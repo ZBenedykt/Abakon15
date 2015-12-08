@@ -1,0 +1,415 @@
+﻿<UserControl x:Class="Abakon15WPF.Views.Controls.PartnerUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:CS="clr-namespace:Abakon15WPF.Views.Controls.Standard"
+             xmlns:UC="clr-namespace:Abakon15WPF.Views.Controls"
+             xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+             xmlns:V="clr-namespace:Abakon15WPF.Views"
+             xmlns:set="clr-namespace:Abakon15WPF.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="900"
+             d:DataContext="{d:DesignInstance Type=VM:PartnerVM}" >
+    
+    <UserControl.DataContext>
+        <VM:PartnerVM x:Name="_PartnerCollectionVM" />
+    </UserControl.DataContext>
+    
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <!--<GridSplitter Grid.Column="0" Grid.RowSpan="4"  Width="6" Background="{StaticResource SpliterVerticalBackgroundBrush}" ClipToBounds="True"></GridSplitter>-->
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="15*" />
+            </Grid.RowDefinitions>
+
+            <GridSplitter Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Height="6" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" 
+                          Margin="0,5,0,0" Background="{StaticResource SpliterHorizontalBackgroundBrush}"></GridSplitter>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0" Background="{StaticResource HeaderGridBackground}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal"  Height="30" HorizontalAlignment="Left" >
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,5,0" Text="{Binding Path=CurrentDocumentClassificationPattern.GetClassificationPath}" HorizontalAlignment="Center" Visibility="{Binding Path=CanAddFiles, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <Button x:Name="_setColumns_Button"    IsEnabled="true" Style="{StaticResource SmallGlassButton}" Click="_setColumns_Button_Click">
+                            <ButtonBase.Content>
+                                <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/Settingsx.png" Width="20" Height="20" Margin="2" />
+                            </ButtonBase.Content>
+                        </Button>
+                        <Button Grid.Column="2" Content="i" Style="{StaticResource CircleButton}" Height="25" Width="25" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" Command="{Binding Path=OpenHelpCommand}" CommandParameter="Intro" IsEnabled="true" IsCancel="False" />
+                    </StackPanel>
+                </Grid>
+                <TextBlock Grid.Row="1" Text="{Binding Path=MyFilteredPanel.FilterText}"  TextWrapping="Wrap" FontWeight="Bold" Margin="4" Foreground="Maroon" />
+
+                <DataGrid x:Name="_partnerDatagrid"  Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" EnableColumnVirtualization="False"
+                            IsReadOnly="True"  AllowDrop="{Binding Path=CanAddFiles}" ItemsSource="{Binding Path=PartnerList}" 
+                                  SelectedItem="{Binding Path=CurrentPartner}" SelectionMode="Extended" Margin="10,0,-10,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=PartnerCode}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerCode_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerCode_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerName}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerName_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerName_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerType}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerType_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerType_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=Partnerphone}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_Partnerphone_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_Partnerphone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerFax}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerFax_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerFax_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerEmail}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerEmail_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerEmail_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerWWW}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerWWW_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerWWW_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerKeyWords}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerKeyWords_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerKeyWords_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=PartnerReliabilityRating}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerReliabilityRating_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerReliabilityRating_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--<TextBlock x:Name="_actProgress" Grid.Row="3" Style="{StaticResource TextBlockHedearStyle}" Text="{Binding Path=ActProgressInfo}" Visibility="{Binding Converter={StaticResource BooleanToVisibilityConverter}, Path=ActProgressVisible}" />-->
+
+
+                <ToolBar Grid.Row="4" Visibility="{Binding Path=isImagePanel, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" Margin="0,0,0,6">
+                    <CS:NavigationPanel  Foreground="#FF666666" View="{Binding Path=PartnerList.View}" />
+                    </ToolBar>
+            </Grid>
+            <TabControl Grid.Row="1" DockPanel.Dock="Bottom" >
+                <TabItem Header="Szczegóły" >
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <UC:PartnerDetailsUC x:Name="_partnerDetail"  Grid.Column="0" Visibility="{Binding Path=VisibleDetails, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                        <ToolBar Grid.Row="1" >
+                            <ToggleButton x:Name="EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible" IsEnabled="{Binding Path=hasPrivilegePersonEdit}">
+                            </ToggleButton>
+
+                            <Button x:Name="SaveButton"   Command="{Binding Path=SaveCommand}" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}" Style="{StaticResource CommandButtonStyle}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}" 
+                                     Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                            <Button x:Name="_undo_Button"   Command="{Binding Path=UndoChangesCommand}"  Style="{StaticResource CommandButtonStyle}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}" 
+                                     Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" CommandParameter="{Binding ElementName=_partnerDatagrid}" >
+                                <ButtonBase.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image  Source="/Abakon15WPF;component/Images/editundo.png" Width="16" Height="16" Margin="5,0" />
+                                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_undo_Buttons}" />
+                                    </StackPanel>
+                                </ButtonBase.Content>
+                            </Button>
+                             
+
+
+                            <Button x:Name="NewProjectButton" Command="{Binding Path=NewPartnerCommand}" Style="{StaticResource CommandButtonStyle}"  
+                                        Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newPartner_Button}" 
+                                    ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newPartner_ToolTip}" 
+                                    Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                                         V:EventFocusAttachment.ElementToFocus="{Binding ElementName=_partnerDetail}"/>
+                                                      <Button x:Name="DeletePersonRecordButton" Command="{Binding Path=DeleteCommand}" Style="{StaticResource CommandButtonStyle}" 
+                                    Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_deleteRecord_DataButtonsUC}" 
+                                    Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                    ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_deleteRecordToolTip_DataButtonsUC}" IsEnabled="True" />
+                        </ToolBar>
+                    </Grid>
+                </TabItem>
+            
+                <TabItem Header="Przedstawiciele" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <DataGrid x:Name="_personDatagrid"  Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" EnableColumnVirtualization="False"
+                            IsReadOnly="True"  ItemsSource="{Binding Path=CurrentPartner.agentList}"   >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Path=name}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_name_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_name_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=sureName}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_sureName_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_sureName_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=department}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_department_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_department_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=interests}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_interests_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_interests_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=work_phone}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_work_phone_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_work_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=mobile_phone}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_mobile_phone_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_mobile_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=home_phone}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_home_phone_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_home_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=pref_contact}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_pref_contact_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_pref_contact_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=fax}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_fax_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_fax_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=business_email}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_business_email_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_business_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <DataGridTextColumn Binding="{Binding Path=private_email}" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_private_email_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_private_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                               
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <!-- ========================================== Documents ============================================================================ -->
+                <TabItem x:Name="_Documents" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documents_TabItemHeader}" Foreground="Black"  IsSelected="{Binding Path=isProjectsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 Visibility="{Binding Path=isCurrentNewPartnerExist, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0"    Margin="0" Background="{StaticResource HeaderGridBackground}" AllowDrop="True" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal"  Height="30" VerticalAlignment="Stretch">
+                                <TextBlock Grid.Row="0" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,20,0" 
+                                                       Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documentPartner_Header}" HorizontalAlignment="Center" Visibility="{Binding Path=CanAddFiles, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </StackPanel>
+                            <Button Grid.Column="3" Content="Ctrl+V" Style="{StaticResource CircleButton}" Margin="2,2,4,2"  Height="25" Width="35" IsEnabled="True" IsDefault="False"  
+                                    FontSize="10" FontWeight="Bold" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_pasteFile_ToolTip}" Command="{Binding Path=AddFromClipboardCommand}" CommandParameter="{Binding ElementName=_DOcumentsDatagrid}" />
+                            <TextBlock Grid.Column="1"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_pathToNewDocuments_Label}" Margin="4" VerticalAlignment="Center" />
+                            <ComboBox Grid.Column="2" x:Name="_pathSelect_ComboBox" ItemsSource="{Binding Path=FilePathList}" DisplayMemberPath="Name" IsSynchronizedWithCurrentItem="True" SelectedValue="{Binding Path=FilePathForNewDocuments}" MinHeight="0" MinWidth="150" />
+                            <Button Grid.Column="3" Content="i" Style="{StaticResource CircleButton}" Height="25" Width="25" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" Command="{Binding Path=OpenHelpCommand}" Visibility="Collapsed" />
+                        </Grid>
+
+                        <DataGrid x:Name="_DOcumentsDatagrid"  Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" EnableColumnVirtualization="true"
+                                ItemsSource="{Binding Path=CurrentPartner.documents}" IsReadOnly="True" SelectedItem="{Binding Path=SelectedDocument}" 
+                                AllowDrop="{Binding Path=CanAddFiles}" Loaded="_DOcumentsDatagrid_Loaded"
+                                Visibility="{Binding Path=isImagePanel, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" EnableRowVirtualization="True" >
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate >
+                                            <Button Style="{StaticResource SmallGlassButton}"
+                                    IsTabStop="True"
+                                    Padding="3,1"
+                                    Margin="0"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                    Command="{Binding DataContext.ShowFileCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" >
+                                                <ButtonBase.Content>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/Documents.png"  Height="16" Width="20" />
+                                                    </StackPanel>
+                                                </ButtonBase.Content>
+                                            </Button>
+
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate >
+                                            <Button Style="{StaticResource SmallGlassButton}"
+                                    IsTabStop="True"
+                                    Padding="3,1"
+                                    Margin="0"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                    Command="{Binding DataContext.sendEmailCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" >
+                                                <ButtonBase.Content>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/DocumentMail.png"  Height="16" Width="20" />
+                                                    </StackPanel>
+                                                </ButtonBase.Content>
+                                            </Button>
+
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Binding="{Binding Path=docCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_documentCode_Label}" 
+                                     />
+                                <DataGridTextColumn Binding="{Binding Path=documentClassificationPattern.ClassificationPath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_Classification_Label}" 
+                                    />
+                                <DataGridTemplateColumn Header="">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate >
+                                            <Button Style="{StaticResource SmallGlassButton}"   
+                                    IsTabStop="True"
+                                    Padding="3,1"
+                                    Margin="0"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                    Command="{Binding DataContext.SelectDocumentClassifierCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid, AncestorLevel=1}}">
+                                                <Button.Content>
+                                                    <Path Visibility="Visible" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Data="M 0 2 L 10 2 L 5 8 Z">
+                                                        <Path.Fill>
+                                                            <SolidColorBrush Color="White"/>
+                                                        </Path.Fill>
+                                                    </Path>
+                                                </Button.Content>
+                                            </Button>
+
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Binding="{Binding Path=FileName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_fileName_Label}" 
+                                    />
+                                <DataGridTextColumn Binding="{Binding Path=filePath.Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_path_Label}"/>
+
+                                <DataGridTextColumn Binding="{Binding Path=docDescription, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_description_Label}" Width="*"/>
+
+                                <DataGridTextColumn Binding="{Binding Path=CreateDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_5_createDate_Label}"/>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <ToolBar Grid.Row="2"  >
+
+                            <ToggleButton x:Name="_EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible">
+                            </ToggleButton>
+
+
+                            <!--<Button x:Name="RefreshButton" Margin="4" Padding="4,1" Style="{StaticResource RefreshCommandButtonStyle}"  Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refresh_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refreshToolTip_DataButtonsUC}" Command="{Binding Path=ReloadDataCommand}" />-->
+                            <Button x:Name="SaveDocButton"   Command="{Binding Path=SaveCommand}"  
+                                      Style="{StaticResource CommandButtonStyle}" 
+                                     Visibility="{Binding ElementName=_EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="60" Padding="4,0,8,0" >
+                                <ButtonBase.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image  Source="/Abakon15WPF;component/Images/Save.png" Width="16" Height="16" Margin="5,0" />
+                                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}"  ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_saveToolTip_DataButtonsUC}" Margin="0,0,4,0" />
+                                    </StackPanel>
+                                </ButtonBase.Content>
+                            </Button>
+
+                            <Button   Margin="5,0"
+                             Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_disconnectFileFromEquipment_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}" 
+                                      Command="{Binding Path=DisconnectDocumentCommand}" CommandParameter="{Binding ElementName=_DOcumentsDatagrid}">
+                                <ButtonBase.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image  Source="/Abakon15WPF;component/Images/Disconnect.png" Width="16" Height="16" Margin="5,0" />
+                                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_disconnectFileFromEquipment_Button}" Margin="0,0,5,0"/>
+                                    </StackPanel>
+                                </ButtonBase.Content>
+                            </Button>
+
+
+                        </ToolBar>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+        </Grid>
+
+        <DockPanel Grid.Row="0" Grid.Column="0"  Margin="0,2,8,2" >
+            <Grid    >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--<TabControl Grid.Row="1" TabStripPlacement="Top" ClipToBounds="True">
+                   
+                    <TabItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_SelectedByFilter}"  IsSelected="{Binding Path=isFilterSelected}">
+                        <CS:FilterPanelUC DataContext="{Binding Path=MyFilteredPanel}" />
+                    </TabItem>
+
+
+
+                </TabControl>-->
+                <Popup x:Name="_popupUserSettins" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint"  >
+                    <Border Background="LightGray" BorderBrush="Silver" BorderThickness="1" ClipToBounds="True">
+                        <Border Background="Transparent" BorderBrush="DarkGreen"   BorderThickness="1" >
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                            </Border.Effect>
+                            <Grid Background="{StaticResource PopUpBrush}" UseLayoutRounding="True" SnapsToDevicePixels="True" Margin="2" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0"  Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}" >
+                                    <TextBlock  Grid.Row="0"  FontSize="16" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_userSettings_Header}" Foreground="#FF4A4E4B" Margin="10,2"  />
+                                </StackPanel>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_columnVisibility}" FontWeight="Bold" Foreground="Black" />
+                                <CheckBox Grid.Row="3" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerCode_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerCode_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="4" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerName_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerName_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="5" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerType_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerType_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="6" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_Partnerphone_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_Partnerphone_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="7" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerFax_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerFax_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="8" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerEmail_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerEmail_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="9" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerWWW_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerWWW_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="10" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerKeyWords_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerKeyWords_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="11" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerReliabilityRating_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerReliabilityRating_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+
+                            </Grid>
+                        </Border>
+                    </Border>
+                </Popup>
+
+            </Grid>
+
+
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<src:WindowBaseClass
+        x:Class="Abakon15WPF.Views.Windows.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UC ="clr-namespace:Abakon15WPF.Views.Controls"
+        xmlns:src="clr-namespace:Abakon15WPF.Views"
+        xmlns:VM ="clr-namespace:Abakon15WPF.ViewModels"
+        Title="{Resx ResxName=WisecomWPF.LangKeys.ResourceLang, Key=_documentsWindow_Window_Title}" Height="700" Width="1200" WindowStartupLocation="CenterOwner" 
+        Icon="/Abakon15WPF;component/Images/Calendar.png">
+
+    <Border Style="{StaticResource WindowBorderStyle}">
+        <Grid>
+            <UC:TaskUC   x:Name="c_TaskUC"  />
+        </Grid>
+        
+    </Border>
+</src:WindowBaseClass>

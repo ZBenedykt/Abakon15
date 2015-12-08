@@ -1,0 +1,171 @@
+﻿<Window x:Class="Abakon15.Views.Windows.AppParametersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:core="clr-namespace:System;assembly=mscorlib"
+        xmlns:VM="clr-namespace:Abakon15.ViewModels"
+        xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+        xmlns:V="clr-namespace:Abakon15.Views"
+        Title="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_appParameters_Window_Title}" 
+        Icon="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=WindowIcon}" WindowStartupLocation="CenterOwner"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         mc:Ignorable="d" d:DataContext="{d:DesignInstance Type=VM:AppParametersVM}" Height="400" Width="800">
+
+    
+    <Window.DataContext>
+        <VM:AppParametersVM  x:Name="_AppParametersVM"/>
+    </Window.DataContext>
+
+
+    
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <GridSplitter Grid.Column="0" Width="6" Background="{StaticResource SpliterVerticalBackgroundBrush}" IsEnabled="True" />
+
+        <!-- List of users -->
+        <Grid Grid.Column="0" Background="{StaticResource WindowBackgroundBrush}" Margin="0,0,7,0">  
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+           
+            <ListView x:Name="_parameters_ListView" Grid.Row="1"  HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" 
+                      ItemsSource="{Binding Path=ParamNameDictionary, UpdateSourceTrigger=PropertyChanged}" 
+                      SelectedValue="{Binding Path=SelectedParamNameDictionary, ValidatesOnExceptions=True}" BorderBrush="#FF8AA98A" Foreground="#FFAC9898" Background="#FFC3E6CA" SelectionMode="Single" AlternationCount="2" MaxHeight="1200" FontWeight="Bold" IsSynchronizedWithCurrentItem="True">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="False">
+                        <GridView.Columns>                               
+                            <GridViewColumn Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_appParameters_Header}"  
+                                            DisplayMemberBinding="{Binding Path=Item2}" />
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+
+                
+            </ListView>
+         
+
+        </Grid>
+
+        <Grid Grid.Column="1"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TabControl Grid.Column ="0" Grid.Row="3" Background="{StaticResource WindowBackgroundBrush}" >
+                <TabControl.ItemContainerStyle>
+                    <Style TargetType="{x:Type TabItem}">
+                        <Setter Property="Visibility"  Value="Collapsed" />
+                    </Style>
+                </TabControl.ItemContainerStyle>
+
+                <TabItem x:Name="param_excPathTypeOfDoc"  Foreground="Black" MaxHeight="1200" MaxWidth="1000"
+                         IsSelected="{Binding Path=isexcPathTypeOfDocTab, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="param1">
+                    <GroupBox  Background="{StaticResource WindowBackgroundBrush}" >
+                     
+                        <Grid Grid.Row="1"  Background="{StaticResource WindowBackgroundBrush}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="80" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" MinWidth="60"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_filePath_Header}" HorizontalAlignment="Right" Margin="0,4" />
+                                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                    <!--<TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_pathToDocuments_Label}" Margin="4" VerticalAlignment="Center" />-->
+                                    <ComboBox x:Name="_pathOfDocuments_ComboBox" ItemsSource="{Binding Path=FilePathList}" DisplayMemberPath="Name" IsSynchronizedWithCurrentItem="True" SelectedValue="{Binding Path=CurrentFilePath}" MinWidth="200" Margin="4,0" IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" />
+                                </StackPanel>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_5_Classification_Label}" HorizontalAlignment="Right" Margin="0,4" />
+                                <Border Grid.Row="2" Grid.Column="1" BorderBrush="{DynamicResource NormalBorderBrush}" Margin="6,2" BorderThickness="2" CornerRadius="2">
+                                    <StackPanel  Orientation="Horizontal" >
+                                        <TextBlock     Text="{Binding Path=SelectedPattern.ClassificationPath, Mode=TwoWay, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" 
+                                            VerticalAlignment="Center" MinWidth="174" TextWrapping="Wrap" Background="{DynamicResource TextBoxBrush}" />
+                                        <Button 
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                    Command="{Binding Path=SelectDocumentClassifierCommand}" 
+                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid, AncestorLevel=1}}" Width="20" IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}">
+                                            <Button.Content>
+                                                <Path Visibility="Visible" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Data="M 0 2 L 10 2 L 5 8 Z">
+                                                    <Path.Fill>
+                                                        <SolidColorBrush Color="White"/>
+                                                    </Path.Fill>
+                                                </Path>
+                                            </Button.Content>
+                                        </Button>
+
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        
+                    </GroupBox>
+                </TabItem>
+                <TabItem x:Name="param_Test" Header="test" Foreground="Black" MaxHeight="1200" MaxWidth="1000"
+                         IsSelected="{Binding Path=istestTab, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <DockPanel Background="{StaticResource WindowBackgroundBrush}">
+                        <Grid Grid.Row="1" Margin="10" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" MinWidth="80" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" MinWidth="60"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_userCode_DGHeader}" HorizontalAlignment="Right" Margin="0,4" />
+                            <TextBox   Grid.Row="1" Grid.Column="1" Width="220" Margin="4,4,4,4" TabIndex="100" 
+                               Text="Panel do testów" VerticalAlignment="Center" />
+                        </Grid>
+                    </DockPanel>
+                </TabItem>
+
+
+            </TabControl>
+            
+
+        </Grid>
+        <ToolBar Grid.Row="1" Grid.ColumnSpan="2">
+            <ToggleButton x:Name="EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible">
+            </ToggleButton>
+            
+       
+
+            <Button x:Name="SaveButton"   Command="{Binding Path=SaveCommand}" 
+                    Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_save_DataButtonsUC}" Style="{StaticResource CommandButtonStyle}"
+                    ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_saveToolTip_DataButtonsUC}" />
+
+        </ToolBar>
+    </Grid>
+</Window>

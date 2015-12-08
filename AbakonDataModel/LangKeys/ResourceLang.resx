@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="acceptedContractors" xml:space="preserve">
+    <value>accepted contractors</value>
+  </data>
+  <data name="affordedCertificate" xml:space="preserve">
+    <value>Afforded certificate</value>
+  </data>
+  <data name="delivered" xml:space="preserve">
+    <value>Delivered</value>
+  </data>
+  <data name="Elektryczne" xml:space="preserve">
+    <value>Electric</value>
+  </data>
+  <data name="finished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="Mechaniczne" xml:space="preserve">
+    <value>Mech.</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>Start process</value>
+  </data>
+  <data name="obtainedAfterCalibration" xml:space="preserve">
+    <value>Obtained after calibration</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>Proceed</value>
+  </data>
+  <data name="PrzyrzadyWszystkie" xml:space="preserve">
+    <value>indefinite</value>
+  </data>
+  <data name="redyToReceive" xml:space="preserve">
+    <value>Redy to receive</value>
+  </data>
+  <data name="seekingBroker" xml:space="preserve">
+    <value>Seeking a broker</value>
+  </data>
+  <data name="seekingLab" xml:space="preserve">
+    <value>Seeking a lab</value>
+  </data>
+  <data name="sentEquipment" xml:space="preserve">
+    <value>Sent the equipment</value>
+  </data>
+  <data name="sentRequest" xml:space="preserve">
+    <value>sent request</value>
+  </data>
+  <data name="Sprawdziany" xml:space="preserve">
+    <value>Gauge</value>
+  </data>
+  <data name="SprawdzianyDoGwintow" xml:space="preserve">
+    <value>For threads</value>
+  </data>
+  <data name="_errForeingKeyProductMesureUnitCode" xml:space="preserve">
+    <value>You must select a unit of measurement</value>
+  </data>
+  <data name="_errForeingKeyProductTechnicalMesureUnitCode" xml:space="preserve">
+    <value>You must select a technical unit of measurement</value>
+  </data>
+  <data name="_errForeingKeyVATrateCodeId" xml:space="preserve">
+    <value>You must select a VAT rate</value>
+  </data>
+  <data name="_errMaxLegth12" xml:space="preserve">
+    <value>Limit is 12 characters</value>
+  </data>
+  <data name="_errMaxLegth256" xml:space="preserve">
+    <value>Limit is 256 characters</value>
+  </data>
+  <data name="_errMaxLegth30" xml:space="preserve">
+    <value>Limit is 30characters</value>
+  </data>
+  <data name="_errMaxLegth60" xml:space="preserve">
+    <value>Limit is 60 characters</value>
+  </data>
+  <data name="_errMaxLegth90" xml:space="preserve">
+    <value>Limit is 90 characters</value>
+  </data>
+  <data name="_errMinLegth1" xml:space="preserve">
+    <value>The text can not be blank</value>
+  </data>
+  <data name="_errMinLegth3" xml:space="preserve">
+    <value>The minimum length is 3 characters</value>
+  </data>
+  <data name="_errRange1To1000" xml:space="preserve">
+    <value>The number must be in the range 1 to 1000</value>
+  </data>
+  <data name="_errRegexInitialsNoMatched" xml:space="preserve">
+    <value>It must be a two-letter initials (in capitals without nationals characters)</value>
+  </data>
+  <data name="_errRegexNoMatched" xml:space="preserve">
+    <value>Code does not match the pattern</value>
+  </data>
+  <data name="DoDecyzji" xml:space="preserve">
+    <value>Depending on the circumstances</value>
+  </data>
+  <data name="LegalizacjaWlasna" xml:space="preserve">
+    <value>Legalization of their own</value>
+  </data>
+  <data name="NiePodlegaLegalizacji" xml:space="preserve">
+    <value>Not subject to legalization</value>
+  </data>
+  <data name="ZawszeZlecana" xml:space="preserve">
+    <value>Not subject to verification</value>
+  </data>
+  <data name="_admin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="_adminComment" xml:space="preserve">
+    <value>Administrator privilege</value>
+  </data>
+  <data name="_appUser" xml:space="preserve">
+    <value>AppUser</value>
+  </data>
+  <data name="_appUserComment" xml:space="preserve">
+    <value>Valid user of application</value>
+  </data>
+  <data name="_roleAmin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="_roleUser" xml:space="preserve">
+    <value>Normal user</value>
+  </data>
+  <data name="_allEquipmnetAccess" xml:space="preserve">
+    <value>Right task allocation</value>
+  </data>
+  <data name="_canAddEquipment" xml:space="preserve">
+    <value>The right to register new devices</value>
+  </data>
+  <data name="_canAddPartner" xml:space="preserve">
+    <value>The right to register new partners</value>
+  </data>
+  <data name="_canAddPerson" xml:space="preserve">
+    <value>The right to register new persons</value>
+  </data>
+  <data name="_canDeleteEquipment" xml:space="preserve">
+    <value>The right to remove devices from the database</value>
+  </data>
+  <data name="_canDeletePartner" xml:space="preserve">
+    <value>The right to remove partners from the database</value>
+  </data>
+  <data name="_canDeletePerson" xml:space="preserve">
+    <value>The right to remove persons from the database</value>
+  </data>
+  <data name="_canDisposeEquipmentToEmployee" xml:space="preserve">
+    <value>The right to dispose devices to empoloyee</value>
+  </data>
+  <data name="_canUpdateEquipment" xml:space="preserve">
+    <value>The right to update data of devices</value>
+  </data>
+  <data name="_canUpdatePartner" xml:space="preserve">
+    <value>The right to update data of partners</value>
+  </data>
+  <data name="_canUpdatePerson" xml:space="preserve">
+    <value>The right to update data of persons</value>
+  </data>
+  <data name="_equipmentHeader" xml:space="preserve">
+    <value>Mesure equipment</value>
+  </data>
+  <data name="_partnerHeader" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="_personHeader" xml:space="preserve">
+    <value>People (representatives,  employees)</value>
+  </data>
+</root>

@@ -1,0 +1,330 @@
+﻿<Window x:Class="Abakon15WPF.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+         Title="Abakon15" 
+         Height="700" Width="1000" 
+         Icon="/Abakon15WPF;component/Images/1_home.png"
+         WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen"
+         xmlns:VM ="clr-namespace:Abakon15WPF.ViewModels"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+         SizeToContent="Manual"  WindowState="Maximized" 
+        Closing="Window_Closing"  Activated="Window_Activated"
+        xmlns:GEMODE="GE-mode"
+         >
+    <!--Loaded="Window_Loaded"  Activated="Window_Activated" Closing="Window_Closing" >-->
+
+
+    <Window.DataContext >
+        <VM:MainWindowVM x:Name="mWindowDataContext"/>
+    </Window.DataContext>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0" />
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="true"  Background="{StaticResource WindowBackgroundBrush}">
+            <!--=========================== Menu główne ===========================-->
+            <Grid DockPanel.Dock="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Menu   VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch"    >
+                    <MenuItem  Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_file_MenuItemHeader}" IsEnabled="True" VerticalAlignment="Center">
+                        <MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changePassword_MenuItemHeader}" Command="{Binding Path=ChangePasswordCommand}" />
+                        <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
+                        <!-- Przykład warunkowej kompilacji wymaga : xmlns:d="GE-mode" oraz  
+                        #if GE
+                         [assembly: XmlnsDefinition("GE-mode", "Abakon15WPF")]
+                        #endif
+                          w AssemblyInfo  -->
+
+                        <!--<mc:AlternateContent>
+                            <mc:Choice Requires="GEMODE">
+                            </mc:Choice>
+                            <mc:Fallback>
+                                 
+                                <MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeDb_MenuItemHeader}" Command="{Binding Path=ChangeDBCommand}" />
+                                <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
+                            </mc:Fallback>
+                        </mc:AlternateContent>-->
+                        <Separator Margin="0" HorizontalAlignment="Center" />
+                        <MenuItem x:Name="_closeApp" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_exit_MenuItemHeader}" Click="_closeApp_Click" />
+                    </MenuItem>
+
+                    <Separator />
+                    <Separator />
+
+                    <MenuItem x:Name="_menuAdministracja"  Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_admin_MenuItemHeader}" IsEnabled="{Binding Path=AktRegisteredUser.isAdmin}" VerticalAlignment="Bottom" Margin="0,0,0,5" >
+
+
+                        <MenuItem  x:Name="_FilePaths"
+                                  Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_FilePaths_Form_Title}"  IsEnabled="True" Command="{Binding Path=PathsFileCommand}" />
+
+                     
+                        <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
+
+                   
+                        <MenuItem  x:Name="_departmantDefinition"
+                                  Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_2_SchematOrganizacyjny_Form_Title}"  IsEnabled="True" Command="{Binding Path=DepartmentDictionaryDefinitionCommand}" />
+
+                        <MenuItem  x:Name="_documentClassificationPattrenDefinition"
+                                  Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_4_DocumentClassificationPattern_Form_Title}"  IsEnabled="True" Command="{Binding Path=DocumentClassificationPatternDefinitionCommand}" />
+                        <MenuItem x:Name="mKeyBoard" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_KeyBoardContent_Title}"  IsEnabled="True"  Command="{Binding Path=KeyBoardCommand}" />
+                        <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
+
+                        <MenuItem x:Name="mOpcjeAplikacji"     Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_applicationOptions_MenuItemHeader}"  IsEnabled="True"  Command="{Binding Path=ApplicationOptionsCommand}" />
+
+                        <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
+
+                        <!--<MenuItem x:Name="excelRename" Header="Napraw daty wzorcowania"  IsEnabled="True"  Click="excelRename_Click" />-->
+                        <MenuItem x:Name="mZarzadanieUzytkownikami" Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_usersManager_MenuItemHeader}"  IsEnabled="True"  Command="{Binding Path=UsersCommand}" />
+
+                    </MenuItem>
+
+                    <MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_language_MenuItemHeader}" IsEnabled="True" VerticalAlignment="Center">
+
+                        <MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_english_MenuItemHeader}" Name="_englishMenuItem" Click="_englishMenuItem_Click" />
+                        <MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_polish_MenuItemHeader}"  Name="_polishMenuItem" Click="_polishMenuItem_Click"/>
+                    </MenuItem>
+
+
+                    <!--<MenuItem x:Name="c_VersionInfo" 
+                                Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_versionInfo_MenuItemHeader}" VerticalAlignment="Center" IsEnabled="True" Command="{Binding Path=VersionInfoCommand}" />-->
+
+
+
+                    <!--<MenuItem Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_pomocMenuItem_Header}" IsEnabled="True" Click="HelpMenuItem_Click" VerticalAlignment="Center" />-->
+
+                </Menu>
+                <StackPanel    Grid.Column="1"  VerticalAlignment="Stretch"   HorizontalAlignment="Stretch" Background="{StaticResource HeaderHighlightedBackgoundBrush}">
+                    <Button Content="i" Style="{StaticResource CircleButton}" Height="25" Width="25" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="5" Command="{Binding Path=OpenHelpCommand}" CommandParameter="Intro" IsEnabled="true" IsCancel="False" HorizontalContentAlignment="Right"   />
+                </StackPanel>
+
+            </Grid>
+            <!--===========================-  Pasek narzędzi ===========================-->
+
+
+
+            <!--=========================== Pasek statusu ===========================-->
+            <!-- Jeśli pasek stanu umieścimy na po siatce, to będzie przykrywany podczas zmniejszania okna -->
+            <StatusBar  Name="_statusBar"  DockPanel.Dock="Bottom" Height="30" ClipToBounds="True" MinHeight="35" Margin="4">
+                <!--<TextBlock Text="{Binding Path=IloscZapisowWBazie}" />-->
+                <!--<TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_uzytkownikStatus_Content}"  Padding="1" />
+                <TextBlock x:Name="_user"  Padding="1" Text="{Binding Path=AktRegisteredUser.UserName}" />
+            <Separator Margin="0,5" />
+                <TextBlock x:Name="_userName" Text="{Binding Path=AktRegisteredUser.LoweredUserName}"   Margin="3,0" Padding="1" />-->
+
+            </StatusBar>
+
+            <Grid Margin="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<GridSplitter Grid.Column="0"    Width="6" Background="{StaticResource SpliterVerticalBackgroundBrush}" Margin="0,4" />-->
+                <!--<Border Grid.Row="0"    BorderBrush="#FF8C8E94" BorderThickness="1">-->
+
+                   <ToolBar Grid.Row="0" Background="{StaticResource HeaderGridBackground}"  >
+                    <Button x:Name="mKontrakt_Button" FontSize="12"  Margin="10,0"  Style="{StaticResource CommandButtonStyle}"
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_contrakt_MenuItemHeader}"  
+                            Height="32" Width="66">
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="mKontraktPlus_Button"  Grid.Column="1" Margin="5,5,5,0" Width="14" Height="14" 
+                                    Style="{StaticResource CircleButton}" HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                     >
+                                <ButtonBase.Content>
+                                    <Image  Source="/Abakon15WPF;component/Images/plus16.png"  />
+                                </ButtonBase.Content>
+
+                            </Button>
+                            <Image Margin="5,4" Source="/Abakon15WPF;component/Images/contract1.png"  />
+                        </Grid>
+
+                    </Button>
+
+
+                    <Button x:Name="mTasks_Button" FontSize="12" Margin="10,0"  Style="{StaticResource CommandButtonStyle}"
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_tasks_MenuItemHeader}" 
+                            Click="mTasks_Button_Click" Visibility="Collapsed">
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="mTasksPlus_Button"  Grid.Column="1" Margin="5,5,5,0" Width="14" Height="14" Style="{StaticResource CircleButton}" 
+                                     HorizontalAlignment="Center" VerticalAlignment="Center"  
+                                     Click="mTasksPlus_Button_Click">
+                                <ButtonBase.Content>
+                                    <Image  Source="/Abakon15WPF;component/Images/plus16.png"  />
+                                </ButtonBase.Content>
+
+                            </Button>
+                            <!--<TextBlock  Grid.Column="1" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documents_MenuItemHeader}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,5,0,4"/>-->
+                            <Image Margin="5,4" Source="/Abakon15WPF;component/Images/Calendar.png"  />
+                        </Grid>
+
+                    </Button>
+
+                    <Button x:Name="mPartner_Button" FontSize="12" Margin="10,0" Style="{StaticResource CommandButtonStyle}"
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_partner_MenuItemHeader }" 
+                            Click="mPartner_Button_Click" Height="32" Width="66">
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="mPartnerPlus_Button" Grid.Column="1" Margin="0,5,10,0" Width="14" Height="14" 
+                                    Style="{StaticResource CircleButton}" HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Click="mPartnerPlus_Button_Click">
+                                <ButtonBase.Content>
+                                    <Image  Source="/Abakon15WPF;component/Images/plus16.png"  />
+                                </ButtonBase.Content>
+
+                            </Button>
+                            <!--<TextBlock  Grid.Column="1" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documents_MenuItemHeader}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,5,0,4"/>-->
+                            <Image Margin="5,2" Source="/Abakon15WPF;component/Images/Home.png"  />
+                        </Grid>
+
+                    </Button>
+
+               
+                    <Button  FontSize="12"  Margin="10,0"  Style="{StaticResource CommandButtonStyle}"
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_persons_MenuItemHeader}"  
+                            Click="mPerson_Button_Click" Height="32" Width="66">
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="mPersonPlus_Button"  Grid.Column="1" Margin="5,5,5,0" Width="14" Height="14" 
+                                    Style="{StaticResource CircleButton}" HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Click="mPersonPlus_Button_Click" >
+                                <ButtonBase.Content>
+                                    <Image  Source="/Abakon15WPF;component/Images/plus16.png"  />
+                                </ButtonBase.Content>
+
+                            </Button>
+                            <!--<TextBlock  Grid.Column="1" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documents_MenuItemHeader}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,5,0,4"/>-->
+                            <Image Margin="5,4" Source="/Abakon15WPF;component/Images/PersonMale.png"  />
+                        </Grid>
+
+                    </Button>
+
+                    <Button x:Name="mDocument_Button"  FontSize="12"  Margin="10,0" Style="{StaticResource CommandButtonStyle}"
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_documents_MenuItemHeader}"  
+                            Click="mDocument_Button_Click" Height="32" Width="66">
+                        <Grid  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="mDocumentPlus_Button"  Grid.Column="1" Margin="5,5,5,0" Width="14" Height="14" 
+                                    Style="{StaticResource CircleButton}" HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Click="mDocumentPlus_Button_Click" >
+                                <ButtonBase.Content>
+                                    <Image  Source="/Abakon15WPF;component/Images/plus16.png" />
+                                </ButtonBase.Content>
+
+                            </Button>
+                            <Image Margin="5,4" Source="/Abakon15WPF;component/Images/Documents.png"   />
+                        </Grid>
+
+                    </Button>
+
+                    <Button x:Name="mKeyboard_Button" Style="{StaticResource CommandButtonStyle}" FontSize="12"   Margin="100,2,2,2"
+                            ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_KeyBoard_Title}"  
+                            Click="mKeyboard_Button_Click">
+                        <ButtonBase.Content>
+                            <Image Margin="2,0" Source="/Abakon15WPF;component/Images/keyboard.png"   />
+                        </ButtonBase.Content>
+                    </Button>
+
+                </ToolBar>
+
+
+
+                <!--</ToolBarTray>-->
+
+                <!--</Border>-->
+                <TabControl Grid.Row="1" Name="tcMdi" PreviewMouseMove="TabItem_PreviewMouseMove" Drop="TabItem_Drop" AllowDrop="True" Background="{StaticResource HeaderGridBackground}" Margin="6,0,0,6" >
+                </TabControl>
+            </Grid>
+
+        </DockPanel>
+        <Popup Grid.Row="3" x:Name="_PopUp" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint"  >
+            <Border Background="LightGray" BorderBrush="Silver" BorderThickness="1" ClipToBounds="True">
+                <Border Background="Transparent" BorderBrush="DarkGreen"   BorderThickness="1" >
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                    </Border.Effect>
+
+
+                    <Grid  UseLayoutRounding="True" SnapsToDevicePixels="True" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.Effect>
+                            <DropShadowEffect BlurRadius="15" Color="Silver"  ShadowDepth="20" />
+                        </Grid.Effect>
+                        <TextBlock x:Name="_popUpHeaderText" Grid.Row="0"  FontSize="16" Foreground="Maroon" Margin="10,10,5,5" FontFamily="Arial" />
+
+                        <DataGrid Grid.Row="1" ItemsSource="{Binding Path=OpenedWindows}" SelectedItem="{Binding Path=SelectedOpenedWindow}" AutoGenerateColumns="False" CanUserReorderColumns="False" HeadersVisibility="None" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" Margin="5" Width="500" MinRowHeight="25" ColumnHeaderHeight="0" IsReadOnly="False">
+                            <DataGrid.Columns >
+                                <DataGridTextColumn  Binding="{Binding Path=Uid, UpdateSourceTrigger=PropertyChanged}"  Width="25" IsReadOnly="True" />
+                                <DataGridTextColumn  Binding="{Binding Path=title, UpdateSourceTrigger=PropertyChanged}"  Width="20*" IsReadOnly="True" />
+                                <DataGridTextColumn  Binding="{Binding Path=RegisteredDetatilHeader, UpdateSourceTrigger=PropertyChanged}"  Width="40*" IsReadOnly="True" />
+                                <DataGridTemplateColumn >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button x:Name="_minimizeWindow"  Style="{StaticResource SmallGlassButton}" Click="_minimizeWindow_Click">
+                                                <ButtonBase.Content>
+                                                    <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/Minimalizuj.png" Width="16" Height="16" Margin="2" />
+                                                </ButtonBase.Content>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button x:Name="_normalWindow"   Style="{StaticResource SmallGlassButton}" Click="_normalWindow_Click" >
+                                                <ButtonBase.Content>
+                                                    <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/PrzywrocRozmiar.png" Width="16" Height="16" Margin="2" />
+                                                </ButtonBase.Content>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button  x:Name="_closeWindow"  IsEnabled="true" Style="{StaticResource SmallGlassButton}" Click="_closeWindow_Click"  >
+                                                <ButtonBase.Content>
+                                                    <Image Grid.Column="0" Source="/Abakon15WPF;component/Images/Zamknij1.png" Width="16" Height="16" Margin="2" />
+                                                </ButtonBase.Content>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Border>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>

@@ -1,0 +1,149 @@
+﻿<V:WindowBaseClass x:Class="Abakon15WPF.Views.Windows.BalanceFeaturesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_FilePathForm_Title}" 
+        Icon="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=WindowIcon}"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+        xmlns:V="clr-namespace:Abakon15WPF.Views"
+       xmlns:CS="clr-namespace:Abakon15WPF.Views.Controls.Standard"
+        Height="600" Width="950" WindowStartupLocation="CenterScreen" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=VM:FilePathVM}" Loaded="WindowLoaded" >
+
+ 
+
+    <Window.DataContext>
+        <VM:FilePathVM />
+    </Window.DataContext>
+
+
+
+    <Grid   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}"  >
+            <!--<TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_departmentList_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0" FontSize="16" FontStyle="Normal" />-->
+        </StackPanel>
+        
+        <GroupBox Grid.Row="2" MaxHeight="550"  >
+            <Grid Name="elementsGrid"  ClipToBounds="True" >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Column="0" Grid.Row="1" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle x:Name="textWid1"  HorizontalAlignment="Left" VerticalAlignment="Center"  
+                                Width="200" Height="25" Margin="2,0,0,0"  MaxWidth="500"  Fill="{StaticResource BalanceRectangleFillBrush}" StrokeMiterLimit="5" StrokeStartLineCap="Square" Stroke="Black" StrokeThickness="0.5"></Rectangle>
+                        <TextBlock Text="{Binding ElementName=textWid1, Path=ActualWidth}" VerticalAlignment="Center" Margin="10,0,0,0" />
+                    </StackPanel>
+
+                </Grid>
+                <Grid Grid.Column="0" Grid.Row="2" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle x:Name="textWid2"  HorizontalAlignment="Left" VerticalAlignment="Center"  
+                                Width="200" Height="25" Margin="2,0,0,0"  MaxWidth="500"  Fill="{StaticResource BalanceRectangleFillBrush}" Stroke="Black" StrokeThickness="0.5"></Rectangle>
+                        <TextBlock Text="{Binding ElementName=textWid2, Path=ActualWidth}" VerticalAlignment="Center" Margin="10,0,0,0" />
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="3" Margin="5">
+                    <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal" >
+                        <Slider x:Name="slValue" IsSnapToTickEnabled="True" MinWidth="350"
+                              TickPlacement="Both" AutoToolTipPlacement="BottomRight" Interval="1" 
+                                IsDirectionReversed="False" TickFrequency="1" AutoToolTipPrecision="1" 
+                                IsMoveToPointEnabled="True" Value="0" Maximum="10" SmallChange="1" 
+                                IsSelectionRangeEnabled="False" Margin="2" Style="{StaticResource mSlider}" Minimum="-10" />
+                        
+
+                        <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" Margin="2,6" />
+                    </StackPanel>
+                </Grid>
+
+                <Border Grid.Column="0" Grid.Row="4" Margin="5">             
+                    <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal" >
+                        <Slider x:Name="slValue1" IsSnapToTickEnabled="True" 
+                                 TickPlacement="Both" AutoToolTipPlacement="BottomRight" Interval="1" IsDirectionReversed="False" SelectionEnd="8" TickFrequency="0.2" AutoToolTipPrecision="1" IsMoveToPointEnabled="True" SelectionStart="5" Value="2.5" Maximum="5" SmallChange="0.2" IsSelectionRangeEnabled="False" Margin="2"
+                                Style="{StaticResource mSlider}" Width="200"  />
+                        <TextBox Text="{Binding ElementName=slValue1, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" Margin="2,6" />
+                    </StackPanel>
+                </Border>
+            
+
+
+
+
+
+
+
+            </Grid>
+        </GroupBox>
+     
+
+           
+            <ToolBar Grid.Row="5"  >
+
+            <ToggleButton x:Name="_EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible">
+            </ToggleButton>
+
+             
+                <!--<Button x:Name="RefreshButton" Margin="4" Padding="4,1" Style="{StaticResource RefreshCommandButtonStyle}"  Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refresh_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refreshToolTip_DataButtonsUC}" Command="{Binding Path=ReloadDataCommand}" />-->
+                <Button x:Name="SaveButton"   Command="{Binding Path=SaveCommand}"  
+                                      Style="{StaticResource CommandButtonStyle}" 
+                                     Visibility="{Binding ElementName=_EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="60" Padding="4,0,8,0" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Save.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}"  ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_saveToolTip_DataButtonsUC}" Margin="0,0,4,0" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+            <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=NewFilePathCommand}"  
+                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newFilePath_ToolTip}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/New document.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newFilePath_DataButtonsUC}" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+         
+                <Button   Margin="5,0"
+                             Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_delete_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}" Command="{Binding Path=DeleteCommand}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Erase.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_delete_DataButtons}" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+
+        </ToolBar>
+    </Grid>
+</V:WindowBaseClass>

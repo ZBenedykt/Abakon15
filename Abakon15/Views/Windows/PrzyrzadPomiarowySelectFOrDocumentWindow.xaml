@@ -1,0 +1,43 @@
+﻿<src:WindowBaseClass
+        x:Class="Abakon15.Views.Windows.PrzyrzadPomiarowySelectFOrDocumentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UC ="clr-namespace:Abakon15.Views.Controls"
+        xmlns:src="clr-namespace:Abakon15.Views"
+        xmlns:VM ="clr-namespace:Abakon15.ViewModels"
+        Title="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_przyrzadPomiarowy_Window_Title}"
+        Icon="/Abakon15;component/Images/Digital_MultiMeter24.png"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200"
+             d:DataContext="{d:DesignInstance Type=VM:PrzyrzadPomiarowyCollectionVM}" x:Name="_win" >
+
+    <Border Style="{StaticResource WindowBorderStyle}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <UC:PrzyrzadPomiarowyUC Grid.ColumnSpan="6"  x:Name="c_PrzyrzadPomiarowyUC" DataContext="{Binding}" />
+
+            <Button x:Name="connectToDocument_Button" Grid.Row="1" Grid.Column="1"  Height="28" Margin="10,4" Padding="10,0" Command="{Binding Path=ConnectPrzyrzadToDocumentCommand}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_connectToDocument_Button}" />
+                        <TextBlock Text="{Binding Path=CurrentDocument.FileName}" />
+                        <TextBlock Text=" - "/>
+                        <TextBlock Text="{Binding Path=CurrentPrzyrzadPomiarowy.PrzyrzadPomiarowyNrKod , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+        </Grid>
+        
+    </Border>
+</src:WindowBaseClass>

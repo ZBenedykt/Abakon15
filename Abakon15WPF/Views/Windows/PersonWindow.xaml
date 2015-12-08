@@ -1,0 +1,18 @@
+﻿<src:WindowBaseClass
+        x:Class="Abakon15WPF.Views.Windows.PersonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UC ="clr-namespace:Abakon15WPF.Views.Controls"
+        xmlns:src="clr-namespace:Abakon15WPF.Views"
+        xmlns:VM ="clr-namespace:Abakon15WPF.ViewModels"
+        Title="{Resx ResxName=WisecomWPF.LangKeys.ResourceLang, Key=_documentsWindow_Window_Title}" 
+        Icon="/Abakon15WPF;component/Images/Persons.png"
+        Height="700" Width="1200" WindowStartupLocation="CenterOwner">
+
+    <Border Style="{StaticResource WindowBorderStyle}">
+        <Grid>
+            <UC:PersonUC   x:Name="c_PersonUC"  />
+        </Grid>
+        
+    </Border>
+</src:WindowBaseClass>

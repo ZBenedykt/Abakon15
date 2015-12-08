@@ -1,0 +1,196 @@
+﻿<UserControl x:Class="Abakon15WPF.Views.Controls.PersonDetailsUC"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:CS="clr-namespace:Abakon15WPF.Views.Controls.Standard"
+             xmlns:UC="clr-namespace:Abakon15WPF.Views.Controls"
+             xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+             xmlns:set="clr-namespace:Abakon15WPF.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1000"
+             d:DataContext="{d:DesignInstance Type=VM:PersonVM}" IsVisibleChanged="UserControl_IsVisibleChanged">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid x:Name="c_detailsGrid" Grid.Row="1" Grid.Column="1" Margin="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="80" Width="Auto"/>
+                <ColumnDefinition MinWidth="100" Width="Auto"/>
+                <ColumnDefinition MinWidth="80" Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition MinWidth="50" Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_name_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_name_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_name_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="1" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_sureName_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_sureName_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="1" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.sureName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_sureName_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="1" Grid.Column="4"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_title_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_title_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="1" Grid.Column="5" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_title_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="4" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_gender_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_gender_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                     Tag="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_gender_WaterMark}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_gender_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="4" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_department_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_department_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="4" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.department, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_department_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="4" Grid.Column="4"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_interests_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_interests_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="4" Grid.Column="5" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.interests, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_interests_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="7" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_work_phone_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_work_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.work_phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_work_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="7" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_home_phone_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_home_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="7" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.home_phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_home_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="7" Grid.Column="4"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_mobile_phone_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_mobile_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="7" Grid.Column="5" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.mobile_phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_mobile_phone_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+
+      
+            <TextBlock Grid.Row="11" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_fax_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_fax_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="11" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.fax, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_fax_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="11" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_business_email_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_business_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="11" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.business_email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_business_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="11" Grid.Column="4"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_private_email_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_private_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="11" Grid.Column="5" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.private_email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_private_email_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="14" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_www_address_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_www_address_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="14" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.www_address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_www_address_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+            <TextBlock Grid.Row="14" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_pref_contact_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_pref_contact_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="14" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.pref_contact, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_pref_contact_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+
+            <TextBlock Grid.Row="15" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_spoken_lang_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_spoken_lang_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="15" Grid.Column="1" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.spoken_lang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_spoken_lang_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock Grid.Row="15" Grid.Column="2"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_written_lang_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_written_lang_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBox Grid.Row="15" Grid.Column="3" Margin="4" Width="180"
+                Text="{Binding Path=CurrentPerson.written_lang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_8_written_lang_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+            <TextBlock x:Name="errors" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Path=validatingResults}" HorizontalAlignment="Left" Margin="10,4" Foreground="#FF861111" FontWeight="Bold" FontSize="14" TextWrapping="Wrap" />
+
+            <StackPanel Grid.Row="20" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" >
+                <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_CreateDate_Label}"  Margin="4" />
+                <TextBlock  Text="{Binding Path=CurrentPerson.CreateDate}" Margin="4" />
+                <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_LastUpdateDate_Label}" HorizontalAlignment="Right" Margin="4" />
+                <TextBlock  Text="{Binding Path=CurrentPerson.LastUpdateDate}" HorizontalAlignment="Right" Margin="4" />
+                <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_8_UserName_Label}" HorizontalAlignment="Right" Margin="4" />
+                <TextBlock  Text="{Binding Path=CurrentPerson.UserName}" HorizontalAlignment="Right" Margin="4" />
+            </StackPanel>
+
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

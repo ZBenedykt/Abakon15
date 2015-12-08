@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Abakon15.Views.Controls.GraphsUC"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+             xmlns:UC="clr-namespace:Abakon15.Views.Controls"
+             xmlns:VM="clr-namespace:Abakon15.ViewModels"
+             xmlns:set="clr-namespace:Abakon15.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1000"
+             d:DataContext="{d:DesignInstance Type=VM:GraphsVM}"
+             Loaded="UserControl_Loaded">
+
+    
+    <Grid    Background="{StaticResource WindowBackgroundBrush}" >
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource HeaderHeaderBrush}"  >
+            <TextBlock Text="{Binding Path=CurrentPrzyrzadPomiarowy.PrzyrzadPomiarowyNrKod}" Margin="10,0" Foreground="Maroon" FontSize="14" FontWeight="Bold" />
+            <TextBlock Text="{Binding Path=CurrentPrzyrzadPomiarowy.Nazwa}" Foreground="Maroon" FontSize="14" FontWeight="Bold" />
+            <TextBlock Text="{Binding Path=CurrentPrzyrzadPomiarowy.NazwaAngielska}" Foreground="Maroon" FontSize="14" FontWeight="Bold" Margin="10,0" />
+            <Button Style="{StaticResource SmallGlassButton}"
+                                    IsTabStop="True"
+                                    Padding="3,1"
+                                    Margin="15,0,0,0"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Command="{Binding Path=ShowFileCommand}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Grid.Column="0" Source="/Abakon15;component/Images/Documents.png"  Height="16" Width="20" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+            <TextBlock Text="{Binding Path=ExcelFile}" />
+        </StackPanel>
+        
+        <Grid x:Name="_graphs_Grid" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+        </Grid>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel  x:Name="_graphs_WrapPanel" />
+        </ScrollViewer>
+             <ToolBar Grid.Row="2" DockPanel.Dock="Bottom"  >
+            <ToggleButton x:Name="EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible" IsEnabled="{Binding Path=hasPrivilegeProjectEdit}">
+            </ToggleButton>
+
+            <!--<Button x:Name="SaveButton"   Command="{Binding Path=SaveCommand}" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_save_DataButtonsUC}"  ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_saveToolTip_DataButtonsUC}" 
+                                      Style="{StaticResource CommandButtonStyle}" 
+                                     Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="60" Padding="4,0,8,0" />-->
+
+
+
+            <Button x:Name="_addDomain_Button"   Command="{Binding Path=UndoChangesCommand}"  Style="{StaticResource CommandButtonStyle}"
+                    Visibility="{Binding ElementName=EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                     Click="_addDomain_Button_Click" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15;component/Images/OmetrisisDomain.png" Width="24" Height="24" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_addDomain_Button}" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+
+        </ToolBar>
+
+    </Grid>
+
+</UserControl>

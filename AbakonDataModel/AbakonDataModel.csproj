@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4AF4F267-48FF-4FED-BB72-E3C82CCE6E25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbakonDataModel</RootNamespace>
+    <AssemblyName>AbakonDataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>OmetrisisWPF_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net40\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net40\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.7\lib\net40\Npgsql.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbakonDBContext.cs" />
+    <Compile Include="ComplexTypes.cs" />
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="DataAccess\DataAccessBaseClass.cs" />
+    <Compile Include="DataAccess\Documents\DocumentClassificationPatternInDB.cs" />
+    <Compile Include="DataAccess\Documents\DocumentInDB.cs" />
+    <Compile Include="DataAccess\Documents\FilePathInDB.cs" />
+    <Compile Include="DataAccess\Documents\StandardInDB.cs" />
+    <Compile Include="DataAccess\Firm\DepartmentInDB.cs" />
+    <Compile Include="DataAccess\Firm\PersonInDB.cs" />
+    <Compile Include="DataAccess\Partners\PartnerInDB.cs" />
+    <Compile Include="DataAccess\RawSQLQery.cs" />
+    <Compile Include="DataAccess\Security\_ApplicationInDB.cs" />
+    <Compile Include="DataAccess\Security\_KeyBoardInDB.cs" />
+    <Compile Include="DataAccess\Security\_RoleInDB.cs" />
+    <Compile Include="DataAccess\Security\_UserInDB.cs" />
+    <Compile Include="Documents\Document.cs" />
+    <Compile Include="Documents\DocumentClassificationPattern.cs" />
+    <Compile Include="Documents\FilePath.cs" />
+    <Compile Include="Documents\Standard.cs" />
+    <Compile Include="Enumerators.cs" />
+    <Compile Include="Firm\Department.cs" />
+    <Compile Include="Firm\Employee.cs" />
+    <Compile Include="Firm\Person.cs" />
+    <Compile Include="Infrastructure\PrintAttribute.cs" />
+    <Compile Include="Interfaces\IInfoFile.cs" />
+    <Compile Include="Interfaces\IUpdateSignaturePlain.cs" />
+    <Compile Include="LangKeys\ResourceLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceLang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OmetrisisDbContext.cs" />
+    <Compile Include="Partners\address.cs" />
+    <Compile Include="Partners\Partner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\GenPrivilege.cs" />
+    <Compile Include="Security\GenRole.cs" />
+    <Compile Include="Security\PrivilegeList.cs" />
+    <Compile Include="Security\RoleStructure.cs" />
+    <Compile Include="Security\_Application.cs" />
+    <Compile Include="Security\_KeyBoard.cs" />
+    <Compile Include="Security\_Membership.cs" />
+    <Compile Include="Security\_Role.cs" />
+    <Compile Include="Security\_User.cs" />
+    <Compile Include="UpadateSignatureExt.cs.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Utility\ExtTranslateStringClass.cs" />
+    <Compile Include="Utility\SortableObservableCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OmetrisisWPF_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LangKeys\ResourceLang.pl.resx" />
+    <EmbeddedResource Include="LangKeys\ResourceLang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

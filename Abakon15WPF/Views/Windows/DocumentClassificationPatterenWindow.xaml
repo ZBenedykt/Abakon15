@@ -1,0 +1,241 @@
+﻿<V:WindowBaseClass x:Class="Abakon15WPF.Views.Windows.DocumentClassificationPatterenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_4_DocumentClassificationPattern_Form_Title}" 
+        Icon="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=WindowIcon}"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+        xmlns:V="clr-namespace:Abakon15WPF.Views"
+       xmlns:CS="clr-namespace:Abakon15WPF.Views.Controls.Standard"
+        Height="600" Width="1000" WindowStartupLocation="CenterScreen" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=VM:DocumentClassificationPatternVM}" >
+
+    <Window.DataContext>
+        <VM:DocumentClassificationPatternVM />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}"  >
+            <!--<TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_departmentList_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0" FontSize="16" FontStyle="Normal" />-->
+        </StackPanel>
+        <GroupBox Grid.Row="3"  >
+            <TreeView  x:Name="c_documentClassificationPatternTree"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  
+                           ItemsSource="{Binding Path=DocumentClassificationPatternList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"                      
+                          PreviewMouseRightButtonDown="c_Tree_PreviewMouseRightButtonDown"   FontSize="14" 
+                          V:TreeViewAttached.TreeViewSelectedItem="{Binding CurrentDocumentClassificationPattern, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       >
+              
+                <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate  ItemsSource="{Binding Path=dcChildren}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Grid.Column="0" IsChecked="{Binding Path=dcpDefault, UpdateSourceTrigger=PropertyChanged}"  />
+                            <TextBlock Grid.Column="1"   Text="{Binding Path=dcpName, UpdateSourceTrigger=PropertyChanged}" Margin="5,0,15,0" TextWrapping="Wrap" />
+                            <Border Grid.Column="2" BorderBrush="DarkGray" BorderThickness="1" 
+                                Visibility="{Binding Path=isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <CheckBox IsChecked="{Binding Path=dcpForEquipmnet}">
+                                    <CheckBox.Content>
+                                        <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForEquipment_Label}" FontFamily="Arial"  Foreground="Black" TextWrapping="NoWrap" />
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Border>
+                            <Border Grid.Column="3" BorderBrush="DarkGray" BorderThickness="1" 
+                                Visibility="{Binding Path=isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <CheckBox IsChecked="{Binding Path=dcpForPartner}">
+                                    <CheckBox.Content>
+                                        <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForPartners_Label}" FontFamily="Arial"  Foreground="Black"  />
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Border>
+                            <Border Grid.Column="4" BorderBrush="DarkGray" BorderThickness="1" 
+                                Visibility="{Binding Path=isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <CheckBox IsChecked="{Binding Path=dcpForPerson}">
+                                    <CheckBox.Content>
+                                        <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForPersons_Label}" FontFamily="Arial"  Foreground="Black"  />
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Border>
+                            <Border Grid.Column="5" BorderBrush="DarkGray" BorderThickness="1" 
+                                Visibility="{Binding Path=isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <CheckBox IsChecked="{Binding Path=dcpForStandard}">
+                                    <CheckBox.Content>
+                                        <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForStandards_Label}" FontFamily="Arial"  Foreground="Black"  />
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Border>
+                            <Border Grid.Column="6" BorderBrush="DarkGray" BorderThickness="1" 
+                                Visibility="{Binding Path=isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <CheckBox IsChecked="{Binding Path=dcpForTask}">
+                                    <CheckBox.Content>
+                                        <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForTsaks_Label}" FontFamily="Arial"  Foreground="Black"  />
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Border>
+                          
+                        </Grid>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        </GroupBox>
+        <Border x:Name="editdepartment" Grid.Row="4"
+            Visibility="{Binding Path=EditMode, Converter={StaticResource BooleanToVisibilityConverter}}" Margin="0,0,0,3">
+            <Grid  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" Orientation="Horizontal" Background="{StaticResource HeaderGridBackground}"  >
+                    <TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_selectedDCP_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0"  />
+                </StackPanel>
+
+                <GroupBox Grid.Row="2" Background="{StaticResource HeaderFuterBrush}" Visibility="{Binding Path=isDocumentClassificationPatternSelected, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                   
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="25,10" 
+                                >
+            
+                <TextBlock Margin="10,4,2,4" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_2_DepartmentName_Header}" VerticalAlignment="Center" />
+                            <TextBox x:Name="_firstFokusedField"  Text="{Binding Path=CurrentDocumentClassificationPattern.dcpName, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Center" TextWrapping="Wrap" IsReadOnly="{Binding Path=ReadOnly}"
+                         Tag="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_4_Name_Tag}" MinWidth="240"/>
+
+                        <CheckBox Margin="15,4,2,4" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpDefault, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_2_DepartmentDefault_Header}"/>
+                        
+                        
+                    </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,50,0" Visibility="{Binding Path=CurrentDocumentClassificationPattern.isRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpIntro_Label}" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" Foreground="Maroon" FontSize="14" FontWeight="Bold" />
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForEquipment_Label}" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" Foreground="Black" />
+                            <CheckBox    HorizontalAlignment="Left" Margin="5" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpForEquipmnet, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                              IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" TabIndex="3" />
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForPartners_Label}" HorizontalAlignment="Right" Margin="25,4,4,4" VerticalAlignment="Center" Foreground="Black" />
+                            <CheckBox     HorizontalAlignment="Left" Margin="5" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpForPartner, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                              IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" TabIndex="4" />
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForPersons_Label}" HorizontalAlignment="Right" Margin="25,4,4,4" VerticalAlignment="Center" Foreground="Black" />
+                            <CheckBox     HorizontalAlignment="Left" Margin="5" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpForPerson, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                              IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" TabIndex="5" />
+
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForStandards_Label}" HorizontalAlignment="Right" Margin="25,4,4,4" VerticalAlignment="Center" Foreground="Black" />
+                            <CheckBox     HorizontalAlignment="Left" Margin="5" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpForStandard, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                              IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" TabIndex="6" />
+
+                            <TextBlock  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dcpForTsaks_Label}" HorizontalAlignment="Right" Margin="25,4,4,4" VerticalAlignment="Center" Foreground="Black" />
+                            <CheckBox     HorizontalAlignment="Left" Margin="5" IsChecked="{Binding Path=CurrentDocumentClassificationPattern.dcpForTask, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                              IsEnabled="{Binding Path=ReadOnly, Converter={StaticResource GlobalBoolRevertConverter}}" TabIndex="7" />
+                        </StackPanel>
+
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Border>
+
+           
+            <ToolBar Grid.Row="5"  >
+
+            <ToggleButton x:Name="_EditMode" IsChecked="{Binding Path=ReadOnly, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource GlobalBoolRevertConverter}}"
+                                      Style="{StaticResource EditButtonStyle}"
+                                      Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible">
+            </ToggleButton>
+
+             
+                <!--<Button x:Name="RefreshButton" Margin="4" Padding="4,1" Style="{StaticResource RefreshCommandButtonStyle}"  Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refresh_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_refreshToolTip_DataButtonsUC}" Command="{Binding Path=ReloadDataCommand}" />-->
+                <Button x:Name="SaveButton"   Command="{Binding Path=SaveCommand}"  
+                                      Style="{StaticResource CommandButtonStyle}" 
+                                     Visibility="{Binding ElementName=_EditMode, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="60" Padding="4,0,8,0" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Save.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_save_DataButtonsUC}"  ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_saveToolTip_DataButtonsUC}" Margin="0,0,4,0" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+                <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=NewDocumentClassificationPatternCommand}"
+                          V:EventFocusAttachment.ElementToFocus="{Binding ElementName=_firstFokusedField}"
+                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newTopDCP_ToolTip}">
+                    <ButtonBase.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Source="/Abakon15WPF;component/Images/Top.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newTopDCP_DataButtonsUC}" Margin="0,0,5,0"/>
+                        </StackPanel>
+                    </ButtonBase.Content>
+                </Button>
+
+                <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=NewDocumentClassificationPatternCommand}"
+                            V:EventFocusAttachment.ElementToFocus="{Binding ElementName=_firstFokusedField}"
+                            ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newTypeDCP_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}" CommandParameter="{Binding Path=CurrentDocumentClassificationPattern}">
+                    <ButtonBase.Content>
+                        <StackPanel Orientation="Horizontal">
+                           <Image  Source="/Abakon15WPF;component/Images/Child.png" Width="16" Height="16" Margin="5,0" />
+                           <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newTypeDCP_DataButtonsUC}" Margin="0,0,5,0" />
+                        </StackPanel>
+                    </ButtonBase.Content>
+                </Button>
+            <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CangeParentDocumentClassificationPatternCommand}"  
+                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeDCPToTop_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/ChangeToTop.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeDCPToTop_DataButtonsUC}" Margin="0,0,5,0" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+            <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CangeParentDocumentClassificationPatternCommand}"  
+                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeParentDCP_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}" CommandParameter="xxx">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/ChangeParent.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeParentDCP_DataButtonsUC}" Margin="0,0,5,0" />
+                    </StackPanel>
+                </ButtonBase.Content>
+                </Button>
+
+            <Button   Margin="5,0"
+                             Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=_EditMode}"
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_delete_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}" Command="{Binding Path=DeleteCommand}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Erase.png" Width="16" Height="16" Margin="5,0" />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_delete_DataButtons}" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+        </ToolBar>
+    </Grid>
+</V:WindowBaseClass>

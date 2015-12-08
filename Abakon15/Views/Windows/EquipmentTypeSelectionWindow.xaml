@@ -1,0 +1,119 @@
+﻿<V:WindowBaseClass x:Class="Abakon15.Views.Windows.EquipmentTypeSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_EquipmentType_Title}" 
+        Icon="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=WindowIcon}"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:VM="clr-namespace:Abakon15.ViewModels"
+        xmlns:V="clr-namespace:Abakon15.Views"
+       xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+        Height="600" Width="600" WindowStartupLocation="CenterScreen" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=VM:EquipmentTypeVM}" >
+
+
+    <Window.DataContext>
+        <VM:EquipmentTypeVM />
+    </Window.DataContext>
+
+
+
+    <Grid   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}"  >
+            <!--<TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_departmentList_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0" FontSize="16" FontStyle="Normal" />-->
+        </StackPanel>
+        <GroupBox Grid.Row="3"  >
+            <TreeView  x:Name="c_typeTree"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  
+                           ItemsSource="{Binding Path=EquipmentTypeList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                       
+                          PreviewMouseRightButtonDown="c_Tree_PreviewMouseRightButtonDown"   FontSize="14" 
+                          V:TreeViewAttached.TreeViewSelectedItem="{Binding CurrentEquipmentType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+
+            <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Path=subordinateList}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"   Text="{Binding Path=EquipmentTypeName, UpdateSourceTrigger=PropertyChanged}" Margin="5,0"/>
+                        </Grid>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        </GroupBox>
+        <Border x:Name="editdepartment" Grid.Row="4"
+            Visibility="{Binding Path=EditMode, Converter={StaticResource BooleanToVisibilityConverter}}" Margin="0,0,0,3">
+            <Grid  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" Orientation="Horizontal" Background="{StaticResource HeaderGridBackground}"  >
+                    <TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_selectedType_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0"  />
+                </StackPanel>
+
+                <GroupBox Grid.Row="2" Background="{StaticResource HeaderFuterBrush}"   >
+                    <StackPanel Orientation="Horizontal" Margin="25,10" 
+                                Visibility="{Binding Path=isDepartmentSelected, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+
+                <TextBlock Margin="10,4,2,4" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_2_DepartmentName_Header}" VerticalAlignment="Center" />
+                <TextBox  Text="{Binding Path=CurrentEquipmentType.EquipmentTypeName, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Center" TextWrapping="Wrap" IsReadOnly="{Binding Path=ReadOnly}"
+                         Tag="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_2_DepartmentName_Tag}" MinWidth="240"/>
+                </StackPanel>
+                </GroupBox>
+            </Grid>
+        </Border>
+
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+
+            <Button x:Name="acceptButton"  Margin="5,0" Width="80" Click="acceptButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}" 
+                              ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_changeParentDepartment_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal"> 
+                        <TextBlock Text="OK" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+            <Button x:Name="acceptNullButton"  Margin="5,0" Width="Auto" Click="acceptNullButton_Click"                            
+                            Style="{StaticResource CommandButtonStyle}" Visibility="{Binding Path=AllEquipmentTypeVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15;component/Images/Mark24.png" Width="24" Height="24"  />
+                        <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_AllEqTypes_TextBlock}" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+            <Button x:Name="exitButton"  Margin="5,0" Width="80" Click="exitButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_delete_ToolTip}" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Esc" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</V:WindowBaseClass>

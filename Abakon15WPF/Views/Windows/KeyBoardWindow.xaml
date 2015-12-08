@@ -1,0 +1,18 @@
+﻿<Window x:Class="Abakon15WPF.Views.Windows.KeyBoardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:VM ="clr-namespace:Abakon15WPF.ViewModels"
+        Title="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_KeyBoard_Title}" 
+        Height="250" Width="500" WindowStyle="ToolWindow" Loaded="Window_Loaded">
+    <Window.DataContext>
+        <VM:KeyBoardVM x:Name="_viewModel"/>
+    </Window.DataContext>
+    
+    <Grid>
+        <GroupBox>
+        <WrapPanel x:Name="_wrapPanel"  HorizontalAlignment="Left" Margin="10,10,0,0"  VerticalAlignment="Top"  >
+
+        </WrapPanel>
+        </GroupBox>
+    </Grid>
+</Window>

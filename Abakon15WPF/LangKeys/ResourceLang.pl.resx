@@ -1,0 +1,1473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_password_Button" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="_StateOfExecutionError" xml:space="preserve">
+    <value>Błąd wykonania procedury</value>
+  </data>
+  <data name="_user_Button" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="_insertPassword" xml:space="preserve">
+    <value>Wpisz hasło</value>
+  </data>
+  <data name="_resignation_Button" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="_anonymous" xml:space="preserve">
+    <value>Użytkownik anonimowy</value>
+  </data>
+  <data name="_anonymousNoAllowed" xml:space="preserve">
+    <value>System nie dopuszcza użytkowników anonimowych!</value>
+  </data>
+  <data name="_incorrectPasswordMessage" xml:space="preserve">
+    <value>Błędne hasło</value>
+  </data>
+  <data name="_incorrectUserNameMessage" xml:space="preserve">
+    <value>Niepoprawna nazwa użytkownika</value>
+  </data>
+  <data name="_admin_MenuItemHeader" xml:space="preserve">
+    <value>Narzędzia administratora</value>
+  </data>
+  <data name="_file_MenuItemHeader" xml:space="preserve">
+    <value>Plik</value>
+  </data>
+  <data name="_language_MenuItemHeader" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="_versionInfo_MenuItemHeader" xml:space="preserve">
+    <value>Informacje o wersjach</value>
+  </data>
+  <data name="_applicationOptions_MenuItemHeader" xml:space="preserve">
+    <value>Opcje aplikacji</value>
+  </data>
+  <data name="_changePassword_MenuItemHeader" xml:space="preserve">
+    <value>Zmiana hasła</value>
+  </data>
+  <data name="_english_MenuItemHeader" xml:space="preserve">
+    <value>Angielski</value>
+  </data>
+  <data name="_exit_MenuItemHeader" xml:space="preserve">
+    <value>Zakończ pracę</value>
+  </data>
+  <data name="_polish_MenuItemHeader" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="_usersManager_MenuItemHeader" xml:space="preserve">
+    <value>Użytkownicy i uprawnienia</value>
+  </data>
+  <data name="_fildCanNotBeBlank" xml:space="preserve">
+    <value>Pole należy wypełnić</value>
+  </data>
+  <data name="_fildsForFilter_Header" xml:space="preserve">
+    <value>Pola do filtrowania</value>
+  </data>
+  <data name="_needDate" xml:space="preserve">
+    <value>Należy wpisać datę</value>
+  </data>
+  <data name="_needDecimal" xml:space="preserve">
+    <value>Należy wpisać liczbę dziesiętną</value>
+  </data>
+  <data name="_needInteger" xml:space="preserve">
+    <value>Należy wpisać liczbę całkowitą</value>
+  </data>
+  <data name="_needLogical" xml:space="preserve">
+    <value>Należy wpisać wartość logiczną (tak, prawda, true;   nie, fałsz,  false)</value>
+  </data>
+  <data name="_SelectedByFilter" xml:space="preserve">
+    <value>Selekcja wg pól</value>
+  </data>
+  <data name="_documents_MenuItemHeader" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="_from_NavigationPanel" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="_Position_NavigationPanel" xml:space="preserve">
+    <value>Zapis</value>
+  </data>
+  <data name="_partner_MenuItemHeader" xml:space="preserve">
+    <value>Firmy </value>
+  </data>
+  <data name="_persons_MenuItemHeader" xml:space="preserve">
+    <value>Osoby (pracownicy, przedstawiciele firm)</value>
+  </data>
+  <data name="_tasks_MenuItemHeader" xml:space="preserve">
+    <value>Terminarz zadań</value>
+  </data>
+  <data name="_noOpenedWIndows" xml:space="preserve">
+    <value>Brak otwartych okien</value>
+  </data>
+  <data name="_openedWIndows" xml:space="preserve">
+    <value>Otwarte pokrewne okna</value>
+  </data>
+  <data name="BeginsWith" xml:space="preserve">
+    <value>Zaczyna się od</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Zawiera</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Puste</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="GreaterEqual" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Nie aktywny</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="LessEqual" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
+  <data name="Loan" xml:space="preserve">
+    <value>Wypożyczony</value>
+  </data>
+  <data name="NotBeginsWith" xml:space="preserve">
+    <value>Nie zaczyna się od</value>
+  </data>
+  <data name="NotContains" xml:space="preserve">
+    <value>Nie zawiera</value>
+  </data>
+  <data name="NotEmpty" xml:space="preserve">
+    <value>Nie puste</value>
+  </data>
+  <data name="NotEqual" xml:space="preserve">
+    <value>!=</value>
+  </data>
+  <data name="_columnVisibility" xml:space="preserve">
+    <value>Widoczność kolumn</value>
+  </data>
+  <data name="_userSettings_Header" xml:space="preserve">
+    <value>Lokalne ustawienia indywidualne </value>
+  </data>
+  <data name="_editModeToolTip_DataButtonsUC" xml:space="preserve">
+    <value>Odblokuj/zablokuj tryb edycji formularza</value>
+  </data>
+  <data name="_editMode_DataButtonsUC" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="Elektryczne" xml:space="preserve">
+    <value>Przyrządy elektryczne</value>
+  </data>
+  <data name="Mechaniczne" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="PrzyrzadyWszystkie" xml:space="preserve">
+    <value>Wszystkie przyrządy</value>
+  </data>
+  <data name="Sprawdziany" xml:space="preserve">
+    <value>Sprawdziany</value>
+  </data>
+  <data name="SprawdzianyDoGwintow" xml:space="preserve">
+    <value>Sprawdziany do gwintów</value>
+  </data>
+  <data name="_dateOfCalibration_Header" xml:space="preserve">
+    <value>Kalibracje</value>
+  </data>
+  <data name="_historiaLegalizacji_TabItemHeader" xml:space="preserve">
+    <value>Kalibracje</value>
+  </data>
+  <data name="_addCalibrator_Button" xml:space="preserve">
+    <value>Dodaj kalibrator do : </value>
+  </data>
+  <data name="_dateStart_Header" xml:space="preserve">
+    <value>Data zarejestrowania</value>
+  </data>
+  <data name="_przyrzadPomiarowy_Window_Title" xml:space="preserve">
+    <value>Przyrząd pomiarowy</value>
+  </data>
+  <data name="_przyrzadPomiarowyFullInfo_Window_Title" xml:space="preserve">
+    <value>Przyrząd pomiarowy</value>
+  </data>
+  <data name="_addNewMode_DataButtonsUC" xml:space="preserve">
+    <value>Nowy przyrząd  </value>
+  </data>
+  <data name="_saveToolTip_DataButtonsUC" xml:space="preserve">
+    <value>  Zapisz zmiany do bazy  </value>
+  </data>
+  <data name="_save_DataButtonsUC" xml:space="preserve">
+    <value>  Zapisz zmiany  </value>
+  </data>
+  <data name="_deleteDataAsk" xml:space="preserve">
+    <value>Czy potwierdzasz kasowanie</value>
+  </data>
+  <data name="activities" xml:space="preserve">
+    <value>Czynności</value>
+  </data>
+  <data name="documents" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="employees" xml:space="preserve">
+    <value>Pracownicy</value>
+  </data>
+  <data name="measuringDevices" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="measuringLabs" xml:space="preserve">
+    <value>Firmy</value>
+  </data>
+  <data name="persons" xml:space="preserve">
+    <value>Osoby</value>
+  </data>
+  <data name="acceptedContractors" xml:space="preserve">
+    <value>Zaakceptowano wykonanie</value>
+  </data>
+  <data name="affordedCertificate" xml:space="preserve">
+    <value>Otzrymano certyfikat</value>
+  </data>
+  <data name="delivered" xml:space="preserve">
+    <value>Przyrząd dostarczony</value>
+  </data>
+  <data name="Elektryczne1" xml:space="preserve">
+    <value>Elektr.</value>
+  </data>
+  <data name="finished" xml:space="preserve">
+    <value>Zakończono</value>
+  </data>
+  <data name="Mechaniczne1" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="obtainedAfterCalibration" xml:space="preserve">
+    <value>Otrzymano po kalibracji</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>W trakcie kalibracji</value>
+  </data>
+  <data name="PrzyrzadyWszystkie1" xml:space="preserve">
+    <value>Nieokreślony</value>
+  </data>
+  <data name="redyToReceive" xml:space="preserve">
+    <value>Gotowe do odbioru</value>
+  </data>
+  <data name="seekingBroker" xml:space="preserve">
+    <value>Wybór pośrednika</value>
+  </data>
+  <data name="seekingLab" xml:space="preserve">
+    <value>Wybór wykonawcy</value>
+  </data>
+  <data name="sentEquipment" xml:space="preserve">
+    <value>Wysłano do wykonawcy</value>
+  </data>
+  <data name="sentRequest" xml:space="preserve">
+    <value>Wysłano żądanie dostarczenia przyrządu</value>
+  </data>
+  <data name="Sprawdziany1" xml:space="preserve">
+    <value>Sprawdz.</value>
+  </data>
+  <data name="SprawdzianyDoGwintow1" xml:space="preserve">
+    <value>Sprawdz. gw.</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>Początek procesu</value>
+  </data>
+  <data name="_2_EtapKalibracji_Label" xml:space="preserve">
+    <value>Etap</value>
+  </data>
+  <data name="_2_procentZuzycia_Label" xml:space="preserve">
+    <value>Zużycie [%]</value>
+  </data>
+  <data name="_2_uwagi_Label" xml:space="preserve">
+    <value>Uwagi</value>
+  </data>
+  <data name="_2_wynikBadania_Label" xml:space="preserve">
+    <value>Wynik badania</value>
+  </data>
+  <data name="_2_dataNastepnegoBadania_Label" xml:space="preserve">
+    <value>Data nast. wzorcowania</value>
+  </data>
+  <data name="_2_dataZakonczeniaProcesu_Label" xml:space="preserve">
+    <value>Data zakończenia procesu</value>
+  </data>
+  <data name="_2_kalibrujeFirma_Label" xml:space="preserve">
+    <value>Firma kalibrująca</value>
+  </data>
+  <data name="_2_posrednikKalibracjiFirma_Label" xml:space="preserve">
+    <value>Firma pośrednicząca</value>
+  </data>
+  <data name="_kalibratorNazwa_Header" xml:space="preserve">
+    <value>Wzorce</value>
+  </data>
+  <data name="_SelectedByKalibratory" xml:space="preserve">
+    <value>Wzorce</value>
+  </data>
+  <data name="_calibratedEquipment_TabItemHeader" xml:space="preserve">
+    <value>Przyrządy kalibrowane</value>
+  </data>
+  <data name="_details_TabItemHeader" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="DoDecyzji" xml:space="preserve">
+    <value>4 - Zależnie od decyzji</value>
+  </data>
+  <data name="LegalizacjaWlasna" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="NiePodlegaLegalizacji" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="ZawszeZlecana" xml:space="preserve">
+    <value>2 - Legalizacja w autoryzowanym laboratorium</value>
+  </data>
+  <data name="kalibratorObceLab_1" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="przyrzadObcy_2" xml:space="preserve">
+    <value>2 - Przyrząd obcy zlecony do kalibracji</value>
+  </data>
+  <data name="przyrzadWlasny_0" xml:space="preserve">
+    <value>0 - Przyrząd własny</value>
+  </data>
+  <data name="_2_DepartmentCode_Header" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="_2_DepartmentName_Header" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="_2_DepartmentParentCode_Header" xml:space="preserve">
+    <value>Kod nadrz.</value>
+  </data>
+  <data name="_2_DepartmentParentName_Header" xml:space="preserve">
+    <value>Nazwa działu nadrzędnego</value>
+  </data>
+  <data name="_2_DepartmentParent_Header" xml:space="preserve">
+    <value>Dział nadrzędny</value>
+  </data>
+  <data name="_2_SchematOrganizacyjny_Form_Title" xml:space="preserve">
+    <value>Struktura organizacyjna firmy</value>
+  </data>
+  <data name="_DepartmantForm_Title" xml:space="preserve">
+    <value>Struktura organizacyjna firmy</value>
+  </data>
+  <data name="_departmentList_Header" xml:space="preserve">
+    <value>Wykaz zarejestrowanych działów</value>
+  </data>
+  <data name="_selectedDepartment_Header" xml:space="preserve">
+    <value>Wybrany ddział</value>
+  </data>
+  <data name="_2_DepartmentCode_Tag" xml:space="preserve">
+    <value>Kod działu</value>
+  </data>
+  <data name="_2_DepartmentName_Tag" xml:space="preserve">
+    <value>Nazwa działu</value>
+  </data>
+  <data name="_changeParentDepartment_DataButtonsUC" xml:space="preserve">
+    <value>Zmień przynależność</value>
+  </data>
+  <data name="_changeParentDepartment_ToolTip" xml:space="preserve">
+    <value>Przenieś dział do innego działu</value>
+  </data>
+  <data name="_delete_DataButtons" xml:space="preserve">
+    <value>Usuń z bazy</value>
+  </data>
+  <data name="_delete_ToolTip" xml:space="preserve">
+    <value>Nieodwracalne usuwanie zapisu z bazy </value>
+  </data>
+  <data name="_newDepartment_DataButtonsUC" xml:space="preserve">
+    <value>Nawy dział zależny</value>
+  </data>
+  <data name="_newDepartment_ToolTip" xml:space="preserve">
+    <value>Nowy dział podległy wybranemu</value>
+  </data>
+  <data name="_newTopDepartment_DataButtonsUC" xml:space="preserve">
+    <value>Nowy dział</value>
+  </data>
+  <data name="_newTopDepartment_ToolTip" xml:space="preserve">
+    <value>Nowy dział nie podlegający żadnemu innemu</value>
+  </data>
+  <data name="_changeDepartmentToTop_DataButtonsUC" xml:space="preserve">
+    <value>Bez nadrzędnego</value>
+  </data>
+  <data name="_changeDepartmentToTop_ToolTip" xml:space="preserve">
+    <value>Ustawia dział na szczycie hierarchii</value>
+  </data>
+  <data name="normy_0" xml:space="preserve">
+    <value>normy</value>
+  </data>
+  <data name="producenta_2" xml:space="preserve">
+    <value>producenta</value>
+  </data>
+  <data name="uzytkownika_1" xml:space="preserve">
+    <value>użytkownika</value>
+  </data>
+  <data name="_3_equipmentType_Form_Title" xml:space="preserve">
+    <value>Struktura typów przyrządów</value>
+  </data>
+  <data name="_changeParentType_DataButtonsUC" xml:space="preserve">
+    <value>Zmień typ nadrzędny</value>
+  </data>
+  <data name="_changeParentType_ToolTip" xml:space="preserve">
+    <value>Przenieś typ do innego typu nadrzędnego</value>
+  </data>
+  <data name="_changeTypeToTop_DataButtonsUC" xml:space="preserve">
+    <value>Na najwyższy poziom</value>
+  </data>
+  <data name="_changeTypeToTop_ToolTip" xml:space="preserve">
+    <value>Przenieś typ na najwyższy poziom</value>
+  </data>
+  <data name="_newTopEquipmentType_ToolTip" xml:space="preserve">
+    <value>Nowy niezależny typ przyrządu  </value>
+  </data>
+  <data name="_newTypeOfEquipment_DataButtonsUC" xml:space="preserve">
+    <value>Nowy typ przyrządu </value>
+  </data>
+  <data name="_newTypeOfEquipment_ToolTip" xml:space="preserve">
+    <value>Nowy typ przyrządu podporządkowany typowi wybranemu</value>
+  </data>
+  <data name="_selectedType_Header" xml:space="preserve">
+    <value>Wybrany typ przyrządów</value>
+  </data>
+  <data name="_FildsForReport_Title" xml:space="preserve">
+    <value>Wykaz pól do użycia w raportach</value>
+  </data>
+  <data name="_RptFildsList_DataButtonsUC" xml:space="preserve">
+    <value>   Pola do raportów   </value>
+  </data>
+  <data name="_RptFildsList_ToolTip" xml:space="preserve">
+    <value>Otwiera okno z wykazem pól które można użyć w raportach</value>
+  </data>
+  <data name="_4_DocumentClassificationPattern_Form_Title" xml:space="preserve">
+    <value>Struktura klasyfikacji dokumentów</value>
+  </data>
+  <data name="_4_Name_Tag" xml:space="preserve">
+    <value>Nazwa typu</value>
+  </data>
+  <data name="_changeDCPToTop_DataButtonsUC" xml:space="preserve">
+    <value>Przenieś na szczyt klasyfikacji</value>
+  </data>
+  <data name="_changeDCPToTop_ToolTip" xml:space="preserve">
+    <value>Przenieś na szczyt klasyfikacji</value>
+  </data>
+  <data name="_changeParentDCP_DataButtonsUC" xml:space="preserve">
+    <value>Przenieś typ</value>
+  </data>
+  <data name="_changeParentDCP_ToolTip" xml:space="preserve">
+    <value>Przenieś typ do innej gałęzi klasyfikacji</value>
+  </data>
+  <data name="_newTopDCP_DataButtonsUC" xml:space="preserve">
+    <value>Nowy typ </value>
+  </data>
+  <data name="_newTopDCP_ToolTip" xml:space="preserve">
+    <value>Nowy typ dokumentu nie podporządkowany żadnemu innemu</value>
+  </data>
+  <data name="_newTypeDCP_DataButtonsUC" xml:space="preserve">
+    <value>Nowy podtyp</value>
+  </data>
+  <data name="_newTypeDCP_ToolTip" xml:space="preserve">
+    <value>Nowy podporządkowany typ dokumentu  </value>
+  </data>
+  <data name="_selectedDCP_Header" xml:space="preserve">
+    <value>Wybrany typ dokumentu</value>
+  </data>
+  <data name="_doc" xml:space="preserve">
+    <value>dok.</value>
+  </data>
+  <data name="_docs" xml:space="preserve">
+    <value> dokumentów.</value>
+  </data>
+  <data name="_documentActive_DGHeader" xml:space="preserve">
+    <value>Aktualny</value>
+  </data>
+  <data name="_documentAlternativeClassification" xml:space="preserve">
+    <value>Klasyfikacje dodatkowe :</value>
+  </data>
+  <data name="_documentBaseClassification" xml:space="preserve">
+    <value>Klasyfikacja podstawowa : </value>
+  </data>
+  <data name="_documentClassPaternDialog_Window_Title" xml:space="preserve">
+    <value>Nowa pozycja klasyfikacji</value>
+  </data>
+  <data name="_documentClassPaternWindow_Window_Title" xml:space="preserve">
+    <value>Wzorzec klasyfikacji dokumentów</value>
+  </data>
+  <data name="_documentCode_DGHeader" xml:space="preserve">
+    <value>Kod </value>
+  </data>
+  <data name="_documentcollateVersions_DGHeader" xml:space="preserve">
+    <value>Zachowuj stare wersje</value>
+  </data>
+  <data name="_documentCreationTime_DGHeader" xml:space="preserve">
+    <value>Document utworzono</value>
+  </data>
+  <data name="_documentDescription_DGHeader" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="_documentDetails_TabItemHeader" xml:space="preserve">
+    <value>Szczegóły dokumentu</value>
+  </data>
+  <data name="_documentDetails_Window_Title" xml:space="preserve">
+    <value>Okno dokumentu</value>
+  </data>
+  <data name="_documentdocPath_DGHeader" xml:space="preserve">
+    <value>Plik</value>
+  </data>
+  <data name="_documentElementarySite_DGHeader" xml:space="preserve">
+    <value>Podział na podsekcje </value>
+  </data>
+  <data name="_documentExtention_DGHeader" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="_documentForPatternDialog_Window_Title" xml:space="preserve">
+    <value>Dopisywanie nowego dokumentu</value>
+  </data>
+  <data name="_documentId_DGHeader" xml:space="preserve">
+    <value>Id dokumentu</value>
+  </data>
+  <data name="_documentLastAccessTime_DGHeader" xml:space="preserve">
+    <value>Ostatni dostęp</value>
+  </data>
+  <data name="_documentLastWriteTime_DGHeader" xml:space="preserve">
+    <value>Ostatnia modyfikacja</value>
+  </data>
+  <data name="_documentLength_DGHeader" xml:space="preserve">
+    <value>Rozmiar pliku </value>
+  </data>
+  <data name="_documentLocationInStore" xml:space="preserve">
+    <value>Miejsce w archiwum</value>
+  </data>
+  <data name="_documentLocked_DGHeader" xml:space="preserve">
+    <value>Blokada</value>
+  </data>
+  <data name="_documentOldVersions_TabItemHeader" xml:space="preserve">
+    <value>Stare versje</value>
+  </data>
+  <data name="_documentOrphan_Message" xml:space="preserve">
+    <value>Nie mozna ustalić klasyfikacji dokumentu</value>
+  </data>
+  <data name="_documentPartners_DGHeader" xml:space="preserve">
+    <value>Firmy</value>
+  </data>
+  <data name="_documentPartner_TabItemHeader" xml:space="preserve">
+    <value>Firmy</value>
+  </data>
+  <data name="_DocumentPatternHasDocumentsAsk" xml:space="preserve">
+    <value>posiada przypisane dokumenty. Należy wskazać klasyfikator do, którego mają być przeniesione.</value>
+  </data>
+  <data name="_documentPrimaryComputer_DGHeader" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="_documentProjects_DGHeader" xml:space="preserve">
+    <value>Projekty</value>
+  </data>
+  <data name="_documentRalationWindow_Title" xml:space="preserve">
+    <value>Definicje relacji pomiędzy dokumentami</value>
+  </data>
+  <data name="_documentReadOnly_DGHeader" xml:space="preserve">
+    <value>Tylko do odczytu</value>
+  </data>
+  <data name="_documentRelationships_TabItemHeader" xml:space="preserve">
+    <value>Powiązania</value>
+  </data>
+  <data name="_documentRelationship_TabItemHeader" xml:space="preserve">
+    <value>Powiązanie</value>
+  </data>
+  <data name="_documentRelations_TabItemHeader" xml:space="preserve">
+    <value>Klasyfikacja</value>
+  </data>
+  <data name="_documentsClassPaternMenuItem_Header" xml:space="preserve">
+    <value>Wzorzec klasyfikacji dokumentów</value>
+  </data>
+  <data name="_documentSignature_DGHeader" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="_documentsInDivision_TabItemHeader" xml:space="preserve">
+    <value>Zmagazynowane dokumenty</value>
+  </data>
+  <data name="_documentsMenuItem_Header" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="_documentsToLocalFolder_Window_Title" xml:space="preserve">
+    <value>Kopiowanie plików na stację</value>
+  </data>
+  <data name="_documentStorageLocalisationSelection_Window_Title" xml:space="preserve">
+    <value>Wybór miejsca w archiwum dokumentów</value>
+  </data>
+  <data name="_documentStoreDetails_TabItemHeader" xml:space="preserve">
+    <value>Pełne informacje o miejscu magazynowym</value>
+  </data>
+  <data name="_documentStoreMaxDivisions_DGHeader" xml:space="preserve">
+    <value>Max. ilość podsekcji</value>
+  </data>
+  <data name="_documentStoreMaxDocuments_DGHeader" xml:space="preserve">
+    <value>Mieści max. il. dokumentów</value>
+  </data>
+  <data name="_documentStoreName_DGHeader" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="_documentStorePrefix_DGHeader" xml:space="preserve">
+    <value>Przedrostek identyfikatora</value>
+  </data>
+  <data name="_documentStoreSubsection_DGHeader" xml:space="preserve">
+    <value>Podsekcja</value>
+  </data>
+  <data name="_documentStore_Title" xml:space="preserve">
+    <value>Magazyn dokumentów</value>
+  </data>
+  <data name="_documentSubMenuItem_Header" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="_documentsWindow_Window_Title" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="_documentVersion_DGHeader" xml:space="preserve">
+    <value>Wersja</value>
+  </data>
+  <data name="_SelectedByClassification" xml:space="preserve">
+    <value>Klasyfikacja</value>
+  </data>
+  <data name="_FilePaths_Form_Title" xml:space="preserve">
+    <value>Ścieżki folderów plików</value>
+  </data>
+  <data name="_newFilePath_DataButtonsUC" xml:space="preserve">
+    <value>Nowa ścieżka</value>
+  </data>
+  <data name="_newFilePath_ToolTip" xml:space="preserve">
+    <value>Inicjuje nową ścieżkę, dane należy wprowadzić w nowym wierszu tabeli</value>
+  </data>
+  <data name="_FilePathForm_Title" xml:space="preserve">
+    <value>Ścieżki do plików</value>
+  </data>
+  <data name="_Standard_Form_Title" xml:space="preserve">
+    <value>Procedury Normy Instrukcje</value>
+  </data>
+  <data name="_newStandard_DataButtonsUC" xml:space="preserve">
+    <value>Nowa norma</value>
+  </data>
+  <data name="_newStandard_ToolTip" xml:space="preserve">
+    <value>Rejestracja nowej normy</value>
+  </data>
+  <data name="_newRptFromPattern_DataButtonsUC" xml:space="preserve">
+    <value>Nowy raport wg szablonu</value>
+  </data>
+  <data name="_newRptFromPattern_ToolTip" xml:space="preserve">
+    <value>Tworzenie nowego raportu w oparciu o istniejący szablon</value>
+  </data>
+  <data name="_documents_DataButtonsUC" xml:space="preserve">
+    <value>  Dokumenty  </value>
+  </data>
+  <data name="_documents_ToolTip" xml:space="preserve">
+    <value>Tworzenie, przeglądanie i aktualizacja dokumentów</value>
+  </data>
+  <data name="_document_Label" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="_newReportPattern_Button" xml:space="preserve">
+    <value>Nowy szablon</value>
+  </data>
+  <data name="_pathToTemplate_Label" xml:space="preserve">
+    <value>Folder szablonów</value>
+  </data>
+  <data name="_template_Label" xml:space="preserve">
+    <value>Szablon</value>
+  </data>
+  <data name="_pathToDocuments_Label" xml:space="preserve">
+    <value>Folder plików</value>
+  </data>
+  <data name="_2_DepartmentDefault_Header" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="_documentEquipment_Header" xml:space="preserve">
+    <value>Dokumenty związane z przyrządem</value>
+  </data>
+  <data name="_documents_TabItemHeader" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="_5_Classification_Label" xml:space="preserve">
+    <value>Klasyfikator dokumentu</value>
+  </data>
+  <data name="_5_createDate_Label" xml:space="preserve">
+    <value>Data utworzenia</value>
+  </data>
+  <data name="_5_description_Label" xml:space="preserve">
+    <value>Notka</value>
+  </data>
+  <data name="_5_documentCode_Label" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="_5_fileName_Label" xml:space="preserve">
+    <value>Nazwa pliku</value>
+  </data>
+  <data name="_5_path_Label" xml:space="preserve">
+    <value>Ścieżka katalogu</value>
+  </data>
+  <data name="_dbConnect_Buttons" xml:space="preserve">
+    <value>Przełącz bazę</value>
+  </data>
+  <data name="_DbOK_Button_ToolTip" xml:space="preserve">
+    <value>Akceptacja zmiana parametrów połączenia spowoduje zamknięcia aplikacji. Ponowne jej otwarcie uwzgledni zmianę.</value>
+  </data>
+  <data name="_connectingToDB_TextBlock" xml:space="preserve">
+    <value>Łączenie z bazą</value>
+  </data>
+  <data name="_employeePostForm_Title" xml:space="preserve">
+    <value>Stanowiska</value>
+  </data>
+  <data name="_personsWindow_DepartmentFilter" xml:space="preserve">
+    <value>Oddziały</value>
+  </data>
+  <data name="_personsWindow_PostFilter" xml:space="preserve">
+    <value>Stanowiska</value>
+  </data>
+  <data name="_8_business_email_Label" xml:space="preserve">
+    <value>Email służbowy</value>
+  </data>
+  <data name="_8_CreateDate_Label" xml:space="preserve">
+    <value>Data zarejestrowania</value>
+  </data>
+  <data name="_8_department_Label" xml:space="preserve">
+    <value>Dział</value>
+  </data>
+  <data name="_8_fax_Label" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="_8_gender_Label" xml:space="preserve">
+    <value>Płeć</value>
+  </data>
+  <data name="_8_home_phone_Label" xml:space="preserve">
+    <value>Tel. domowy</value>
+  </data>
+  <data name="_8_interests_Label" xml:space="preserve">
+    <value>Tematyka</value>
+  </data>
+  <data name="_8_LastUpdateDate_Label" xml:space="preserve">
+    <value>Data ost. aktualizacji</value>
+  </data>
+  <data name="_8_mobile_phone_Label" xml:space="preserve">
+    <value>Tel. komórkowy</value>
+  </data>
+  <data name="_8_name_Label" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="_8_pref_contact_Label" xml:space="preserve">
+    <value>Preferowany kontakt</value>
+  </data>
+  <data name="_8_private_email_Label" xml:space="preserve">
+    <value>Email prywatny</value>
+  </data>
+  <data name="_8_spoken_lang_Label" xml:space="preserve">
+    <value>Języki - rozmowa</value>
+  </data>
+  <data name="_8_sureName_Label" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="_8_title_Label" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="_8_UserName_Label" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="_8_work_phone_Label" xml:space="preserve">
+    <value>Tel. służbowy</value>
+  </data>
+  <data name="_8_written_lang_Label" xml:space="preserve">
+    <value>Języki - pisownia</value>
+  </data>
+  <data name="_8_www_address_Label" xml:space="preserve">
+    <value>WWW</value>
+  </data>
+  <data name="_changePassword_Button" xml:space="preserve">
+    <value>Nowe hasło</value>
+  </data>
+  <data name="_copyRolesTextBlock" xml:space="preserve">
+    <value>Od użytkownika :</value>
+  </data>
+  <data name="_copyRoles_Button" xml:space="preserve">
+    <value>Skopiuj role </value>
+  </data>
+  <data name="_deleteUser_Button" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="_Department_DGHeader" xml:space="preserve">
+    <value>Dział</value>
+  </data>
+  <data name="_employee_Label" xml:space="preserve">
+    <value>Pracownik</value>
+  </data>
+  <data name="_listOfUsers_Header" xml:space="preserve">
+    <value>Lista użytkowników</value>
+  </data>
+  <data name="_newUser_Button" xml:space="preserve">
+    <value>Dodaj </value>
+  </data>
+  <data name="_otherRoles_Header" xml:space="preserve">
+    <value>Pozostałe role</value>
+  </data>
+  <data name="_removeRoles_Button" xml:space="preserve">
+    <value>Wycofaj wszystkie role</value>
+  </data>
+  <data name="_Stand_DGHeader" xml:space="preserve">
+    <value>Stanowisko</value>
+  </data>
+  <data name="_userActive_DGHeader" xml:space="preserve">
+    <value>Wycofany</value>
+  </data>
+  <data name="_userCode_DGHeader" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="_userDetails_TabItemHeader" xml:space="preserve">
+    <value>Dane użytkownika</value>
+  </data>
+  <data name="_userEmail_DGHeader" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="_userInitials_DGHeader" xml:space="preserve">
+    <value>Inicjały</value>
+  </data>
+  <data name="_userLastName_DGHeader" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="_userLevelOfConfidency_DGHeader" xml:space="preserve">
+    <value>Poziom zaufania</value>
+  </data>
+  <data name="_userLevelOfConfidency_DGHeader1" xml:space="preserve">
+    <value>Poziom zaufania</value>
+  </data>
+  <data name="_userName_DGHeader" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="_userPhone_DGHeader" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="_userRoles_Header" xml:space="preserve">
+    <value>Role użytkownika</value>
+  </data>
+  <data name="_userRoles_TabItemHeader" xml:space="preserve">
+    <value>Role użytkownika</value>
+  </data>
+  <data name="_usersWindow_Window_Title" xml:space="preserve">
+    <value>Zarządzanie użytkownikami</value>
+  </data>
+  <data name="_changePasswordAsk" xml:space="preserve">
+    <value>Potwierdzasz zmianę hasła  użytkownika:</value>
+  </data>
+  <data name="_changePasswordAsk1" xml:space="preserve">
+    <value>Confirm change a user's password:</value>
+  </data>
+  <data name="_confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+  <data name="_error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="_needChangePassword_Header" xml:space="preserve">
+    <value>Trzeba zmienić hasło</value>
+  </data>
+  <data name="_newPassword_Button" xml:space="preserve">
+    <value>Nowe hasło</value>
+  </data>
+  <data name="_passwordConformationError" xml:space="preserve">
+    <value>Nie potwierdzone hasło</value>
+  </data>
+  <data name="_passwordToShort" xml:space="preserve">
+    <value>Hasło musi mieć minimum sześć znaków</value>
+  </data>
+  <data name="_x" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="_AddPartner_Button" xml:space="preserve">
+    <value>Dodaj firmę</value>
+  </data>
+  <data name="_deleteRecordToolTip_DataButtonsUC" xml:space="preserve">
+    <value>Skasuj bieżący zapis</value>
+  </data>
+  <data name="_deleteRecord_DataButtonsUC" xml:space="preserve">
+    <value>Skasuj zapis</value>
+  </data>
+  <data name="_employeeChangePost_Label" xml:space="preserve">
+    <value>Zmiana stanowiska</value>
+  </data>
+  <data name="_employeeDartment_Label" xml:space="preserve">
+    <value>Dział</value>
+  </data>
+  <data name="_newPerson_Button" xml:space="preserve">
+    <value>Dodaj nową osobę</value>
+  </data>
+  <data name="_partner_division_Label" xml:space="preserve">
+    <value>Dział</value>
+  </data>
+  <data name="_partner_name_Label" xml:space="preserve">
+    <value>Nazwa firmy</value>
+  </data>
+  <data name="_personDetails_TabItemHeader" xml:space="preserve">
+    <value>Szczegóły Osoby</value>
+  </data>
+  <data name="_personEditEmployee_Button" xml:space="preserve">
+    <value>Edycja zatrudnionego</value>
+  </data>
+  <data name="_personEmployee_Header" xml:space="preserve">
+    <value>Pracownik działu</value>
+  </data>
+  <data name="_personEmployee_TabItemHeader" xml:space="preserve">
+    <value>Pracownik</value>
+  </data>
+  <data name="_personNewEmployee_Button" xml:space="preserve">
+    <value>Dodaj do zatrudnionych</value>
+  </data>
+  <data name="_personRepresentative_TabItemHeader" xml:space="preserve">
+    <value>Przedstawiciel firmy</value>
+  </data>
+  <data name="_RemovePartner_Button" xml:space="preserve">
+    <value>Odłącz firmę</value>
+  </data>
+  <data name="_repleacePhoto_Button" xml:space="preserve">
+    <value>Dodaj/zmień zdjęcie</value>
+  </data>
+  <data name="_8_labWorker_Label" xml:space="preserve">
+    <value>Pracownik laboratorium</value>
+  </data>
+  <data name="_createDate_Label" xml:space="preserve">
+    <value>Data zapisu</value>
+  </data>
+  <data name="_employeesAttendants" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="_employeesToChoose" xml:space="preserve">
+    <value>Pracownicy do wyboru</value>
+  </data>
+  <data name="_permissions_TabItemHeader" xml:space="preserve">
+    <value>Uprawnienia dostępu</value>
+  </data>
+  <data name="_sureFirstName_Label" xml:space="preserve">
+    <value>Nazwisko i imię</value>
+  </data>
+  <data name="_userName_Label" xml:space="preserve">
+    <value>Dodane przez:</value>
+  </data>
+  <data name="_dcpForEquipment_Label" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="_dcpForPartners_Label" xml:space="preserve">
+    <value>Firmy</value>
+  </data>
+  <data name="_dcpForPersons_Label" xml:space="preserve">
+    <value>Osoby</value>
+  </data>
+  <data name="_dcpForStandards_Label" xml:space="preserve">
+    <value>Normy</value>
+  </data>
+  <data name="_dcpForTsaks_Label" xml:space="preserve">
+    <value>Zadania</value>
+  </data>
+  <data name="_dcpIntro_Label" xml:space="preserve">
+    <value>Hierarchia dokumentów dla obiektów: </value>
+  </data>
+  <data name="_SelectedLabWorker" xml:space="preserve">
+    <value>Przydziały</value>
+  </data>
+  <data name="_selectLabWorkers_ListViewHeader" xml:space="preserve">
+    <value>Wybierz pracownika(ów)</value>
+  </data>
+  <data name="_selectLabWorkers_ListViewToolTip" xml:space="preserve">
+    <value>Można wybrać jednego lub wielu pracowników, jeśli nikt nie zostanie zaznaczony, to wybrane zostaną przyrządy bez przydziału.</value>
+  </data>
+  <data name="_complyCalibrationDate_CheckBocContent" xml:space="preserve">
+    <value>Filtrować wg daty kalibracji?</value>
+  </data>
+  <data name="_from_text" xml:space="preserve">
+    <value>Od</value>
+  </data>
+  <data name="_to_text" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="excPathTypeOfDoc" xml:space="preserve">
+    <value>Ścieżka i klasyfikator arkuszy kalibracji (xls)</value>
+  </data>
+  <data name="test" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="_appParameters_Header" xml:space="preserve">
+    <value>Parametry aplikacji</value>
+  </data>
+  <data name="_appParameters_Window_Title" xml:space="preserve">
+    <value>Globalne parametry aplikacji</value>
+  </data>
+  <data name="_filePath_Header" xml:space="preserve">
+    <value>Ścieżka do plików</value>
+  </data>
+  <data name="_selectFile_ListViewHeader" xml:space="preserve">
+    <value>Proszę wybrać właściwy arkusz</value>
+  </data>
+  <data name="_11_addSelectedStandards_ToolTip" xml:space="preserve">
+    <value>Dodaj wskazane normy</value>
+  </data>
+  <data name="_11_standardDescription_Label" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="_11_standardName_Label" xml:space="preserve">
+    <value>Norma</value>
+  </data>
+  <data name="_resign_ToolTip" xml:space="preserve">
+    <value>Rezygnuj z wyboru</value>
+  </data>
+  <data name="_disconnectFileFromEquipment_Button" xml:space="preserve">
+    <value>Odłącz dokument</value>
+  </data>
+  <data name="_disconnectFileFromEquipment_ToolTip" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="_pasteFile_ToolTip" xml:space="preserve">
+    <value>Pliki przechowywane w schowku zapisz  w systemie</value>
+  </data>
+  <data name="_pathToNewDocuments_Label" xml:space="preserve">
+    <value>Pliki umieść w:</value>
+  </data>
+  <data name="_2_LabWorker_Label" xml:space="preserve">
+    <value>Wzorcowanie wykonał</value>
+  </data>
+  <data name="_labWorkerKalibrator_Header" xml:space="preserve">
+    <value>Laborant</value>
+  </data>
+  <data name="_9_PartnerCode_Label" xml:space="preserve">
+    <value>Kod firmy</value>
+  </data>
+  <data name="_9_PartnerEmail_Label" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="_9_PartnerFax_Label" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="_9_PartnerKeyWords_Label" xml:space="preserve">
+    <value>Słowa kluczowe</value>
+  </data>
+  <data name="_9_PartnerName_Label" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="_9_Partnerphone_Label" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="_9_PartnerReliabilityRating_Label" xml:space="preserve">
+    <value>Ocena</value>
+  </data>
+  <data name="_9_PartnerType_Label" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="_9_PartnerWWW_Label" xml:space="preserve">
+    <value>WWW</value>
+  </data>
+  <data name="_8_gender_WaterMark" xml:space="preserve">
+    <value>0 - mężczyzna, 1 - kobieta</value>
+  </data>
+  <data name="_newPartner_Button" xml:space="preserve">
+    <value>Dodaj nową firmę</value>
+  </data>
+  <data name="_newPartner_ToolTip" xml:space="preserve">
+    <value>Zrejestruj w systemie nową firmę</value>
+  </data>
+  <data name="_newPerson_ToolTip" xml:space="preserve">
+    <value>Zrejestruj w systemie nową osobę</value>
+  </data>
+  <data name="_2_dataBadania_Label" xml:space="preserve">
+    <value>Data wzorcowania</value>
+  </data>
+  <data name="_search" xml:space="preserve">
+    <value>[Ctrl+F]Szukaj ... </value>
+  </data>
+  <data name="przyrzadNierejestrowany_3" xml:space="preserve">
+    <value>3 - Wyłączony z rejestru</value>
+  </data>
+  <data name="_2_LabWorkerAccept_Label" xml:space="preserve">
+    <value>Wyniki opracował  : </value>
+  </data>
+  <data name="_2_wynikBadaniaAngielski_Label" xml:space="preserve">
+    <value>Wynik badania w języku angielskim</value>
+  </data>
+  <data name="_deleteDocument_Button" xml:space="preserve">
+    <value>Skasuj dokument</value>
+  </data>
+  <data name="_deleteDocument_ToolTip" xml:space="preserve">
+    <value>Kasuje z bazy danych informacje o pliku, nie kasuje pliku.</value>
+  </data>
+  <data name="_Tasks" xml:space="preserve">
+    <value>Zadania</value>
+  </data>
+  <data name="_filter_equipmentActive" xml:space="preserve">
+    <value>Aktywne</value>
+  </data>
+  <data name="_filter_equipmentDiscontinued" xml:space="preserve">
+    <value>Wycofane</value>
+  </data>
+  <data name="_NotAllocated" xml:space="preserve">
+    <value>Nie przydzielono</value>
+  </data>
+  <data name="_Selected" xml:space="preserve">
+    <value>Przydzielone</value>
+  </data>
+  <data name="_TaskAllocated" xml:space="preserve">
+    <value>Przydzielono</value>
+  </data>
+  <data name="_TotalAllocation" xml:space="preserve">
+    <value>Suma wg przydziałów</value>
+  </data>
+  <data name="_Code_Header" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="_Name_Header" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="_AirConditionDeviceWindow_Title" xml:space="preserve">
+    <value>Przyrządy do pomiaru warunków środowiskowych</value>
+  </data>
+  <data name="_newAirConditionDevice_DataButtonsUC" xml:space="preserve">
+    <value>Nowy przyrząd</value>
+  </data>
+  <data name="_5_uerName_Label" xml:space="preserve">
+    <value>Zarejestrowany przez:</value>
+  </data>
+  <data name="_connectToDocument_Button" xml:space="preserve">
+    <value>Połącz</value>
+  </data>
+  <data name="_KeyBoard_Title" xml:space="preserve">
+    <value>Klawiatura znaków specjalnych</value>
+  </data>
+  <data name="_Char_Header" xml:space="preserve">
+    <value>Znak/Napis</value>
+  </data>
+  <data name="_deleteKey_Button" xml:space="preserve">
+    <value>Usuń z klawiatury</value>
+  </data>
+  <data name="_initKeyBoard_Button" xml:space="preserve">
+    <value>Zapisz zestaw początkowy</value>
+  </data>
+  <data name="_KeyBoardContent_Title" xml:space="preserve">
+    <value>Zawartość klawiatury ekranowej</value>
+  </data>
+  <data name="_Lp_Header" xml:space="preserve">
+    <value>Lp</value>
+  </data>
+  <data name="_newKey_Buttons" xml:space="preserve">
+    <value>Nowy znak lub napis</value>
+  </data>
+  <data name="_11_standardFile_Label" xml:space="preserve">
+    <value>Nazwa pliku lub adres URL</value>
+  </data>
+  <data name="_11_standardPath_Label" xml:space="preserve">
+    <value>Ścieżka</value>
+  </data>
+  <data name="_Caution" xml:space="preserve">
+    <value>Uwaga</value>
+  </data>
+  <data name="_oldPassword_Button" xml:space="preserve">
+    <value>Stare hasło</value>
+  </data>
+  <data name="_passwordChanges" xml:space="preserve">
+    <value>Hasło zostało zmienione</value>
+  </data>
+  <data name="_ShowMultipleAlocations" xml:space="preserve">
+    <value>Wybiera przyrządy, które mają wielokrotne przydziały opiekunów</value>
+  </data>
+  <data name="_AllDepartmenst_TextBlock" xml:space="preserve">
+    <value>Wszystkie działy</value>
+  </data>
+  <data name="_AllEqTypes_TextBlock" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="_refreshDataGrid_Button" xml:space="preserve">
+    <value>Odśwież zapisy w tabeli</value>
+  </data>
+  <data name="_employeeFrom_Label" xml:space="preserve">
+    <value>Od dnia</value>
+  </data>
+  <data name="_employeeTo_Label" xml:space="preserve">
+    <value>Do dnia</value>
+  </data>
+  <data name="_newEmployee_Button" xml:space="preserve">
+    <value>Nowy okres zatrudnienia</value>
+  </data>
+  <data name="_RemoveEmployee_Button" xml:space="preserve">
+    <value>Usuń okres zatrudnienia</value>
+  </data>
+  <data name="_tidy_Button" xml:space="preserve">
+    <value>Posprzątaj</value>
+  </data>
+  <data name="_tidy_ToolTip" xml:space="preserve">
+    <value>Usuwa zapisy dotyczące plików skasowanych </value>
+  </data>
+  <data name="_deleteAgentAsk" xml:space="preserve">
+    <value>nie jest już agentem firmy </value>
+  </data>
+  <data name="_documentPartner_Header" xml:space="preserve">
+    <value>Dokumenty związane z firmą (laboratorium)</value>
+  </data>
+  <data name="_PartnerToDocument_Button" xml:space="preserve">
+    <value>Dołącz firmę do dokumentu</value>
+  </data>
+  <data name="_PartnerToDocument_ToolTip" xml:space="preserve">
+    <value>Pozwala wybrać firmę , które należy połączyć z dokumentem</value>
+  </data>
+  <data name="_endOfTryPeriod" xml:space="preserve">
+    <value>Okres próbny już się skończył.</value>
+  </data>
+  <data name="_ifPurchaseLicense" xml:space="preserve">
+    <value>Czy chcesz zamówić licencję?</value>
+  </data>
+  <data name="_limitLoginsExceeded" xml:space="preserve">
+    <value>Limit zalogowanych użytkowników wyczerpany</value>
+  </data>
+  <data name="_registerApplication" xml:space="preserve">
+    <value>Czy masz plik licencji i chcesz ją zainstalować?</value>
+  </data>
+  <data name="_appedix_ExpanderLabel" xml:space="preserve">
+    <value>Dodatki</value>
+  </data>
+  <data name="rysunku_4" xml:space="preserve">
+    <value>rysunku</value>
+  </data>
+  <data name="_undo_Buttons" xml:space="preserve">
+    <value>Wycofaj zmiany</value>
+  </data>
+  <data name="_closeApplicationAsk" xml:space="preserve">
+    <value>Potwierdzasz chęć zamknięcia aplikacji?</value>
+  </data>
+  <data name="_UnsavedChangesWillSave" xml:space="preserve">
+    <value>Czy chcesz zapisać zmiany?</value>
+  </data>
+  <data name="_savedChanges" xml:space="preserve">
+    <value>Zmiany zostały zapisane do bazy danych</value>
+  </data>
+  <data name="_graphs_Window_Title" xml:space="preserve">
+    <value>Historia kalibracji przyrządu</value>
+  </data>
+  <data name="_addDomain_Button" xml:space="preserve">
+    <value>Dodaj nowy zakres</value>
+  </data>
+  <data name="_pasteToGridOmitHeader_ToolTip" xml:space="preserve">
+    <value>Wklej dane ze schowka. W schowku nie ma nagłówków, dane muszą być zgodne z istniejącymi nagłówkami.</value>
+  </data>
+  <data name="_pasteToGrid_ToolTip" xml:space="preserve">
+    <value>Wklej dane ze schowka. Pierwszy wiersz musi zawierać nagłówki. </value>
+  </data>
+  <data name="_colErrors_Button" xml:space="preserve">
+    <value>Kol. błędów</value>
+  </data>
+  <data name="_colLimits_Button" xml:space="preserve">
+    <value>Kol. wart. granicznych</value>
+  </data>
+  <data name="_colMeasSeries_Button" xml:space="preserve">
+    <value>Kol. serii pomiarów</value>
+  </data>
+  <data name="_year_Label" xml:space="preserve">
+    <value>Rok: </value>
+  </data>
+  <data name="_onlyOneColumnCanSelect" xml:space="preserve">
+    <value>Trzeba wskazać jedną kolumnę w tabeli</value>
+  </data>
+  <data name="_incompatibleColumns" xml:space="preserve">
+    <value>Ilość kopiowanych kolumn i ich nazwy muszą być zgodne z tabelą</value>
+  </data>
+  <data name="_incompatibleNumberOfColumns" xml:space="preserve">
+    <value>Ilość kopiowanych kolumn musi być zgodna z ilością kolumn tabeli</value>
+  </data>
+  <data name="_omittedDataSourceCollection" xml:space="preserve">
+    <value>Tabela nie jest zdefiniowana</value>
+  </data>
+  <data name="_paste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+  <data name="_pasteToGridFromRange_ToolTip" xml:space="preserve">
+    <value>Dołącz do tabeli zawartość z wskazanego arkusza i zakresu komórek</value>
+  </data>
+  <data name="_devDegree" xml:space="preserve">
+    <value>xx</value>
+  </data>
+  <data name="_changeDb_MenuItemHeader" xml:space="preserve">
+    <value>Połączenie z bazą danych</value>
+  </data>
+  <data name="_scopeName_Label" xml:space="preserve">
+    <value>Nazwa zakresu</value>
+  </data>
+  <data name="_scope" xml:space="preserve">
+    <value>Zakres</value>
+  </data>
+  <data name="_graph_Button" xml:space="preserve">
+    <value>Odśwież graf</value>
+  </data>
+  <data name="_graph_toolTip" xml:space="preserve">
+    <value>Utwórz lub przemaluj graf</value>
+  </data>
+  <data name="_3_equipmentType_Tag" xml:space="preserve">
+    <value>Nazwa typu</value>
+  </data>
+  <data name="_setBalanceFeatures_Buttons" xml:space="preserve">
+    <value>Wagi cech subiektywnych</value>
+  </data>
+  <data name="_DbConnection_Authentication_Label" xml:space="preserve">
+    <value>Autentyfikacja windows</value>
+  </data>
+  <data name="_DbConnection_DbName_Label" xml:space="preserve">
+    <value>Baza danych</value>
+  </data>
+  <data name="_DbConnection_Form_Title" xml:space="preserve">
+    <value>Połączenie do bazy danych</value>
+  </data>
+  <data name="_DbConnection_NotConnected_Label" xml:space="preserve">
+    <value>System nie może połączyć się z tą bazą! </value>
+  </data>
+  <data name="_DbConnection_Password_Label" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="_DbConnection_Resign_Label" xml:space="preserve">
+    <value>Rezygnuję</value>
+  </data>
+  <data name="_DbConnection_ServerName_Label" xml:space="preserve">
+    <value>Nazwa serwera</value>
+  </data>
+  <data name="_DbConnection_SystemStopped_Label" xml:space="preserve">
+    <value>Uwaga: po zmianie bazy danych program zostanie zamknięty! </value>
+  </data>
+  <data name="_DbConnection_User_Label" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="_dbConnectionDbName_textBox" xml:space="preserve">
+    <value>Baza =</value>
+  </data>
+  <data name="_dbConnection_textBox" xml:space="preserve">
+    <value>Źródło danych:   DbSerwer =</value>
+  </data>
+  <data name="_dbConnect_ToolTip" xml:space="preserve">
+    <value>Wybierz inną bazę</value>
+  </data>
+  <data name="_trialPeriod" xml:space="preserve">
+    <value>dni okresu próbnego</value>
+  </data>
+  <data name="_youStillHave" xml:space="preserve">
+    <value>Masz jeszcze </value>
+  </data>
+  <data name="_licenceEmailSubject" xml:space="preserve">
+    <value>Licencja dla programu "Ometrisis"</value>
+  </data>
+  <data name="_orderLicence" xml:space="preserve">
+    <value>Zamawiam licencję na ..... stanowisk.</value>
+  </data>
+  <data name="_pasteTo_scopeDatagrid_ToolTip" xml:space="preserve">
+    <value>Wklej dane  z Excela </value>
+  </data>
+  <data name="_contrakt_MenuItemHeader" xml:space="preserve">
+    <value>Kontrakt</value>
+  </data>
+</root>

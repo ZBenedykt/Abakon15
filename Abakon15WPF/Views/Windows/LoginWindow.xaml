@@ -1,0 +1,217 @@
+﻿<Window x:Class="Abakon15WPF.Views.Windows.LoginWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+        xmlns:V="clr-namespace:Abakon15WPF.Views"
+        Height="400" Width="650" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="CanResizeWithGrip"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Login to Abakon" 
+        d:DataContext="{d:DesignInstance Type=VM:LoginVM}" BorderBrush="#FF625D5D" Foreground="#FF5C5656" Icon="/Abakon15WPF;component/Images/1_home.png">
+
+    <Window.Resources>
+        <Storyboard x:Key="AnimateTarget"  RepeatBehavior="Forever">
+            <DoubleAnimation BeginTime="0:0:1" Duration="0:0:1" Storyboard.TargetProperty="(Image.Opacity)" 
+                  Storyboard.TargetName="myImage"  From="1.0" To="0.1" RepeatBehavior="Forever" AutoReverse="True" />
+
+        </Storyboard>
+
+        <Style x:Key="AnimationImage" TargetType="{x:Type Image}">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="0" CenterX="32" CenterY="32" />
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="true">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"
+                                       From="000" To="360" Duration="0:0:8" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+
+        <DockPanel Grid.Row="1"  x:Name="_mainDockPanel"  Focusable="False" Background="{StaticResource WindowBackgroundBrush}" >
+
+            <Grid Margin="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*" />
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="20*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="15" BorderThickness="2,2,0,0" CornerRadius="1" BorderBrush="#CE1D1D1D">
+                    <Border BorderThickness="0,0,2,2" CornerRadius="1" BorderBrush="White">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Button  Grid.Column="0" Height="24"  Margin="6,2,6,2" VerticalAlignment="Top"
+                              Click="Button_Click"
+                            ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnect_ToolTip}"  HorizontalAlignment="Right" IsTabStop="False" Focusable="False">
+                                <ButtonBase.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image  Source="/Abakon15WPF;component/Images/Database.png" Width="18" Height="18" Margin="2,1,2,2" />
+                                        <!--<TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnect_Buttons}" Margin="6,1,2,2"  />-->
+                                    </StackPanel>
+                                </ButtonBase.Content>
+                            </Button>
+                            <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Orientation="Horizontal">
+                            <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnection_textBox}"/>
+                            <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbServer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnectionDbName_textBox}"/>
+                        <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            </StackPanel>
+                       
+
+                
+                        </Grid>
+                    </Border>
+                </Border>
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical"
+                            Visibility="{Binding Path=StartImage, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"> 
+
+                    <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_connectingToDB_TextBlock}" FontSize="14" Foreground="#CCBE2727" HorizontalAlignment="Center" FontWeight="Bold">
+                                            <TextBlock.Effect>
+                        <DropShadowEffect Color="Silver" Direction="320" ShadowDepth="9" Opacity="0.5" RenderingBias="Quality" BlurRadius="6" />
+                        
+                    </TextBlock.Effect>
+                    </TextBlock>
+                </StackPanel>
+                <Image Name="Logo" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Source="/Abakon15WPF;component/Images/ABAKON_logo.png" Stretch="None" 
+                           Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,10,0,10"
+                                >
+                    <Image.Effect>
+                        <DropShadowEffect  Color="Silver" Direction="320" ShadowDepth="9" Opacity="0.8" RenderingBias="Quality" BlurRadius="6"/>
+                    </Image.Effect>
+                </Image>
+                <!--<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" 
+                           Text="Abakon" Foreground="#FF0000FF" FontSize="32" FontWeight="Bold" FontStyle="Italic" FontFamily="Lucida Sans Unicode" HorizontalAlignment="Center" FontStretch="ExtraExpanded" Margin="0,5,0,0" Visibility="{Binding Path=LogoVisible}">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="Silver" Direction="320" ShadowDepth="9" Opacity="0.5" RenderingBias="Quality" BlurRadius="6" />
+                                      </TextBlock.Effect>
+                </TextBlock>-->
+
+                <Label Grid.Column="0" Grid.Row="2" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_user_Button}"  HorizontalAlignment="Right" Margin="3" VerticalAlignment="Center" />
+                <TextBox Name="_userName" Grid.Column="1" Grid.Row="2"  Tag="Użytkownik" 
+                         Margin="5" AcceptsTab="False" TabIndex="10" VerticalAlignment="Center" AcceptsReturn="False" GotFocus="_userName_GotFocus"
+                         LostFocus="_userName_LostFocus"
+                         Height="27" Text="{Binding Path=InputUserName, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" />
+
+                <Label Grid.Column="0" Grid.Row="3"  Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_password_Button}" HorizontalAlignment="Right" Margin="3" />
+                <PasswordBox Name="_password" Grid.Column="1" Grid.Row="3" Margin="5"  VerticalContentAlignment="Center" Tag="Hasło" 
+                             GotFocus="_password_GotFocus" LostFocus="_password_LostFocus" 
+                             VerticalAlignment="Stretch" Height="27" TabIndex="11" 
+                             PreviewKeyDown="_password_PreviewKeyDown" />
+                <!--IsTabStop="{Binding Path=StartImage, Converter={StaticResource GlobalBoolRevertConverter}}"-->
+                <!--Visibility="{Binding Path=StartImage, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" />-->
+
+                <TextBox Grid.Column="2" Grid.Row="4"  IsTabStop="False" Width="2" Height="2" Visibility="{Binding Path=isNeedChangePassword, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" />
+                <Button x:Name="_OK_Button" Grid.Column="2" Grid.Row="4" Margin="15,3" Click="AcceptButton_Click" Content="OK" 
+                    IsDefault="True" Style="{StaticResource CommandButtonStyle}" Height="27" 
+                    Visibility="{Binding Path=isNeedChangePassword, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" 
+                    IsEnabled="{Binding Path=isPasswordCorrect}"  UseLayoutRounding="True" TabIndex="100" />
+
+
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
+                    <TextBlock Name="_waitForUserValidating"  Text="" Foreground="Maroon" FontSize="14" FontWeight="Normal" Visibility="Visible" MaxWidth="500" TextWrapping="Wrap" />
+                    <TextBlock  Text="{Binding Path=ErrorUserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Right" Margin="3" Visibility="Visible" Foreground="#FFEB0C0C" FontWeight="Bold" MaxWidth="450" TextWrapping="Wrap" />
+                    <TextBlock  Text="{Binding Path=ErrorPassword, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Right" Margin="3" Visibility="Visible" Foreground="#FFEB0C0C" FontWeight="Bold" MaxWidth="450" TextWrapping="Wrap" />
+                    <TextBlock   x:Name="_newPasswordError" HorizontalAlignment="Right" Margin="3" Visibility="Visible" Foreground="#FFEB0C0C" FontWeight="Bold" MaxWidth="450" TextWrapping="Wrap" />
+                </StackPanel>
+                <Button Grid.Column="3" Grid.Row="5"  Margin="15,15,15,3" Click="RezygnujButton_Click" Height="27" 
+                    Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_resignation_Button}"  IsCancel="True" Style="{StaticResource CommandButtonStyle}" IsTabStop="False" Width="Auto" VerticalAlignment="Top" TabIndex="101" />
+
+               
+
+                <Popup x:Name="_connection_PopUP" Grid.Row="6" Grid.Column="1" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint" >
+
+                    <Border Background="{StaticResource TextBoxBrush}"  BorderBrush="Silver" BorderThickness="1" ClipToBounds="True" MaxHeight="500">
+                        <Border Background="{StaticResource TextBoxBrush}" BorderBrush="DarkGreen"   BorderThickness="1" >
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                            </Border.Effect>
+                            <Grid>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <!--<TextBlock Grid.Row="0" Grid.Column="0" Text="Serwer" />-->
+                                <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Path=DbServer}" Tag="Nazwa serwera" MinWidth="200" Margin="4"/>
+                                <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="User" />-->
+                                <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Path=DbUser}" Tag="Nazwa użytkownika" MinWidth="200" Margin="4" />
+                                <PasswordBox x:Name="_DBpassword" Grid.Row="2" Grid.ColumnSpan="2" PreviewLostKeyboardFocus="_DBpassword_PreviewLostKeyboardFocus" />
+                                <Button x:Name="_DbOK_Button" Grid.Column="0" Grid.Row="3" Margin="15,15,15,3"   Content="OK" 
+                                    IsDefault="True" Style="{StaticResource CommandButtonStyle}" Height="27" 
+                                    Command="{Binding Path=ChangeConnStringCommand}" UseLayoutRounding="True" TabIndex="100"
+                                    ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_DbOK_Button_ToolTip}"/>
+                            
+                                <!--<Button Grid.Column="3" Grid.Row="4"  Margin="15,15,15,3" Click="RezygnujButton_Click" Height="27" 
+                                    Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_resignation_Button}"  IsCancel="True" Style="{StaticResource CommandButtonStyle}" IsTabStop="False" Width="Auto" VerticalAlignment="Top" TabIndex="101" />-->
+
+                            </Grid>
+                        </Border>
+                    </Border>
+
+
+                </Popup>
+
+
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" 
+                  Visibility="{Binding Converter={StaticResource BooleanToVisibilityConverter}, Path=isNeedChangePassword}" Focusable="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="{StaticResource HeaderGridBackground}" 
+                           Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_needChangePassword_Header}" Foreground="Maroon" FontSize="14" FontWeight="Bold" />
+                    <Label Grid.Column="0" Grid.Row="1" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_newPassword_Button}" 
+                       HorizontalAlignment="Right" Margin="3" IsTabStop="False" />
+                    <PasswordBox Name="_newPassword" Grid.Column="1" Grid.Row="1" Margin="5"  VerticalContentAlignment="Center" 
+                             GotFocus="_newPassword_GotFocus"  PreviewLostKeyboardFocus="_newPassword_PreviewLostKeyboardFocus" TabIndex="0" />
+                    <Label Grid.Column="0" Grid.Row="2" Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_repeatPassword_Button}" HorizontalAlignment="Right" Margin="3" />
+                    <PasswordBox Name="_repeatPassword" Grid.Column="1" Grid.Row="2" Margin="5"  VerticalContentAlignment="Center"  
+                       LostFocus="_repeatPassword_LostFocus" TabIndex="1" PreviewKeyDown="_repeatPassword_PreviewKeyDown" />
+
+                    <Button x:Name="_newPassword_Button" Grid.Column="2" Grid.Row="2" Margin="15,3" Click="_newPassword_Button_Click" Content="OK" IsDefault="True" IsEnabled="False" />
+                </Grid>
+
+            </Grid>
+
+        </DockPanel>
+    </Grid>
+</Window>

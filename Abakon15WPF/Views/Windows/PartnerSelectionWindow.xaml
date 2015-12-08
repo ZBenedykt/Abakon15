@@ -1,0 +1,77 @@
+﻿<V:WindowBaseClass x:Class="Abakon15WPF.Views.Windows.PartnerSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_DepartmantForm_Title}" 
+        Icon="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=WindowIcon}"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:UC ="clr-namespace:Abakon15WPF.Views.Controls"
+        xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
+        xmlns:V="clr-namespace:Abakon15WPF.Views"
+       xmlns:CS="clr-namespace:Abakon15WPF.Views.Controls.Standard"
+        Height="800" Width="1000" WindowStartupLocation="CenterScreen" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=VM:PartnerVM}" >
+
+    <Window.DataContext>
+        <VM:PartnerVM/>
+    </Window.DataContext>
+
+
+
+    <Grid   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}"  >
+            <!--<TextBlock   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_departmentList_Header}" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="10,0,50,0" FontSize="16" FontStyle="Normal" />-->
+        </StackPanel>
+        <GroupBox Grid.Row="3"  >
+            <UC:PartnerUC x:Name="c_PartnerUC" DataContext="{Binding}" />
+        </GroupBox>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+
+            <Button x:Name="acceptButton"  Margin="5,0" MinWidth="80" Click="acceptButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}"   
+                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_changeParentDepartment_ToolTip}" IsEnabled="{Binding Path=CurrentPartner}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Mark24.png" Width="24" Height="24"  />
+                        <TextBlock Text="{Binding Path=CurrentPartner.PartnerCode}" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+            <!--<Button x:Name="acceptNullButton"  Margin="5,0" Width="80" Click="acceptNullButton_Click"                           
+                            Style="{StaticResource CommandButtonStyle}"   
+                             >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Source="/Abakon15WPF;component/Images/Mark24.png" Width="24" Height="24"  />
+                        <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_AllDepartmenst_TextBlock}" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>-->
+
+            <Button x:Name="exitButton"  Margin="5,0" Width="80" Click="exitButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_delete_ToolTip}" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Esc" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</V:WindowBaseClass>

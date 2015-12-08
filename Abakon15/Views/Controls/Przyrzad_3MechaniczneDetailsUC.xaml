@@ -1,0 +1,254 @@
+﻿<UserControl x:Class="Abakon15.Views.Controls.Przyrzad_3MechaniczneDetailsUC"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+             xmlns:UC="clr-namespace:Abakon15.Views.Controls"
+             xmlns:VM="clr-namespace:Abakon15.ViewModels"
+             xmlns:set="clr-namespace:Abakon15.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="400"
+             d:DataContext="{d:DesignInstance Type=VM:PrzyrzadPomiarowyCollectionVM}"  IsVisibleChanged="UserControl_IsVisibleChanged">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid x:Name="c_detailsGrid" Grid.Row="1" Grid.Column="1" Margin="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="Auto"/>
+                <ColumnDefinition  Width="Auto"/>
+
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_dzialka_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_dzialka_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.dzialka, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_dzialka_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_obszar_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_obszar_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.obszar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_obszar_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_wgran_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wgran_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wgran, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wgran_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_wysieg_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wysieg_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wysieg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wysieg_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_nacisk_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_nacisk_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.nacisk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_nacisk_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_klasa_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_klasa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.klasa, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_klasa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_grupa_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_grupa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.grupa, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_grupa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_rodzaj_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_rodzaj_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.rodzaj, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_rodzaj_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_gr_wz_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_gr_wz_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.gr_wz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_gr_wz_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Mwzorzec_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Mwzorzec_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.Mwzorzec, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Mwzorzec_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_producent_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_producent_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.producent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_producent_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+
+                <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Muzytkownik_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Muzytkownik_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.Muzytkownik, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Muzytkownik_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_sprawdz_Label}" 
+                HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_sprawdz_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox  Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.sprawdz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_sprawdz_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+            <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="1"  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_parName_Label}" 
+                HorizontalAlignment="Left" Margin="20,4,4,4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="0" Grid.Column="2"  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_parWynik_Label}" 
+                HorizontalAlignment="Left" Margin="20,4,4,4" VerticalAlignment="Center" TextAlignment="Center" FontStretch="UltraExpanded" FontWeight="Bold" />
+                
+                <TextBlock Grid.Row="1" Grid.Column="0"  Text="1" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="2" Grid.Column="0"  Text="2" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="3" Grid.Column="0"  Text="3" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="4" Grid.Column="0"  Text="4" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="5" Grid.Column="0"  Text="5" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="6" Grid.Column="0"  Text="6" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="7" Grid.Column="0"  Text="7" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="8" Grid.Column="0"  Text="8" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="9" Grid.Column="0"  Text="9" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+                <TextBlock Grid.Row="10" Grid.Column="0"  Text="10" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center" FontWeight="Bold" FontStretch="UltraExpanded" />
+
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par1_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="1" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik1_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par2_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="2" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik2_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par3_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="3" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik3_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par4, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par4_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="4" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik4, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik4_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par5, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par5_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="5" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik5, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik5_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="6" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par6_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="6" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik6_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="7" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par7, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par7_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="7" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik7, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik7_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="8" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par8, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par8_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="8" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik8, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik8_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="9" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par9, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par9_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="9" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik9, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik9_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="10" Grid.Column="1" Margin="4" MinWidth="200"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.par10, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_par10_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBox Grid.Row="10" Grid.Column="2" Margin="4" MinWidth="80"
+                Text="{Binding Path=CurrentPrzyrzadPomiarowy.wynik10, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" IsReadOnly="{Binding Path=ReadOnly}"
+                Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_wynik10_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+           </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

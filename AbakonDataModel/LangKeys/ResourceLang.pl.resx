@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="acceptedContractors" xml:space="preserve">
+    <value>Zaakceptowano wykonanie</value>
+  </data>
+  <data name="affordedCertificate" xml:space="preserve">
+    <value>Otzrymano certyfikat</value>
+  </data>
+  <data name="delivered" xml:space="preserve">
+    <value>Przyrząd dostarczony</value>
+  </data>
+  <data name="Elektryczne" xml:space="preserve">
+    <value>Elektr.</value>
+  </data>
+  <data name="finished" xml:space="preserve">
+    <value>Zakończono</value>
+  </data>
+  <data name="Mechaniczne" xml:space="preserve">
+    <value>Mech.</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>Początek procesu</value>
+  </data>
+  <data name="obtainedAfterCalibration" xml:space="preserve">
+    <value>Otrzymano po kalibracji</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>W trakcie kalibracji</value>
+  </data>
+  <data name="PrzyrzadyWszystkie" xml:space="preserve">
+    <value>Nieokreślony</value>
+  </data>
+  <data name="redyToReceive" xml:space="preserve">
+    <value>Gotowe do odbioru</value>
+  </data>
+  <data name="seekingBroker" xml:space="preserve">
+    <value>Wybór pośrednika</value>
+  </data>
+  <data name="seekingLab" xml:space="preserve">
+    <value>Wybór wykonawcy</value>
+  </data>
+  <data name="sentEquipment" xml:space="preserve">
+    <value>Wysłano do wykonawcy</value>
+  </data>
+  <data name="sentRequest" xml:space="preserve">
+    <value>Wysłano żądanie dostarczenia przyrządu</value>
+  </data>
+  <data name="Sprawdziany" xml:space="preserve">
+    <value>Sprawdz.</value>
+  </data>
+  <data name="SprawdzianyDoGwintow" xml:space="preserve">
+    <value>Sprawdz. gw.</value>
+  </data>
+  <data name="_errForeingKeyProductMesureUnitCode" xml:space="preserve">
+    <value>Trzeba wybrać jednostkę miary</value>
+  </data>
+  <data name="_errForeingKeyProductTechnicalMesureUnitCode" xml:space="preserve">
+    <value>Trzeba wybrać jednostkę miary techniczną</value>
+  </data>
+  <data name="_errForeingKeyVATrateCodeId" xml:space="preserve">
+    <value>Trzeba wybrać VAT</value>
+  </data>
+  <data name="_errMaxLegth12" xml:space="preserve">
+    <value>Dopuszczalnych jest tylko 12 znaków</value>
+  </data>
+  <data name="_errMaxLegth256" xml:space="preserve">
+    <value>Dopuszczalnych jest tylko 256 znaków</value>
+  </data>
+  <data name="_errMaxLegth30" xml:space="preserve">
+    <value>Dopuszczalnych jest tylko 30 znaków</value>
+  </data>
+  <data name="_errMaxLegth60" xml:space="preserve">
+    <value>Dopuszczalnych jest tylko 60 znaków</value>
+  </data>
+  <data name="_errMaxLegth90" xml:space="preserve">
+    <value>Dopuszczalnych jest tylko 90 znaków</value>
+  </data>
+  <data name="_errMinLegth1" xml:space="preserve">
+    <value>Pole nie może być puste</value>
+  </data>
+  <data name="_errMinLegth3" xml:space="preserve">
+    <value>Wymagane są minimum 3 znaki</value>
+  </data>
+  <data name="_errRange1To1000" xml:space="preserve">
+    <value>Liczba musi być z zakresu 1 do 1000</value>
+  </data>
+  <data name="_errRegexInitialsNoMatched" xml:space="preserve">
+    <value>Musi być dwuliterowy inicjał (dużymi literami bez znaków narodowych)</value>
+  </data>
+  <data name="_errRegexNoMatched" xml:space="preserve">
+    <value>Kod niezgodny ze wzorcem</value>
+  </data>
+  <data name="DoDecyzji" xml:space="preserve">
+    <value>Zależnie od decyzji</value>
+  </data>
+  <data name="LegalizacjaWlasna" xml:space="preserve">
+    <value>Legalizacja we własnym zakresie</value>
+  </data>
+  <data name="NiePodlegaLegalizacji" xml:space="preserve">
+    <value>Nie podlega legalizacji</value>
+  </data>
+  <data name="ZawszeZlecana" xml:space="preserve">
+    <value>Legalizacja w autoryzowanym laboratorium</value>
+  </data>
+  <data name="_admin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="_adminComment" xml:space="preserve">
+    <value>Uprawnienia adminstratora</value>
+  </data>
+  <data name="_appUser" xml:space="preserve">
+    <value>Użytkownik aplikacji</value>
+  </data>
+  <data name="_appUserComment" xml:space="preserve">
+    <value>Uprawniony użytkownik aplikacji</value>
+  </data>
+  <data name="_roleAmin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="_roleUser" xml:space="preserve">
+    <value>Zwykły użytkownik</value>
+  </data>
+  <data name="_allEquipmnetAccess" xml:space="preserve">
+    <value>Prawo przydziału zadań</value>
+  </data>
+  <data name="_canAddEquipment" xml:space="preserve">
+    <value>Prawo rejestrowania nowych przyrządów</value>
+  </data>
+  <data name="_canAddPartner" xml:space="preserve">
+    <value>Prawo rejestrowania firm </value>
+  </data>
+  <data name="_canAddPerson" xml:space="preserve">
+    <value>Prawo rejestrowania nowych osób</value>
+  </data>
+  <data name="_canDeleteEquipment" xml:space="preserve">
+    <value>Prawo usuwania przyrządów z bazy</value>
+  </data>
+  <data name="_canDeletePartner" xml:space="preserve">
+    <value>Prawo usuwania firm z bazy</value>
+  </data>
+  <data name="_canDeletePerson" xml:space="preserve">
+    <value>Prawo usuwania osób z bazy</value>
+  </data>
+  <data name="_canDisposeEquipmentToEmployee" xml:space="preserve">
+    <value>Prawo przydzielania przyrządów pracownikom</value>
+  </data>
+  <data name="_canUpdateEquipment" xml:space="preserve">
+    <value>Prawo aktualizacji danych przyrządów</value>
+  </data>
+  <data name="_canUpdatePartner" xml:space="preserve">
+    <value>Prawo aktualizacji danych o firmach</value>
+  </data>
+  <data name="_canUpdatePerson" xml:space="preserve">
+    <value>Prawo aktualizacji danych o osobach</value>
+  </data>
+  <data name="_equipmentHeader" xml:space="preserve">
+    <value>Przyrządy pomiarowe</value>
+  </data>
+  <data name="_partnerHeader" xml:space="preserve">
+    <value>Firmy współpracujące</value>
+  </data>
+  <data name="_personHeader" xml:space="preserve">
+    <value>Osoby (przedstawiciele, pracownicy)</value>
+  </data>
+</root>

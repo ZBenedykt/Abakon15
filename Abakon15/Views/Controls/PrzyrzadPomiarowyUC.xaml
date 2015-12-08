@@ -1,0 +1,901 @@
+﻿<UserControl x:Class="Abakon15.Views.Controls.PrzyrzadPomiarowyUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+             xmlns:UC="clr-namespace:Abakon15.Views.Controls"
+             xmlns:VM="clr-namespace:Abakon15.ViewModels"
+             xmlns:set="clr-namespace:Abakon15.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="1200"
+             d:DataContext="{d:DesignInstance Type=VM:PrzyrzadPomiarowyCollectionVM}"
+              >
+    
+    <UserControl.DataContext>
+        <VM:PrzyrzadPomiarowyCollectionVM x:Name="_PrzyrzadPomiarowyCollectionVM" />
+    </UserControl.DataContext>
+
+    <Grid x:Name="_GridVerticalSpliter" Loaded="_GridVerticalSpliter_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter x:Name="_spliterV1" Grid.Column="0" Grid.RowSpan="4"  Width="6" 
+                      Background="{StaticResource SpliterVerticalBackgroundBrush}" ClipToBounds="True"
+                      LostFocus="_spliterV1_LostFocus"/>
+
+
+        <Grid x:Name="_GridHoryzontalSpliter" Grid.Column="1" Loaded="_GridHoryzontalSpliter_Loaded">
+            <Grid.RowDefinitions>
+                <RowDefinition /> <!--Height="{Binding Source={x:Static set:Settings.Default}, Path=EquipmentSpliter, Mode=TwoWay, Converter={StaticResource GridLengthConverter}}" />-->               
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <GridSplitter x:Name="_spliter1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Height="6" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" 
+                          Margin="0,5,0,0" Background="{StaticResource SpliterHorizontalBackgroundBrush}" ShowsPreview="False" ResizeBehavior="CurrentAndNext" LostFocus="_spliter1_LostFocus" />
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0" Background="{StaticResource HeaderGridBackground}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StatusBar Grid.ColumnSpan="5" FontSize="14" FontWeight="Bold" FontFamily="Arial">
+                        <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TotalRecordsPrefix_Label}" Margin="20,0,0,0" />
+                        <TextBlock  Text="{Binding Path=IloscZapisowWBazie}"/>
+                        <TextBlock  Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TotalRecordsSufix_Label}"  />
+                    </StatusBar>
+                    <!--<StackPanel Grid.Row="1" Orientation="Horizontal"  Height="30" HorizontalAlignment="Left" >
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,5,0" Text="{Binding Path=CurrentDocumentClassificationPattern.GetClassificationPath}" HorizontalAlignment="Center" Visibility="{Binding Path=CanAddFiles, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                    </StackPanel>-->
+                    <Border Grid.Row="0" CornerRadius="5" BorderThickness="2" BorderBrush="{DynamicResource NormalBorderBrush}" 
+                            Margin="2,2,10,2" HorizontalAlignment="Right"   
+                            Visibility="{Binding Path=isImagePanel, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="_searchBox"  
+                                Style="{DynamicResource SearchBoxStyle}" BorderThickness="0" Margin="1"   Background="{StaticResource SearchBoxBackground}" MinWidth="200"></TextBox>
+                            <Button x:Name="_searchDown_Button"    IsEnabled="true" Style="{StaticResource SmallGlassButton}" Click="_searchDown_Button_Click">
+                                <ButtonBase.Content>
+                                    <Image Grid.Column="0" Source="/Abakon15;component/Images/search24.png" Width="16" Height="16" Margin="2" />
+                                </ButtonBase.Content>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Grid.Row="0"  Grid.Column="2" Orientation="Horizontal">
+                        <Button x:Name="_setColumns_Button"    IsEnabled="true" Style="{StaticResource SmallGlassButton}" Click="_setColumns_Button_Click">
+                            <ButtonBase.Content>
+                                <Image Grid.Column="0" Source="/Abakon15;component/Images/Settingsx.png" Width="20" Height="20" Margin="2" />
+                            </ButtonBase.Content>
+                        </Button>
+                        <Button Grid.Column="2" Content="i" Style="{StaticResource CircleButton}" Height="25" Width="25" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" Command="{Binding Path=OpenHelpCommand}" CommandParameter="Intro" IsEnabled="true" IsCancel="False" />
+                    </StackPanel>
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Button x:Name ="_reloadButton" Style="{StaticResource SmallGlassButton}" Click="Button_Click"
+                          ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_refreshDataGrid_Button}"  >
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/editStartDate.png" Width="20" Height="20" />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+                    <TextBlock Grid.Row="1" Text="{Binding Path=MyFilteredPanel.FilterText}"  TextWrapping="Wrap" FontWeight="Bold" Margin="4" Foreground="Maroon" />
+                </StackPanel>
+                <DataGrid Grid.Row="2"
+                           x:Name="_przyrzadyDatagrid"   AutoGenerateColumns="False" CanUserAddRows="False" EnableColumnVirtualization="False"
+                            IsReadOnly="True"   ItemsSource="{Binding Path=PrzyrzadPomiarowyCollection.View}" 
+                            SelectedItem="{Binding Path=CurrentPrzyrzadPomiarowy}" FrozenColumnCount="1" IsSynchronizedWithCurrentItem="True"
+                            Loaded="_przyrzadyDatagrid_Loaded"
+                            SelectionChanged="_przyrzadyDatagrid_SelectionChanged" KeyDown="_przyrzadyDatagrid_KeyDown" >
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <EventSetter Event="PreviewMouseDoubleClick" Handler="Row_PreviewMouseDoubleClick" />
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="BorderBrush" Value="DarkOliveGreen" />
+                                    <Setter Property="BorderThickness" Value="2" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                        
+                    </DataGrid.RowStyle>
+                    <!--  MouseDoubleClick="_projectsDatagrid_MouseDoubleClick"
+                                  KeyDown="_ProjectDatagrid_KeyDown">-->
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=PrzyrzadPomiarowyNrKod}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_PrzyrzadPomiarowyNrKod_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_PrzyrzadPomiarowyNrKod_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="50" />
+                        <!-- Widoczność kolumny ustawiana w VM ale używa settingsa bo bezpośrednie bindowanie nie chodzi (nie znalazłem lepszej metody)-->
+                        <!--<DataGridTextColumn Binding="{Binding Path=TypPrzyrzaduEnum}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TypPrzyrzadu_Label}" 
+                                           Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_SelectedEquipmentType_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />-->
+                        <DataGridTextColumn Binding="{Binding Path=NrSAP}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrSAP_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrSAP_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                        <DataGridTextColumn Binding="{Binding Path=NrEwid}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrEwid_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrEwid_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=NrInwentarzowy}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrInwentarzowy_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrInwentarzowy_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=Nazwa}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Nazwa_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Nazwa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                                             MaxWidth="300" >
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="TextWrapping" Value="Wrap"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Path=producent}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_ProducentId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_ProducentId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=NrFabryczny}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrFabryczny_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrFabryczny_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=SymbolProducenta}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_SymbolProducenta_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_SymbolProducenta_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=SubGrupa}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_SubGrupa_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_SubGrupa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=RokProdukcji}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_RokProdukcji_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_RokProdukcji_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=AktualnaKalibracja.DataBadania, StringFormat=\{0:d\}}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataOstatniegoBadania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_DataOstatniegoBadania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=AktualnaKalibracja.DataNastepnegoBadania, StringFormat=\{0:d\}}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataNastepnegoBadania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_DataNastepnegoBadania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=miejsceUzytkowania.FullPath}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_MiejsceUzytkowaniaId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_MiejsceUzytkowaniaId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=UzytkownikNazwa}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_UzytkwnikId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_UzytkownikId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--<TextBlock x:Name="_actProgress" Grid.Row="3" Style="{StaticResource TextBlockHedearStyle}" Text="{Binding Path=ActProgressInfo}" Visibility="{Binding Converter={StaticResource BooleanToVisibilityConverter}, Path=ActProgressVisible}" />-->
+
+
+                <ToolBar Grid.Row="4" Visibility="{Binding Path=isImagePanel, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=false}" Margin="0,0,0,6">
+                    <CS:NavigationPanel  Foreground="#FF666666" View="{Binding Path=PrzyrzadPomiarowyCollection.View}" />
+                    <!--<CS:PageNavigationPanel Visibility="Collapsed" Foreground="#FF666666" />-->
+                    <!--<Button   x:Name="addToTemporary" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_addSelectedToTemporaryCollection}"  Margin="5,1" Padding="6,1" Click="addToTemporary_Click"   />-->
+                    <!---->
+                    
+                    <ToggleButton x:Name="EditMode" 
+                                      Style="{StaticResource EditButtonStyle}"
+                                  IsChecked="{Binding Path=CanAddRecords, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                      Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_addNewMode_DataButtonsUC}" ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_editModeToolTip_DataButtonsUC}" Margin="4,2" DataContext="{Binding}" Visibility="Visible" IsEnabled="{Binding Path=hasPrivilegeProjectEdit}" Width="Auto">
+                    </ToggleButton>
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=VisibleCopyButton,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CreateByCopyEquipmentCommand}" 
+                              ToolTip="Utwórz nowy zapis poprzez kopiowanie ">
+
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal"> 
+                            <Image  Source="/Abakon15;component/Images/Copy.png" Width="20" Height="20" Margin="5,0" />
+                                <TextBlock Text="Kopiuj: " />
+                                <TextBlock Text="{Binding Path=CurrentPrzyrzadPomiarowy.PrzyrzadPomiarowyNrKod, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" Margin="0,0,3,0" />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CreateEquipmentCommand}" CommandParameter="Elektryczne"
+                              ToolTip="Utwórz nowy zapis. ">
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/New document.png" Width="16" Height="16" Margin="5,0" />
+                                <TextBlock Text="Przyrząd elektryczny " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+                    
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CreateEquipmentCommand}" CommandParameter="Mechaniczne"
+                              ToolTip="Utwórz nowy zapis. ">
+
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/New document.png" Width="16" Height="16" Margin="5,0" />
+                                <TextBlock Text="Przyrząd mechaniczny " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CreateEquipmentCommand}" CommandParameter="Sprawdziany"
+                              ToolTip="Utwórz nowy zapis. ">
+
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/New document.png" Width="16" Height="16" Margin="5,0" />
+                                <TextBlock Text="Sprawdzian " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, ElementName=EditMode}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=CreateEquipmentCommand}" CommandParameter="SprawdzianyDoGwintow"
+                              ToolTip="Utwórz nowy zapis. ">
+
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/New document.png" Width="16" Height="16" Margin="5,0" />
+                                <TextBlock Text="Sprawdzian do gwintów " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+
+                    <Button   Margin="5,0"
+                            Visibility="{Binding Path=VisibleEraseButton, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=DeleteCommand}"  
+                              ToolTip="Kasuj zapis z bazy ">
+
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Abakon15;component/Images/Erase.png" Width="16" Height="16" Margin="5,0" />
+                                <TextBlock Text=" Kasuj zapis " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+
+  
+                    <Button x:Name="_rpt_Button"    IsEnabled="true"  Style="{StaticResource CommandButtonStyle}"
+                            ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_documents_ToolTip}" Click="_rpt_Button_Click">
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal" >
+                                
+                            <Image Grid.Column="0" Source="/Abakon15;component/Images/Text.png" Width="20" Height="20" Margin="2" />
+                                <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_documents_DataButtonsUC}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+                    <Button   Margin="5,0"  Visibility="Collapsed"                         
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=UstawFlow2Command}"  
+                             >
+                        <ButtonBase.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Wypełnij Flow2 " />
+                            </StackPanel>
+                        </ButtonBase.Content>
+                    </Button>
+                    
+                </ToolBar>
+                
+            </Grid>
+            <TabControl Grid.Row="1" DockPanel.Dock="Bottom" >
+                <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_details_TabItemHeader}" IsSelected="{Binding Path=isDetailsSelectedByDetails}">
+                    <!--<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">-->
+
+                        <UC:Przyrzad_1BaseDetailsUC Grid.Column="0" Visibility="{Binding Path=VisibleDetails, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                                
+
+                    <!--</ScrollViewer>-->
+                </TabItem>
+                <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_calibratedEquipment_TabItemHeader}" IsSelected="{Binding Path=isDetailsSelectedyCalibratedEquipment}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                        
+                            <DataGrid 
+                           x:Name="_przyrzadyKalibrowaneDatagrid"   AutoGenerateColumns="False" CanUserAddRows="False" EnableColumnVirtualization="False"
+                            IsReadOnly="True"   ItemsSource="{Binding Path=PrzyrzadKalibrowanyCollection.View}" 
+                            SelectedItem="{Binding Path=CurrentPrzyrzadKalibrowany}" FrozenColumnCount="1" IsSynchronizedWithCurrentItem="True"
+                            SelectionChanged="_przyrzadyKalibrowaneDatagrid_SelectionChanged"
+                           >
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                                <EventSetter Event="PreviewMouseDoubleClick" Handler="RowKalibrowane_PreviewMouseDoubleClick" />
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="BorderBrush" Value="DarkOliveGreen" />
+                                    <Setter Property="BorderThickness" Value="2" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </DataGrid.RowStyle>
+                    <!--  MouseDoubleClick="_projectsDatagrid_MouseDoubleClick"
+                                  KeyDown="_ProjectDatagrid_KeyDown">-->
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=PrzyrzadPomiarowyNrKod}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_PrzyrzadPomiarowyNrKod_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_PrzyrzadPomiarowyNrKod_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" MinWidth="50" />
+                        <!-- Widoczność kolumny ustawiana w VM ale używa settingsa bo bezpośrednie bindowanie nie chodzi (nie znalazłem lepszej metody)-->
+                        <DataGridTextColumn Binding="{Binding Path=TypPrzyrzaduEnum}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TypPrzyrzadu_Label}" 
+                                           Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_SelectedEquipmentType_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                        <DataGridTextColumn Binding="{Binding Path=NrEwid}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrEwid_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrEwid_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=NrInwentarzowy}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrInwentarzowy_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrInwentarzowy_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=Nazwa}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Nazwa_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Nazwa_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=producent}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_ProducentId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_ProducentId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=NrFabryczny}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrFabryczny_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_NrFabryczny_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=SymbolProducenta}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_SymbolProducenta_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_SymbolProducenta_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=RokProdukcji}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_RokProdukcji_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_RokProdukcji_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=TypWlasnosci}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TypWlasnosci_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_TypWlasnosci_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=Legalizacja}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Legalizacja_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Legalizacja_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=CzasokresSprawdzania}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_CzasokresSprawdzania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_CzasokresSprawdzania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=DataOstatniegoBadania}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataOstatniegoBadania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_DataOstatniegoBadania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=StopienZuzycia}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_StopienZuzycia_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_StopienZuzycia_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=WynikBadania}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_WynikBadania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_WynikBadania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=DataNastepnegoBadania}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataNastepnegoBadania_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_DataNastepnegoBadania_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <!--<DataGridTextColumn Binding="{Binding Path=Uwagi}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Uwagi_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_Uwagi_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />-->
+                        <DataGridTextColumn Binding="{Binding Path=WlascicielId}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_WlascicielId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_WlascicielId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=MiejsceUzytkowaniaId}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_MiejsceUzytkowaniaId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_MiejsceUzytkowaniaId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <DataGridTextColumn Binding="{Binding Path=UzytkownikId}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_UzytkownikId_Label}" 
+                                                    Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_1_UzytkownikId_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                            <CS:NavigationPanel Grid.Row="1" Foreground="#FF666666" View="{Binding Path=PrzyrzadKalibrowanyCollection.View}" />
+                        </Grid>
+                    </TabItem>
+                <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_permissions_TabItemHeader}" Foreground="Black" 
+                                   IsSelected="True"
+                                   Visibility="{Binding Path=VisibleAllEquipmentAccess}">
+                    <Grid >
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid >
+                            <Grid >
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="15*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <GridSplitter Grid.Column="0" Width="6"  Background="{StaticResource SpliterVerticalBackgroundBrush}"  Grid.RowSpan="5"></GridSplitter>
+
+                                <StackPanel Grid.Row="0" Orientation="Horizontal"  Height="30" VerticalAlignment="Stretch">
+                                    <TextBlock  VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,5,0" 
+                                                            Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_employeesToChoose}" HorizontalAlignment="Center"  />
+                                </StackPanel>
+
+                                <ListView x:Name="_Users_ListView" Grid.Row="1" Grid.RowSpan="3"  HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Margin="4,0,9,4"
+                                                  ItemsSource="{Binding Path=PersonList, UpdateSourceTrigger=PropertyChanged}" Loaded="_Users_ListView_Loaded"
+                                                  BorderBrush="#FF8AA98A" Foreground="#FFAC9898" Background="#FFC3E6CA" SelectionMode="Extended" AlternationCount="2" MaxHeight="1200">
+                                    <ListView.Resources>
+                                        <DataTemplate x:Key="CheckBoxCell">
+                                            <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
+                                        </DataTemplate>
+                                    </ListView.Resources>
+                                    <ListView.View>
+                                        <GridView AllowsColumnReorder="False">
+                                            <GridView.Columns>
+                                                <GridViewColumn  Width="30"  CellTemplate="{StaticResource CheckBoxCell}"/>
+
+                                                <GridViewColumn Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_userCode_DGHeader}"  
+                                                                DisplayMemberBinding="{Binding Path= SureFirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0\,-60\}}" Width="180"   />
+
+              
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+
+
+                                </ListView>
+
+                                <Grid Grid.Row="0" Grid.Column="1"  Margin="0" Background="{StaticResource HeaderGridBackground}" AllowDrop="True">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Height="30" VerticalAlignment="Stretch">
+                                        <TextBlock  VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,5,0" 
+                                                            Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_employeesAttendants}" HorizontalAlignment="Center"  />
+                                        <TextBlock    HorizontalAlignment="Center" Text="{Binding Path=CurrentPartnerOld.name}" />
+                                    </StackPanel>
+
+
+
+
+                                    <Button Grid.Column="2" Content="i" Style="{StaticResource CircleButton}" Height="25" Width="25" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" Command="{Binding Path=OpenHelpCommand}" />
+                                </Grid>
+                                <DataGrid x:Name="_allowedEmployeeDatagrid" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Path=CurrentPrzyrzadPomiarowy.keepers}" AutoGenerateColumns="False" CanUserAddRows="False" 
+                                                     CanUserDeleteRows="False" IsReadOnly="True"  
+                                                     EnableColumnVirtualization="True">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=person.SureFirstName}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_sureFirstName_Label}" Width="*" />
+                                        <DataGridTextColumn Binding="{Binding Path=CreateDate}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_createDate_Label}"/>
+                                        <DataGridTextColumn Binding="{Binding Path=UserName}" Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_userName_Label}"/>
+                                    </DataGrid.Columns>
+
+                                </DataGrid>
+
+
+
+
+                                <ToolBar Grid.Column="1" Grid.Row="3">
+                                    <Button x:Name="_connectEmployees" Click="_connectEmployees_Click"  Style="{StaticResource CommandButtonStyle}"  
+                                                        Content="Dodaj opiekunów" ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_refreshToolTip_DataButtonsUC}" />
+                                    <Button x:Name="_discoonectEmployees" Click="_disconectEmployees_Click" Style="{StaticResource CommandButtonStyle}" 
+                                                        Content="Odłącz opiekunów"/>
+                                </ToolBar>
+
+
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <DockPanel Grid.Row="0" Grid.Column="0"  Margin="0,2,8,2" >
+            <Grid    >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+                <!--<ComboBox   Grid.Row ="0" ItemsSource="{Binding Path=EquipmentTypeEnumTranslate}" Margin="4"  MaxWidth="200" DisplayMemberPath="Item2" SelectedValuePath="Item1" SelectedValue="{Binding Path=SelectedEquipmentType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Visibility="Collapsed"/>-->
+                 <StackPanel Orientation="Horizontal" Grid.Row="0" >
+                    
+                    <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Typ_Label}" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Top" />
+                        <TextBox  Margin="0,4" MinWidth="150" HorizontalAlignment="Left" IsReadOnly="true" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Path=SelectedEquipmentTypePath}" />
+                        <Button  Width="22" Height="22" DataContext="{Binding}"  Command="{Binding Path=SelectEquipmentTypeCommand}" VerticalAlignment="Top" Margin="0,4,0,0">
+                            <Button.Content>
+                                <Path Visibility="Visible" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Data="M 0 2 L 10 2 L 5 8 Z">
+                                    <Path.Fill>
+                                        <SolidColorBrush Color="White"/>
+                                    </Path.Fill>
+                                </Path>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" >
+
+                    <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_MiejsceUzytkowaniaId_Label}" HorizontalAlignment="Right" Margin="4" VerticalAlignment="Top" />
+                    <TextBox  Margin="0,4" MinWidth="150" HorizontalAlignment="Left" IsReadOnly="true" TextWrapping="Wrap" VerticalAlignment="Top"
+                               Text="{Binding Path=SelectedDepartmentPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" />
+                    <Button  Width="22" Height="22" DataContext="{Binding}"  Command="{Binding Path=SelectDepartmentCommand}" VerticalAlignment="Top" Margin="0,4,0,0">
+                        <Button.Content>
+                            <Path Visibility="Visible" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Data="M 0 2 L 10 2 L 5 8 Z">
+                                <Path.Fill>
+                                    <SolidColorBrush Color="White"/>
+                                </Path.Fill>
+                            </Path>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                        <CheckBox Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_filter_equipmentDiscontinued}" Margin="8,0,4,0" IsChecked="{Binding Path=FilterDiscontinuedEquipment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <CheckBox IsChecked="{Binding Path=FilterActiveEquipment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_filter_equipmentActive}" Margin="4,0,0,0"  />
+                    </StackPanel>
+
+                    <TabControl Grid.Row="3" TabStripPlacement="Top" ClipToBounds="True">
+                   
+                    <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_SelectedByFilter}" IsSelected="{Binding Path=isSelectedByFilter}">
+                        <CS:FilterPanelUC DataContext="{Binding Path=MyFilteredPanel}" />
+                    </TabItem>
+
+                    <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_SelectedByKalibratory}" IsSelected="{Binding Path=isSelectedByKalibratory}">
+
+                        <GroupBox Grid.Row="1" Margin="0" >
+                            <Grid Background="{StaticResource HeaderGridBackground}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25*" />
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="75*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="1" Text="Zestawienie przyrządów, które zostały użyte w charakterze kalibratorów" TextWrapping="Wrap" FontSize="16" Margin="5" FontWeight="Bold" />
+                            </Grid>
+                        </GroupBox>
+
+                    </TabItem>
+
+                        <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_SelectedLabWorker}" 
+                                 IsSelected="{Binding Path=isSelectedByResposibilities}" Visibility="{Binding Path=VisibleAllEquipmentAccess}">
+
+                            <GroupBox Grid.Row="1" Margin="0" >
+                                <Grid Background="{StaticResource HeaderGridBackground}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <DockPanel Grid.Row="0" Margin="0,5,0,0">
+                                        <TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_selectLabWorkers_ListViewHeader}" TextWrapping="Wrap" Margin="2" FontWeight="Bold"
+                                           ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_selectLabWorkers_ListViewToolTip}"/>
+                                        <Button x:Name="_filter_Button"    IsEnabled="True" Style="{StaticResource GlassButton}" HorizontalAlignment="Right"
+                                      Command="{Binding Path=filterResponsibilityCommand}" IsDefault="True" Width="30" Height="30" Margin="4,2" DockPanel.Dock="Right">
+                                            <ButtonBase.Content>
+                                                <Image Grid.Column="0" Source="/Abakon15;component/Images/Search.png" Width="20" Height="20" />
+                                                <!--<TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_filter}" Margin="5,2" FontWeight="Bold" Foreground="Maroon" />-->
+                                            </ButtonBase.Content>
+                                        </Button>
+                                    </DockPanel>
+                                    <ListView x:Name="_LabWorkers_ListView" Grid.Row="1"   HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Margin="4,0,9,4"
+                                                  ItemsSource="{Binding Path=PersonList, UpdateSourceTrigger=PropertyChanged}" Loaded="_Users_ListView_Loaded"
+                                          SelectionChanged="_LabWorkers_ListView_SelectionChanged"
+                                                  BorderBrush="#FF8AA98A" Foreground="#FFAC9898" Background="#FFC3E6CA" SelectionMode="Extended" AlternationCount="2" MaxHeight="1200">
+                                        <ListView.Resources>
+                                            <DataTemplate x:Key="CheckBoxCell">
+                                                <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
+                                            </DataTemplate>
+                                        </ListView.Resources>
+                                        <ListView.View>
+                                            <GridView AllowsColumnReorder="False">
+                                                <GridView.Columns>
+                                                    <GridViewColumn  Width="30"  CellTemplate="{StaticResource CheckBoxCell}"/>
+
+                                                    <GridViewColumn Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_userCode_DGHeader}"  
+                                                                DisplayMemberBinding="{Binding Path= SureFirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0\,-60\}}" Width="180"   />
+
+                                                    <GridViewColumn Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_TaskAllocated}"  
+                                                                DisplayMemberBinding="{Binding Path= TaskAllocated, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="60"   />
+
+                                                </GridView.Columns>
+                                            </GridView>
+                                        </ListView.View>
+
+
+                                    </ListView>
+                                    <GroupBox Grid.Row="2">
+                                        <Grid Margin="4" Grid.Row="2" HorizontalAlignment="Right">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="*"/>
+
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <CheckBox Grid.Row="0" Grid.ColumnSpan="2" IsChecked="{Binding Path=FilterCheckCalibrationDate}" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_complyCalibrationDate_CheckBocContent}" FontWeight="Bold" />
+                                            <TextBlock Grid.Row="1" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_from_text}" HorizontalAlignment="Right" Margin="2" VerticalAlignment="Center" FontWeight="Bold" Padding="0" />
+
+                                            <DatePicker Grid.Row="1" Grid.Column="1" SelectedDate="{Binding Path=FilterCalibrationDateFrom, StringFormat=\{0:d\}}" />
+                                            <TextBlock Grid.Row="2" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_to_text}" HorizontalAlignment="Right" FontWeight="Bold" Margin="2" Padding="0" />
+                                            <DatePicker Grid.Row="2" Grid.Column="1" SelectedDate="{Binding Path=FilterCalibrationDateTo, StringFormat=\{0:d\}}"  />
+                                        </Grid>
+                                    </GroupBox>
+                                    <GroupBox Grid.Row="3">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_Selected}"/>
+                                         
+                                            <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_TotalAllocation}" Margin="0" />
+                                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_NotAllocated}"/>
+                                            <Label Grid.Row="0" Grid.Column="1" Content="{Binding Path=Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Right" FontWeight="Bold" />
+                                            <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=TotalAllocated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Right" FontWeight="Bold" />
+                                            <Button Grid.Row="1" Grid.Column="2" Content="?" Style="{StaticResource CircleButton}" Height="20" Width="20" 
+                                                    ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_ShowMultipleAlocations}"
+                                                    VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" CommandParameter="Intro" IsEnabled="true" IsCancel="False" Command="{Binding Path=filterMultipleResponsibilityCommand}" />
+                                            <Label Grid.Row="2" Grid.Column="1" Content="{Binding Path=NotAllocated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Right" FontWeight="Bold" />
+                                        </Grid>
+
+                                    </GroupBox>
+                                </Grid>
+                            </GroupBox>
+
+
+                        </TabItem>
+
+
+                        <TabItem Header="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_Tasks}"
+                                 IsSelected="{Binding Path=isSelectedByTasks}">
+                        
+                        <GroupBox Grid.Row="1" Margin="0" >
+                            <Grid Background="{StaticResource HeaderGridBackground}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <DockPanel Grid.Row="0" Margin="0,5,0,0">
+                                 <Button x:Name="_filterTask_Button"    IsEnabled="True" Style="{StaticResource GlassButton}" HorizontalAlignment="Right"
+                                      Command="{Binding Path=filterTaskCommand}" IsDefault="True" Width="30" Height="30" Margin="4,2" DockPanel.Dock="Right">
+                                    <ButtonBase.Content>
+                                        <Image Grid.Column="0" Source="/Abakon15;component/Images/Search.png" Width="20" Height="20" />
+                                        <!--<TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_filter}" Margin="5,2" FontWeight="Bold" Foreground="Maroon" />-->
+                                    </ButtonBase.Content>
+                                </Button>
+                                </DockPanel>
+                                <GroupBox Grid.Row="1">
+                                      
+                                        <Grid Margin="4" Grid.Row="2" HorizontalAlignment="Right">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                        
+                                        
+                                    </Grid.ColumnDefinitions>
+                                
+                                    <CheckBox Grid.Row="0" Grid.ColumnSpan="2" IsChecked="{Binding Path=FilterCheckCalibrationDate}" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_complyCalibrationDate_CheckBocContent}" FontWeight="Bold" />
+                                    <TextBlock Grid.Row="1" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_from_text}" HorizontalAlignment="Right" Margin="2" VerticalAlignment="Center" FontWeight="Bold" Padding="0" />
+                                  
+                                        <DatePicker Grid.Row="1" Grid.Column="1" SelectedDate="{Binding Path=FilterCalibrationDateFrom, StringFormat=\{0:d\}}" />
+                                    <TextBlock Grid.Row="2" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_to_text}" HorizontalAlignment="Right" FontWeight="Bold" Margin="2" Padding="0" />
+                                    <DatePicker Grid.Row="2" Grid.Column="1" SelectedDate="{Binding Path=FilterCalibrationDateTo, StringFormat=\{0:d\}}"  />
+                                </Grid>
+                                </GroupBox>
+                                
+
+                                </Grid>
+                        </GroupBox>
+                            
+                            
+                                  
+                    </TabItem>
+
+
+                </TabControl>
+                <Popup x:Name="_popupUserSettins" Grid.Row="4" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint"> 
+                        <Border Background="LightGray" BorderBrush="Silver" BorderThickness="1" ClipToBounds="True" MaxHeight="500">
+                        <Border Background="Transparent" BorderBrush="DarkGreen"   BorderThickness="1" >
+                            <ScrollViewer >
+                                <Grid Background="{StaticResource PopUpBrush}" UseLayoutRounding="True" SnapsToDevicePixels="True" Margin="2" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                      </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0"  Orientation="Horizontal"  Background="{StaticResource HeaderGridBackground}" >
+                                    <TextBlock  Grid.Row="0"  FontSize="16" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_userSettings_Header}" Foreground="#FF4A4E4B" Margin="10,2"  />
+                                </StackPanel>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_columnVisibility}" FontWeight="Bold" Foreground="Black" />
+                                        <CheckBox Grid.Row="4" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrSAP_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_NrSAP_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                        <CheckBox Grid.Row="5" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_SubGrupa_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_SubGrupa_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+
+                                        <CheckBox Grid.Row="6" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrEwid_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_NrEwid_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="7" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrInwentarzowy_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_NrInwentarzowy_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="8" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Nazwa_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_Nazwa_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="9" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_ProducentId_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_ProducentId_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="10" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_NrFabryczny_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_NrFabryczny_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="11" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_SymbolProducenta_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_SymbolProducenta_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="12" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_RokProdukcji_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_RokProdukcji_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="13" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_TypWlasnosci_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_TypWlasnosci_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="14" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Legalizacja_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_Legalizacja_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="15" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_CzasokresSprawdzania_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_CzasokresSprawdzania_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="16" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataOstatniegoBadania_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_DataOstatniegoBadania_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="17" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_StopienZuzycia_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_StopienZuzycia_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="18" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_WynikBadania_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_WynikBadania_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="19" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_DataNastepnegoBadania_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_DataNastepnegoBadania_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="20" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_Uwagi_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_Uwagi_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="21" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_WlascicielId_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_WlascicielId_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="22" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_MiejsceUzytkowaniaId_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_MiejsceUzytkowaniaId_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                                <CheckBox Grid.Row="23" Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_1_UzytkownikId_Label}" 
+                               IsChecked="{Binding Source={x:Static set:Settings.Default}, Path=_1_UserName_ColumnVisibility, Mode=TwoWay}" Foreground="Black" />
+                           
+                              </Grid>
+                            </ScrollViewer>
+                        </Border>
+                    </Border>
+                
+                </Popup>
+
+
+                <Popup x:Name="_popupTypPrzyrzadu" Grid.Row="4" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint" >
+
+                    <Border Background="LightGray" BorderBrush="Silver" BorderThickness="1" ClipToBounds="True" MaxHeight="500">
+                        <Border Background="Transparent" BorderBrush="DarkGreen"   BorderThickness="1" >
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                            </Border.Effect>
+                            <ScrollViewer >
+                                <StackPanel>
+                                <UC:Przyrzad_2ElektryczneDetailsUC Grid.Column="1" Visibility="{Binding Path=VisibleElektryczne, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                                <UC:Przyrzad_3MechaniczneDetailsUC   Visibility="{Binding Path=VisibleMechaniczne, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                <UC:Przyrzad_4SprawdzianyDetailsUC   Visibility="{Binding Path=VisibleSprawdziany, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                <UC:Przyrzad_5SprawdzianyGwintowDetailsUC x:Name="_cSprawdzianyDoGwintow"   Visibility="{Binding Path=VisibleSprawdzianyDoGwintow, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+                    </Border>
+
+                </Popup>
+
+                <Popup x:Name="_reportPopUP" Grid.Row="4" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint" >
+
+                    <Border Background="{StaticResource TextBoxBrush}"  BorderBrush="Silver" BorderThickness="1" ClipToBounds="True" MaxHeight="500">
+                        <Border Background="{StaticResource TextBoxBrush}" BorderBrush="DarkGreen"   BorderThickness="1" >
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                            </Border.Effect>
+                            <Grid>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0"  Orientation="Horizontal"  Background="{StaticResource HeaderHeaderBrush}" Height="25" Margin="0,5" >
+                                    <TextBlock   VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,0,0" 
+                                                 Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_template_Label}" HorizontalAlignment="Center" FontSize="14" Foreground="Maroon" />
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                    <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_pathToTemplate_Label}" Margin="4" VerticalAlignment="Center" />
+                                    <ComboBox x:Name="_pathOfPattern_ComboBox" ItemsSource="{Binding Path=TemplatePathList}" DisplayMemberPath="Name" IsSynchronizedWithCurrentItem="True" SelectedValue="{Binding Path=CurrentTemplatePath}" />
+
+                                    <Button x:Name="_newReportPattern_Button"     Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_newReportPattern_Button}"     
+                                      Style="{StaticResource CommandButtonStyle}" MinWidth="60" Padding="4,0,8,0" Command="{Binding Path=newReportPatternCommand}" Margin="20,2,2,2" />
+
+                                    <!--<Button x:Name="_newReportPattern_Button"     Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_newReportPattern_Button}"     
+                                      Style="{StaticResource CommandButtonStyle}" MinWidth="60" Padding="4,0,8,0" Command="{Binding Path=OpenRptFieldsWindowCommand}" Margin="20,2,2,2" />-->
+
+                       
+                                </StackPanel>
+
+                                <StackPanel Grid.Row="2"  Orientation="Horizontal"  Background="{StaticResource HeaderHeaderBrush}" Height="25" Margin="0,5">
+                                    <TextBlock   VerticalAlignment="Center" FontStretch="ExtraExpanded" FontWeight="Bold" Margin="20,0,0,0" 
+                                                 Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_document_Label}" HorizontalAlignment="Center" 
+                                                 FontSize="14" Foreground="Maroon" />
+                                </StackPanel>
+                                <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                    <TextBlock   Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_pathToDocuments_Label}" Margin="4" VerticalAlignment="Center" />
+                                   <TextBlock Text="{Binding Path=RptPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    </StackPanel>
+                                
+                                <StackPanel Grid.Row="4" Orientation="Horizontal">
+                                    <TextBlock Text="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_template_Label}" Margin="4" VerticalAlignment="Center" />
+                                    <ComboBox x:Name="_template_ComboBox" ItemsSource="{Binding Path=TemplateList}"  IsSynchronizedWithCurrentItem="True" SelectedValue="{Binding Path=SelectedPattern}" />
+                                    <Button  Content="?" Style="{StaticResource CircleButton}" Height="20" Width="20" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,5,0" Command="{Binding Path=showFileCommand}"   IsEnabled="true" IsCancel="False" />
+                                    <Button x:Name="newRpt_Button"     Content="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_newRptFromPattern_DataButtonsUC}"
+                                      Style="{StaticResource CommandButtonStyle}" MinWidth="60" Padding="4,0,8,0" Command="{Binding Path=RptFromPatternCommand}"  />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Border>
+
+                    
+                </Popup>
+            </Grid>
+
+
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,79 @@
+﻿<V:WindowBaseClass x:Class="Abakon15.Views.Windows.FieldsForReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_FildsForReport_Title}" 
+        Icon="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=WindowIcon}"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:VM="clr-namespace:Abakon15.ViewModels"
+        xmlns:V="clr-namespace:Abakon15.Views"
+       xmlns:CS="clr-namespace:Abakon15.Views.Controls.Standard"
+        Height="600" Width="600" WindowStartupLocation="CenterScreen" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=VM:FieldsForReportsVM}" >
+
+
+    <Window.DataContext>
+        <VM:FieldsForReportsVM/>
+    </Window.DataContext>
+
+    <Grid   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0"  >
+            <DataGrid x:Name="_scopeDatagrid"   AutoGenerateColumns="False"  
+                    IsReadOnly="True"   
+                           IsSynchronizedWithCurrentItem="True" 
+                           RowHeaderWidth="0" Margin="5" HeadersVisibility="Column" HorizontalAlignment="Left" ItemsSource="{Binding Path=FieldsList}">
+                <!--Visibility="{Binding Path=IsCurrentProductClassificationNotNull, Converter={StaticResource BooleanToVisibilityConverter}}"-->
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background"  Value="{DynamicResource HeaderFuterBrush}" />
+                            </Trigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding}" Header="Nazwa do raportu" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+   
+
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+
+            <!--<Button x:Name="acceptButton"  Margin="5,0" Width="80" Click="acceptButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}" Command="{Binding Path=NowaKalibracjaCommand}"  
+                              ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_changeParentDepartment_ToolTip}" IsEnabled="{Binding Path=isDepartmentSelected}">
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal"> 
+                        <TextBlock Text="OK" />
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>-->
+
+            <Button x:Name="exitButton"  Margin="5,0" Width="80" Click="exitButton_Click"
+                            
+                            Style="{StaticResource CommandButtonStyle}"    
+                             ToolTip="{Resx ResxName=Abakon15.LangKeys.ResourceLang, Key=_delete_ToolTip}" >
+                <ButtonBase.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Zmknij" Margin="0,0,5,0"/>
+                    </StackPanel>
+                </ButtonBase.Content>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</V:WindowBaseClass>

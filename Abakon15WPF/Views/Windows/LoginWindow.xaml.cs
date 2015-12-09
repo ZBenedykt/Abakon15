@@ -39,6 +39,7 @@ namespace Abakon15WPF.Views.Windows
             {
                 this.DialogResult = true;
             }
+            //todo test
         }
 
         private void RezygnujButton_Click(object sender, RoutedEventArgs e)

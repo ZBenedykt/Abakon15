@@ -152,7 +152,7 @@ namespace AbakonDataModel
             foreach (GenRole item in RolesActual)
             {
                 _Role role = _Role.GetRole(item.roleKey);
-                if (this.RolesOf.FirstOrDefault(r => r.RoleId == item.roleKey) == null)
+                if (RolesOf.FirstOrDefault(r => r?.RoleId == item.roleKey) == null)
                 {
                     this.RolesOf.Add(role);
                     _UserInDB.SaveChanges();

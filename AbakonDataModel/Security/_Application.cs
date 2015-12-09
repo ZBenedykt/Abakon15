@@ -44,7 +44,7 @@ namespace AbakonDataModel
             if (m_ThisApplication == null)
             {
                 m_ThisApplication = _ApplicationInDB.ThisApplication();
-            //    RoleStructure.GetRoleFullStructure().RebuildRoles();
+                RoleStructure.GetRoleFullStructure().RebuildRoles();
             }
             return m_ThisApplication;
         }

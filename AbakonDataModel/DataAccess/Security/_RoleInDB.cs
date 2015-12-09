@@ -26,7 +26,7 @@ namespace AbakonDataModel.DataAccess
         internal static bool IsRoleExist(int roleId)
         {
             int idApp = _Application.ThisApplication().ApplicationId;
-            return mContext._RoleDbSet.Find(idApp, roleId) != null;
+            return mContext._RoleDbSet.Find(roleId) != null;
         }
 
         internal static void Create(_Role newRole)
@@ -38,14 +38,14 @@ namespace AbakonDataModel.DataAccess
         internal static _Role GetRole(int roleId)
         {
             int idApp = _Application.ThisApplication().ApplicationId;
-            return mContext._RoleDbSet.Find(idApp, roleId);
+            return mContext._RoleDbSet.Find(roleId);
         }
 
 
         internal static int CountUsers(int roleId)
         {
             int idApp = _Application.ThisApplication().ApplicationId;
-            return mContext._RoleDbSet.Find(idApp, roleId).UsersOf.Count();
+            return mContext._RoleDbSet.Find(roleId).UsersOf.Count();
         }
     }
 }

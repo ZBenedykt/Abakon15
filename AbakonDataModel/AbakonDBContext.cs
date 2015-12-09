@@ -53,17 +53,9 @@ namespace AbakonDataModel
 
 
         public DbSet<_KeyBoardKey> _KeyBoardKeyDbSet { get; set; }
+        public DbSet<Inwestment> InwestmentDbSet { get; set; }
+        public DbSet<Inwestment2> Inwestment2DbSet { get; set; }
 
-
-        ////http://www.entityframeworktutorial.net/code-first/configure-one-to-one-relationship-in-code-first.aspx
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        // //   modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.ComplexTypeAttributeConvention>();
-
-           
-
-        //}
 
     }
 
@@ -77,25 +69,27 @@ namespace AbakonDataModel
             public PgSqlDBContext(string connectionString) : base(connectionString)
             {
             }
-
+        public PgSqlDBContext() : base()
+        {
+        }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-          //  Database.SetInitializer(new MigrateDatabaseToLatestVersion<PgSqlDBContext, PostgreConfiguration<PgSqlDBContext>>(false));
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<PgSqlDBContext, PostgreConfiguration<PgSqlDBContext>>(false));
             //MadeDbInitializer();
 
-            modelBuilder.Entity<_Membership>()
-                      .HasRequired(u => u.applicationMemb)
-                      .WithMany(u => u.memberships)
-                      .HasForeignKey(u => u.ApplicationId)
-                      .WillCascadeOnDelete(true);
+            //modelBuilder.Entity<_Membership>()
+            //          .HasRequired(u => u.applicationMemb)
+            //          .WithMany(u => u.memberships)
+            //          .HasForeignKey(u => u.ApplicationId)
+            //          .WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<_User>()  //one-to-many
-            .HasRequired(u => u.application)
-            .WithMany(u => u.users)
-            .HasForeignKey(u => u.ApplicationId)
-            .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<_User>()  //one-to-many
+            //.HasRequired(u => u.application)
+            //.WithMany(u => u.users)
+            //.HasForeignKey(u => u.ApplicationId)
+            //.WillCascadeOnDelete(false);
 
             modelBuilder.Entity<_Membership>()  // one-to-one
               .HasRequired(u => u.userMemb)
@@ -153,21 +147,12 @@ namespace AbakonDataModel
 
         internal static PgSqlDBContext GetModelDbContext()
         {
-            //if (global)
-            {
                 if (_instance == null)
                 {
-                 //   Devart.Data.PostgreSql.Entity.Configuration.PgSqlEntityProviderConfig config = Devart.Data.PostgreSql.Entity.Configuration.PgSqlEntityProviderConfig.Instance;
-
-                   // config.Workarounds.IgnoreSchemaName = true;
-                    _instance = new PgSqlDBContext("PgSqlDBContext");
+                _instance = new PgSqlDBContext ("PgSqlDBContext");
                 }
-                return _instance;
-            }
-            //else
-            //{
-            //    return new PgSqlDBContext();
-            //}
+                return _instance;         
+
         }
     }
 

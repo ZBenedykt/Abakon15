@@ -96,6 +96,7 @@
     <Compile Include="Enumerators.cs" />
     <Compile Include="Firm\Department.cs" />
     <Compile Include="Firm\Employee.cs" />
+    <Compile Include="Firm\Investment.cs" />
     <Compile Include="Firm\Person.cs" />
     <Compile Include="Infrastructure\PrintAttribute.cs" />
     <Compile Include="Interfaces\IInfoFile.cs" />

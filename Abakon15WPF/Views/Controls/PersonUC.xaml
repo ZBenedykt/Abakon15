@@ -11,10 +11,11 @@
              xmlns:m="clr-namespace:Abakon15WPF"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1100"
-             d:DataContext="{d:DesignInstance Type=VM:PersonVM}" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit">
+             d:DataContext="{d:DesignInstance Type=VM:PersonVM}" 
+             xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit">
 
     <UserControl.DataContext>
-        <VM:PersonVM x:Name="_personVM"  />
+        <VM:PersonVM x:Name="_personVMx" />
     </UserControl.DataContext>
 
     <Border Style="{StaticResource WindowBorderStyle}">

@@ -42,7 +42,7 @@
 
     <Grid>
 
-        <DockPanel Grid.Row="1"  x:Name="_mainDockPanel"  Focusable="False" Background="{StaticResource WindowBackgroundBrush}" >
+        <DockPanel Grid.Row="0"  x:Name="_mainDockPanel"  Focusable="False" Background="{StaticResource WindowBackgroundBrush}" Margin="0" >
 
             <Grid Margin="2" >
                 <Grid.ColumnDefinitions>
@@ -78,25 +78,25 @@
                                 </ButtonBase.Content>
                             </Button>
                             <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Orientation="Horizontal">
-                            <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnection_textBox}"/>
-                            <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbServer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnectionDbName_textBox}"/>
-                        <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnection_textBox}"/>
+                                <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbServer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock  Margin="2,2,0,2" Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_dbConnectionDbName_textBox}"/>
+                                <TextBlock  Margin="0,2,2,2" Text="{Binding Path=DbName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                             </StackPanel>
-                       
 
-                
+
+
                         </Grid>
                     </Border>
                 </Border>
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical"
-                            Visibility="{Binding Path=StartImage, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"> 
+                            Visibility="{Binding Path=StartImage, Converter={StaticResource BooleanToVisibilityConverterTrueFalse}, ConverterParameter=true, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
 
                     <TextBlock Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_connectingToDB_TextBlock}" FontSize="14" Foreground="#CCBE2727" HorizontalAlignment="Center" FontWeight="Bold">
-                                            <TextBlock.Effect>
-                        <DropShadowEffect Color="Silver" Direction="320" ShadowDepth="9" Opacity="0.5" RenderingBias="Quality" BlurRadius="6" />
-                        
-                    </TextBlock.Effect>
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="Silver" Direction="320" ShadowDepth="9" Opacity="0.5" RenderingBias="Quality" BlurRadius="6" />
+
+                        </TextBlock.Effect>
                     </TextBlock>
                 </StackPanel>
                 <Image Name="Logo" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Source="/Abakon15WPF;component/Images/ABAKON_logo.png" Stretch="None" 
@@ -143,7 +143,7 @@
                 <Button Grid.Column="3" Grid.Row="5"  Margin="15,15,15,3" Click="RezygnujButton_Click" Height="27" 
                     Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_resignation_Button}"  IsCancel="True" Style="{StaticResource CommandButtonStyle}" IsTabStop="False" Width="Auto" VerticalAlignment="Top" TabIndex="101" />
 
-               
+
 
                 <Popup x:Name="_connection_PopUP" Grid.Row="6" Grid.Column="1" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint" >
 
@@ -172,7 +172,7 @@
                                     IsDefault="True" Style="{StaticResource CommandButtonStyle}" Height="27" 
                                     Command="{Binding Path=ChangeConnStringCommand}" UseLayoutRounding="True" TabIndex="100"
                                     ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_DbOK_Button_ToolTip}"/>
-                            
+
                                 <!--<Button Grid.Column="3" Grid.Row="4"  Margin="15,15,15,3" Click="RezygnujButton_Click" Height="27" 
                                     Content="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_resignation_Button}"  IsCancel="True" Style="{StaticResource CommandButtonStyle}" IsTabStop="False" Width="Auto" VerticalAlignment="Top" TabIndex="101" />-->
 

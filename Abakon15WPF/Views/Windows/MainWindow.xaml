@@ -23,6 +23,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0" />
+            <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <DockPanel LastChildFill="true"  Background="{StaticResource WindowBackgroundBrush}">
             <!--=========================== Menu główne ===========================-->
@@ -63,10 +64,10 @@
                         <MenuItem  x:Name="_FilePaths"
                                   Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_FilePaths_Form_Title}"  IsEnabled="True" Command="{Binding Path=PathsFileCommand}" />
 
-                     
+
                         <Separator   Style="{StaticResource MenuItemSeparatorStyle}" />
 
-                   
+
                         <MenuItem  x:Name="_departmantDefinition"
                                   Header="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_2_SchematOrganizacyjny_Form_Title}"  IsEnabled="True" Command="{Binding Path=DepartmentDictionaryDefinitionCommand}" />
 
@@ -128,7 +129,7 @@
                 <!--<GridSplitter Grid.Column="0"    Width="6" Background="{StaticResource SpliterVerticalBackgroundBrush}" Margin="0,4" />-->
                 <!--<Border Grid.Row="0"    BorderBrush="#FF8C8E94" BorderThickness="1">-->
 
-                   <ToolBar Grid.Row="0" Background="{StaticResource HeaderGridBackground}"  >
+                <ToolBar Grid.Row="0" Background="{StaticResource HeaderGridBackground}"  >
                     <Button x:Name="mKontrakt_Button" FontSize="12"  Margin="10,0"  Style="{StaticResource CommandButtonStyle}"
                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_contrakt_MenuItemHeader}"  
                             Height="32" Width="66">
@@ -197,7 +198,7 @@
 
                     </Button>
 
-               
+
                     <Button  FontSize="12"  Margin="10,0"  Style="{StaticResource CommandButtonStyle}"
                              ToolTip="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_persons_MenuItemHeader}"  
                             Click="mPerson_Button_Click" Height="32" Width="66">
@@ -258,12 +259,12 @@
                 <!--</ToolBarTray>-->
 
                 <!--</Border>-->
-                <TabControl Grid.Row="1" Name="tcMdi" PreviewMouseMove="TabItem_PreviewMouseMove" Drop="TabItem_Drop" AllowDrop="True" Background="{StaticResource HeaderGridBackground}" Margin="6,0,0,6" >
+                <TabControl Grid.Row="1" Name="tcMdi" PreviewMouseMove="TabItem_PreviewMouseMove" Drop="TabItem_Drop" AllowDrop="True"  Margin="6,0,0,6" >
                 </TabControl>
             </Grid>
 
         </DockPanel>
-        <Popup Grid.Row="3" x:Name="_PopUp" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint"  >
+        <Popup Grid.Row="2" x:Name="_PopUp" StaysOpen="False" PopupAnimation="Slide" IsOpen="False" Placement="MousePoint" Margin="0,0,0,1"  >
             <Border Background="LightGray" BorderBrush="Silver" BorderThickness="1" ClipToBounds="True">
                 <Border Background="Transparent" BorderBrush="DarkGreen"   BorderThickness="1" >
                     <Border.Effect>

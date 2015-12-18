@@ -77,7 +77,8 @@ namespace Abakon15WPF.Utility
 
         public void SaveParameters()
         {
-            Abakon15WPF.Properties.Settings.Default._DB_server = _serverName;
+
+            Properties.Settings.Default._DB_server = _serverName;
             Abakon15WPF.Properties.Settings.Default._DB_Name = _databaseName;
             Abakon15WPF.Properties.Settings.Default._DB_Authetification = !_DbAuth;
             if (_DbAuth)

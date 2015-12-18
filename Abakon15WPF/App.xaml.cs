@@ -11,16 +11,19 @@ using Abakon15WPF.Views.Windows;
 using System.Data.Common;
 using AbakonDataModel;
 using System.Windows.Controls;
-
+using Abakon15WPF.LangKeys;
+using System.Resources;
 
 namespace Abakon15WPF
 {
+   
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-     //   public Devart.Data.PostgreSql.PgSqlMonitor myMonitor = new Devart.Data.PostgreSql.PgSqlMonitor();
+        //   public Devart.Data.PostgreSql.PgSqlMonitor myMonitor = new Devart.Data.PostgreSql.PgSqlMonitor();
+       
 
         static App()
         {

@@ -20,17 +20,7 @@
             <my:MultiBooleanToVisibilityConverter x:Key="GlobalMultiBooleanToVisibilityConverter" />
             <my:UpadateSignatureFormatter x:Key="GlobalUpadateSignatureFormatter"/>
             <my:GridLengthConverter x:Key="GridLengthConverter"/>
-
-      <!--<Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="ContentTemplate">
-                        <Setter.Value>
-                            <DataTemplate>
-                                <TextBlock TextWrapping="Wrap" Text="{Binding}"></TextBlock>
-                            </DataTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>-->
-             
+            
         </ResourceDictionary>
         
         

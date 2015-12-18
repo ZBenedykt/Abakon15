@@ -94,6 +94,7 @@
     <Compile Include="Documents\FilePath.cs" />
     <Compile Include="Documents\Standard.cs" />
     <Compile Include="Enumerators.cs" />
+    <Compile Include="Firm\Contract.cs" />
     <Compile Include="Firm\Department.cs" />
     <Compile Include="Firm\Employee.cs" />
     <Compile Include="Firm\Investment.cs" />

@@ -204,9 +204,6 @@
   <data name="_Position_NavigationPanel" xml:space="preserve">
     <value>Record</value>
   </data>
-  <data name="_equipment_MenuItemHeader" xml:space="preserve">
-    <value>Mesure tools</value>
-  </data>
   <data name="_partner_MenuItemHeader" xml:space="preserve">
     <value>Partners </value>
   </data>
@@ -338,9 +335,6 @@
   </data>
   <data name="persons" xml:space="preserve">
     <value>Persons</value>
-  </data>
-  <data name="_newCalibration_DataButtonsUC" xml:space="preserve">
-    <value>Nowy zapis kalibracji</value>
   </data>
   <data name="acceptedContractors" xml:space="preserve">
     <value>accepted contractors</value>
@@ -536,9 +530,6 @@
   </data>
   <data name="_changeTypeToTop_ToolTip" xml:space="preserve">
     <value>Move selected type to top level</value>
-  </data>
-  <data name="_newTopEquipmentType_DataButtonsUC" xml:space="preserve">
-    <value>New top type of equipment</value>
   </data>
   <data name="_newTopEquipmentType_ToolTip" xml:space="preserve">
     <value>New top type of equipment</value>
@@ -1065,9 +1056,6 @@
   <data name="_userName_Label" xml:space="preserve">
     <value>Added by:</value>
   </data>
-  <data name="_dcpForEquipment_Label" xml:space="preserve">
-    <value>Equipments</value>
-  </data>
   <data name="_dcpForPartners_Label" xml:space="preserve">
     <value>Partners</value>
   </data>
@@ -1145,12 +1133,6 @@
   </data>
   <data name="_selectFilePath_Message" xml:space="preserve">
     <value>Select the file location path</value>
-  </data>
-  <data name="_2_LabWorker_Label" xml:space="preserve">
-    <value>Mesurment made by </value>
-  </data>
-  <data name="_labWorkerKalibrator_Header" xml:space="preserve">
-    <value>Laborant</value>
   </data>
   <data name="_9_PartnerCode_Label" xml:space="preserve">
     <value>PartnerCode</value>
@@ -1248,12 +1230,6 @@
   <data name="_5_uerName_Label" xml:space="preserve">
     <value>Registered by:</value>
   </data>
-  <data name="_EquipmentToDocument_Button" xml:space="preserve">
-    <value>Connet device to document</value>
-  </data>
-  <data name="_EquipmentToDocument_ToolTip" xml:space="preserve">
-    <value>Allows you to associate a document with multiple devices</value>
-  </data>
   <data name="_connectToDocument_Button" xml:space="preserve">
     <value>Connect</value>
   </data>
@@ -1301,9 +1277,6 @@
   </data>
   <data name="_AllEqTypes_TextBlock" xml:space="preserve">
     <value>Wszystkie</value>
-  </data>
-  <data name="_EquipmentType_Title" xml:space="preserve">
-    <value>Equipment types</value>
   </data>
   <data name="_refreshDataGrid_Button" xml:space="preserve">
     <value>Refresh  records in the table</value>
@@ -1422,12 +1395,6 @@
   <data name="_scope" xml:space="preserve">
     <value>Skope</value>
   </data>
-  <data name="_eraseGraph_Buttons" xml:space="preserve">
-    <value>Remove scope</value>
-  </data>
-  <data name="_eraseYear_Buttons" xml:space="preserve">
-    <value>Remove year: </value>
-  </data>
   <data name="_graph_Button" xml:space="preserve">
     <value>Repaint graph</value>
   </data>
@@ -1493,5 +1460,14 @@
   </data>
   <data name="_contrakt_MenuItemHeader" xml:space="preserve">
     <value>Contract</value>
+  </data>
+  <data name="_changePasswordAsk" xml:space="preserve">
+    <value>Do you accept to change the password:</value>
+  </data>
+  <data name="_changePasswordAsk1" xml:space="preserve">
+    <value>Confirm change a user's password:</value>
+  </data>
+  <data name="_lastUpdateLabel" xml:space="preserve">
+    <value>Date of last update</value>
   </data>
 </root>

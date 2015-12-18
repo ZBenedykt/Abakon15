@@ -89,7 +89,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Infralution.Localization.Wpf">
+    <Reference Include="Infralution.Localization.Wpf, Version=2.1.1.0, Culture=neutral, PublicKeyToken=547ccae517a004b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Infralution.Localization.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -139,6 +140,7 @@
     <Compile Include="Infrastructure\ResizingAdorner .cs" />
     <Compile Include="Infrastructure\StateOfExecution.cs" />
     <Compile Include="Infrastructure\StringLib.cs" />
+    <Compile Include="Infrastructure\StringLocalizer.cs" />
     <Compile Include="Infrastructure\ViewableObservableCollection.cs" />
     <Compile Include="Infrastructure\VirtualClassificationTree.cs" />
     <Compile Include="Infrastructure\WindowManagerClass.cs" />
@@ -464,7 +466,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LangKeys\ResourceLang.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceLang.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -22,7 +22,7 @@ namespace Abakon15WPF.LangKeys {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourceLang {
+    public class ResourceLang {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Abakon15WPF.LangKeys {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Abakon15WPF.LangKeys.ResourceLang", typeof(ResourceLang).Assembly);
@@ -51,7 +51,7 @@ namespace Abakon15WPF.LangKeys {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add selected standards.
         /// </summary>
-        internal static string _11_addSelectedStandards_ToolTip {
+        public static string _11_addSelectedStandards_ToolTip {
             get {
                 return ResourceManager.GetString("_11_addSelectedStandards_ToolTip", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Desription.
         /// </summary>
-        internal static string _11_standardDescription_Label {
+        public static string _11_standardDescription_Label {
             get {
                 return ResourceManager.GetString("_11_standardDescription_Label", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to File name or URL.
         /// </summary>
-        internal static string _11_standardFile_Label {
+        public static string _11_standardFile_Label {
             get {
                 return ResourceManager.GetString("_11_standardFile_Label", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Standard name.
         /// </summary>
-        internal static string _11_standardName_Label {
+        public static string _11_standardName_Label {
             get {
                 return ResourceManager.GetString("_11_standardName_Label", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Path.
         /// </summary>
-        internal static string _11_standardPath_Label {
+        public static string _11_standardPath_Label {
             get {
                 return ResourceManager.GetString("_11_standardPath_Label", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date of calibration.
         /// </summary>
-        internal static string _2_dataBadania_Label {
+        public static string _2_dataBadania_Label {
             get {
                 return ResourceManager.GetString("_2_dataBadania_Label", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date of next calibr..
         /// </summary>
-        internal static string _2_dataNastepnegoBadania_Label {
+        public static string _2_dataNastepnegoBadania_Label {
             get {
                 return ResourceManager.GetString("_2_dataNastepnegoBadania_Label", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Data zakończenia procesu.
         /// </summary>
-        internal static string _2_dataZakonczeniaProcesu_Label {
+        public static string _2_dataZakonczeniaProcesu_Label {
             get {
                 return ResourceManager.GetString("_2_dataZakonczeniaProcesu_Label", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
-        internal static string _2_DepartmentCode_Header {
+        public static string _2_DepartmentCode_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentCode_Header", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Insert code.
         /// </summary>
-        internal static string _2_DepartmentCode_Tag {
+        public static string _2_DepartmentCode_Tag {
             get {
                 return ResourceManager.GetString("_2_DepartmentCode_Tag", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Default.
         /// </summary>
-        internal static string _2_DepartmentDefault_Header {
+        public static string _2_DepartmentDefault_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentDefault_Header", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _2_DepartmentName_Header {
+        public static string _2_DepartmentName_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentName_Header", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Insert name.
         /// </summary>
-        internal static string _2_DepartmentName_Tag {
+        public static string _2_DepartmentName_Tag {
             get {
                 return ResourceManager.GetString("_2_DepartmentName_Tag", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Parent department.
         /// </summary>
-        internal static string _2_DepartmentParent_Header {
+        public static string _2_DepartmentParent_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentParent_Header", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Code of parent.
         /// </summary>
-        internal static string _2_DepartmentParentCode_Header {
+        public static string _2_DepartmentParentCode_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentParentCode_Header", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name of parent.
         /// </summary>
-        internal static string _2_DepartmentParentName_Header {
+        public static string _2_DepartmentParentName_Header {
             get {
                 return ResourceManager.GetString("_2_DepartmentParentName_Header", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Step.
         /// </summary>
-        internal static string _2_EtapKalibracji_Label {
+        public static string _2_EtapKalibracji_Label {
             get {
                 return ResourceManager.GetString("_2_EtapKalibracji_Label", resourceCulture);
             }
@@ -216,25 +216,16 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Company calibrating.
         /// </summary>
-        internal static string _2_kalibrujeFirma_Label {
+        public static string _2_kalibrujeFirma_Label {
             get {
                 return ResourceManager.GetString("_2_kalibrujeFirma_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mesurment made by .
-        /// </summary>
-        internal static string _2_LabWorker_Label {
-            get {
-                return ResourceManager.GetString("_2_LabWorker_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Wyniki opracował  : .
         /// </summary>
-        internal static string _2_LabWorkerAccept_Label {
+        public static string _2_LabWorkerAccept_Label {
             get {
                 return ResourceManager.GetString("_2_LabWorkerAccept_Label", resourceCulture);
             }
@@ -243,7 +234,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Firma pośrednicząca.
         /// </summary>
-        internal static string _2_posrednikKalibracjiFirma_Label {
+        public static string _2_posrednikKalibracjiFirma_Label {
             get {
                 return ResourceManager.GetString("_2_posrednikKalibracjiFirma_Label", resourceCulture);
             }
@@ -252,7 +243,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Zużycie [%].
         /// </summary>
-        internal static string _2_procentZuzycia_Label {
+        public static string _2_procentZuzycia_Label {
             get {
                 return ResourceManager.GetString("_2_procentZuzycia_Label", resourceCulture);
             }
@@ -261,7 +252,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Organisational structure.
         /// </summary>
-        internal static string _2_SchematOrganizacyjny_Form_Title {
+        public static string _2_SchematOrganizacyjny_Form_Title {
             get {
                 return ResourceManager.GetString("_2_SchematOrganizacyjny_Form_Title", resourceCulture);
             }
@@ -270,7 +261,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Uwagi.
         /// </summary>
-        internal static string _2_uwagi_Label {
+        public static string _2_uwagi_Label {
             get {
                 return ResourceManager.GetString("_2_uwagi_Label", resourceCulture);
             }
@@ -279,7 +270,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Wynik badania.
         /// </summary>
-        internal static string _2_wynikBadania_Label {
+        public static string _2_wynikBadania_Label {
             get {
                 return ResourceManager.GetString("_2_wynikBadania_Label", resourceCulture);
             }
@@ -288,7 +279,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Wynik badania w języku angielskim.
         /// </summary>
-        internal static string _2_wynikBadaniaAngielski_Label {
+        public static string _2_wynikBadaniaAngielski_Label {
             get {
                 return ResourceManager.GetString("_2_wynikBadaniaAngielski_Label", resourceCulture);
             }
@@ -297,7 +288,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Equipment type structure.
         /// </summary>
-        internal static string _3_equipmentType_Form_Title {
+        public static string _3_equipmentType_Form_Title {
             get {
                 return ResourceManager.GetString("_3_equipmentType_Form_Title", resourceCulture);
             }
@@ -306,7 +297,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name of type.
         /// </summary>
-        internal static string _3_equipmentType_Tag {
+        public static string _3_equipmentType_Tag {
             get {
                 return ResourceManager.GetString("_3_equipmentType_Tag", resourceCulture);
             }
@@ -315,7 +306,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document classification structure.
         /// </summary>
-        internal static string _4_DocumentClassificationPattern_Form_Title {
+        public static string _4_DocumentClassificationPattern_Form_Title {
             get {
                 return ResourceManager.GetString("_4_DocumentClassificationPattern_Form_Title", resourceCulture);
             }
@@ -324,7 +315,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _4_Name_Tag {
+        public static string _4_Name_Tag {
             get {
                 return ResourceManager.GetString("_4_Name_Tag", resourceCulture);
             }
@@ -333,7 +324,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Classifier.
         /// </summary>
-        internal static string _5_Classification_Label {
+        public static string _5_Classification_Label {
             get {
                 return ResourceManager.GetString("_5_Classification_Label", resourceCulture);
             }
@@ -342,7 +333,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date of creation.
         /// </summary>
-        internal static string _5_createDate_Label {
+        public static string _5_createDate_Label {
             get {
                 return ResourceManager.GetString("_5_createDate_Label", resourceCulture);
             }
@@ -351,7 +342,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Notes.
         /// </summary>
-        internal static string _5_description_Label {
+        public static string _5_description_Label {
             get {
                 return ResourceManager.GetString("_5_description_Label", resourceCulture);
             }
@@ -360,7 +351,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
-        internal static string _5_documentCode_Label {
+        public static string _5_documentCode_Label {
             get {
                 return ResourceManager.GetString("_5_documentCode_Label", resourceCulture);
             }
@@ -369,7 +360,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to File name.
         /// </summary>
-        internal static string _5_fileName_Label {
+        public static string _5_fileName_Label {
             get {
                 return ResourceManager.GetString("_5_fileName_Label", resourceCulture);
             }
@@ -378,7 +369,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Path name.
         /// </summary>
-        internal static string _5_path_Label {
+        public static string _5_path_Label {
             get {
                 return ResourceManager.GetString("_5_path_Label", resourceCulture);
             }
@@ -387,7 +378,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Registered by:.
         /// </summary>
-        internal static string _5_uerName_Label {
+        public static string _5_uerName_Label {
             get {
                 return ResourceManager.GetString("_5_uerName_Label", resourceCulture);
             }
@@ -396,7 +387,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Business email.
         /// </summary>
-        internal static string _8_business_email_Label {
+        public static string _8_business_email_Label {
             get {
                 return ResourceManager.GetString("_8_business_email_Label", resourceCulture);
             }
@@ -405,7 +396,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date of registr..
         /// </summary>
-        internal static string _8_CreateDate_Label {
+        public static string _8_CreateDate_Label {
             get {
                 return ResourceManager.GetString("_8_CreateDate_Label", resourceCulture);
             }
@@ -414,7 +405,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Department.
         /// </summary>
-        internal static string _8_department_Label {
+        public static string _8_department_Label {
             get {
                 return ResourceManager.GetString("_8_department_Label", resourceCulture);
             }
@@ -423,7 +414,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Fax.
         /// </summary>
-        internal static string _8_fax_Label {
+        public static string _8_fax_Label {
             get {
                 return ResourceManager.GetString("_8_fax_Label", resourceCulture);
             }
@@ -432,7 +423,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Gender.
         /// </summary>
-        internal static string _8_gender_Label {
+        public static string _8_gender_Label {
             get {
                 return ResourceManager.GetString("_8_gender_Label", resourceCulture);
             }
@@ -441,7 +432,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 0 - male, 1 - female.
         /// </summary>
-        internal static string _8_gender_WaterMark {
+        public static string _8_gender_WaterMark {
             get {
                 return ResourceManager.GetString("_8_gender_WaterMark", resourceCulture);
             }
@@ -450,7 +441,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Home phone.
         /// </summary>
-        internal static string _8_home_phone_Label {
+        public static string _8_home_phone_Label {
             get {
                 return ResourceManager.GetString("_8_home_phone_Label", resourceCulture);
             }
@@ -459,7 +450,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Interests.
         /// </summary>
-        internal static string _8_interests_Label {
+        public static string _8_interests_Label {
             get {
                 return ResourceManager.GetString("_8_interests_Label", resourceCulture);
             }
@@ -468,7 +459,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Lab worker.
         /// </summary>
-        internal static string _8_labWorker_Label {
+        public static string _8_labWorker_Label {
             get {
                 return ResourceManager.GetString("_8_labWorker_Label", resourceCulture);
             }
@@ -477,7 +468,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date of last update.
         /// </summary>
-        internal static string _8_LastUpdateDate_Label {
+        public static string _8_LastUpdateDate_Label {
             get {
                 return ResourceManager.GetString("_8_LastUpdateDate_Label", resourceCulture);
             }
@@ -486,7 +477,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Mobile phone.
         /// </summary>
-        internal static string _8_mobile_phone_Label {
+        public static string _8_mobile_phone_Label {
             get {
                 return ResourceManager.GetString("_8_mobile_phone_Label", resourceCulture);
             }
@@ -495,7 +486,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _8_name_Label {
+        public static string _8_name_Label {
             get {
                 return ResourceManager.GetString("_8_name_Label", resourceCulture);
             }
@@ -504,7 +495,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Preferable contact.
         /// </summary>
-        internal static string _8_pref_contact_Label {
+        public static string _8_pref_contact_Label {
             get {
                 return ResourceManager.GetString("_8_pref_contact_Label", resourceCulture);
             }
@@ -513,7 +504,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Private email.
         /// </summary>
-        internal static string _8_private_email_Label {
+        public static string _8_private_email_Label {
             get {
                 return ResourceManager.GetString("_8_private_email_Label", resourceCulture);
             }
@@ -522,7 +513,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Spoken lang.
         /// </summary>
-        internal static string _8_spoken_lang_Label {
+        public static string _8_spoken_lang_Label {
             get {
                 return ResourceManager.GetString("_8_spoken_lang_Label", resourceCulture);
             }
@@ -531,7 +522,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Surename.
         /// </summary>
-        internal static string _8_sureName_Label {
+        public static string _8_sureName_Label {
             get {
                 return ResourceManager.GetString("_8_sureName_Label", resourceCulture);
             }
@@ -540,7 +531,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
-        internal static string _8_title_Label {
+        public static string _8_title_Label {
             get {
                 return ResourceManager.GetString("_8_title_Label", resourceCulture);
             }
@@ -549,7 +540,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Operator.
         /// </summary>
-        internal static string _8_UserName_Label {
+        public static string _8_UserName_Label {
             get {
                 return ResourceManager.GetString("_8_UserName_Label", resourceCulture);
             }
@@ -558,7 +549,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Work phone.
         /// </summary>
-        internal static string _8_work_phone_Label {
+        public static string _8_work_phone_Label {
             get {
                 return ResourceManager.GetString("_8_work_phone_Label", resourceCulture);
             }
@@ -567,7 +558,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Written lang.
         /// </summary>
-        internal static string _8_written_lang_Label {
+        public static string _8_written_lang_Label {
             get {
                 return ResourceManager.GetString("_8_written_lang_Label", resourceCulture);
             }
@@ -576,7 +567,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to WWW.
         /// </summary>
-        internal static string _8_www_address_Label {
+        public static string _8_www_address_Label {
             get {
                 return ResourceManager.GetString("_8_www_address_Label", resourceCulture);
             }
@@ -585,7 +576,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerCode.
         /// </summary>
-        internal static string _9_PartnerCode_Label {
+        public static string _9_PartnerCode_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerCode_Label", resourceCulture);
             }
@@ -594,7 +585,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerEmail.
         /// </summary>
-        internal static string _9_PartnerEmail_Label {
+        public static string _9_PartnerEmail_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerEmail_Label", resourceCulture);
             }
@@ -603,7 +594,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerFax.
         /// </summary>
-        internal static string _9_PartnerFax_Label {
+        public static string _9_PartnerFax_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerFax_Label", resourceCulture);
             }
@@ -612,7 +603,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerKeyWords.
         /// </summary>
-        internal static string _9_PartnerKeyWords_Label {
+        public static string _9_PartnerKeyWords_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerKeyWords_Label", resourceCulture);
             }
@@ -621,7 +612,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerName.
         /// </summary>
-        internal static string _9_PartnerName_Label {
+        public static string _9_PartnerName_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerName_Label", resourceCulture);
             }
@@ -630,7 +621,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Partnerphone.
         /// </summary>
-        internal static string _9_Partnerphone_Label {
+        public static string _9_Partnerphone_Label {
             get {
                 return ResourceManager.GetString("_9_Partnerphone_Label", resourceCulture);
             }
@@ -639,7 +630,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerReliabilityRating.
         /// </summary>
-        internal static string _9_PartnerReliabilityRating_Label {
+        public static string _9_PartnerReliabilityRating_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerReliabilityRating_Label", resourceCulture);
             }
@@ -648,7 +639,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerType.
         /// </summary>
-        internal static string _9_PartnerType_Label {
+        public static string _9_PartnerType_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerType_Label", resourceCulture);
             }
@@ -657,7 +648,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to PartnerWWW.
         /// </summary>
-        internal static string _9_PartnerWWW_Label {
+        public static string _9_PartnerWWW_Label {
             get {
                 return ResourceManager.GetString("_9_PartnerWWW_Label", resourceCulture);
             }
@@ -666,7 +657,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add calibrator to :.
         /// </summary>
-        internal static string _addCalibrator_Button {
+        public static string _addCalibrator_Button {
             get {
                 return ResourceManager.GetString("_addCalibrator_Button", resourceCulture);
             }
@@ -675,7 +666,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add new scope.
         /// </summary>
-        internal static string _addDomain_Button {
+        public static string _addDomain_Button {
             get {
                 return ResourceManager.GetString("_addDomain_Button", resourceCulture);
             }
@@ -684,7 +675,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add new equipment  .
         /// </summary>
-        internal static string _addNewMode_DataButtonsUC {
+        public static string _addNewMode_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_addNewMode_DataButtonsUC", resourceCulture);
             }
@@ -693,7 +684,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add partner.
         /// </summary>
-        internal static string _AddPartner_Button {
+        public static string _AddPartner_Button {
             get {
                 return ResourceManager.GetString("_AddPartner_Button", resourceCulture);
             }
@@ -702,7 +693,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Admin tools.
         /// </summary>
-        internal static string _admin_MenuItemHeader {
+        public static string _admin_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_admin_MenuItemHeader", resourceCulture);
             }
@@ -711,7 +702,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Aircondition devices.
         /// </summary>
-        internal static string _AirConditionDeviceWindow_Title {
+        public static string _AirConditionDeviceWindow_Title {
             get {
                 return ResourceManager.GetString("_AirConditionDeviceWindow_Title", resourceCulture);
             }
@@ -720,7 +711,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to All departments.
         /// </summary>
-        internal static string _AllDepartmenst_TextBlock {
+        public static string _AllDepartmenst_TextBlock {
             get {
                 return ResourceManager.GetString("_AllDepartmenst_TextBlock", resourceCulture);
             }
@@ -729,7 +720,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Wszystkie.
         /// </summary>
-        internal static string _AllEqTypes_TextBlock {
+        public static string _AllEqTypes_TextBlock {
             get {
                 return ResourceManager.GetString("_AllEqTypes_TextBlock", resourceCulture);
             }
@@ -738,7 +729,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Anonymous user.
         /// </summary>
-        internal static string _anonymous {
+        public static string _anonymous {
             get {
                 return ResourceManager.GetString("_anonymous", resourceCulture);
             }
@@ -747,7 +738,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to An anonymous user is unacceptable.
         /// </summary>
-        internal static string _anonymousNoAllowed {
+        public static string _anonymousNoAllowed {
             get {
                 return ResourceManager.GetString("_anonymousNoAllowed", resourceCulture);
             }
@@ -756,7 +747,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Appendix.
         /// </summary>
-        internal static string _appedix_ExpanderLabel {
+        public static string _appedix_ExpanderLabel {
             get {
                 return ResourceManager.GetString("_appedix_ExpanderLabel", resourceCulture);
             }
@@ -765,7 +756,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Application options.
         /// </summary>
-        internal static string _applicationOptions_MenuItemHeader {
+        public static string _applicationOptions_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_applicationOptions_MenuItemHeader", resourceCulture);
             }
@@ -774,7 +765,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Application parameters.
         /// </summary>
-        internal static string _appParameters_Header {
+        public static string _appParameters_Header {
             get {
                 return ResourceManager.GetString("_appParameters_Header", resourceCulture);
             }
@@ -783,7 +774,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Global application parameters.
         /// </summary>
-        internal static string _appParameters_Window_Title {
+        public static string _appParameters_Window_Title {
             get {
                 return ResourceManager.GetString("_appParameters_Window_Title", resourceCulture);
             }
@@ -792,7 +783,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Calibrated equipment.
         /// </summary>
-        internal static string _calibratedEquipment_TabItemHeader {
+        public static string _calibratedEquipment_TabItemHeader {
             get {
                 return ResourceManager.GetString("_calibratedEquipment_TabItemHeader", resourceCulture);
             }
@@ -801,7 +792,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Caution.
         /// </summary>
-        internal static string _Caution {
+        public static string _Caution {
             get {
                 return ResourceManager.GetString("_Caution", resourceCulture);
             }
@@ -810,7 +801,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Data base connection.
         /// </summary>
-        internal static string _changeDb_MenuItemHeader {
+        public static string _changeDb_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_changeDb_MenuItemHeader", resourceCulture);
             }
@@ -819,7 +810,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move to top.
         /// </summary>
-        internal static string _changeDCPToTop_DataButtonsUC {
+        public static string _changeDCPToTop_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeDCPToTop_DataButtonsUC", resourceCulture);
             }
@@ -828,7 +819,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move to top of classification.
         /// </summary>
-        internal static string _changeDCPToTop_ToolTip {
+        public static string _changeDCPToTop_ToolTip {
             get {
                 return ResourceManager.GetString("_changeDCPToTop_ToolTip", resourceCulture);
             }
@@ -837,7 +828,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Top department.
         /// </summary>
-        internal static string _changeDepartmentToTop_DataButtonsUC {
+        public static string _changeDepartmentToTop_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeDepartmentToTop_DataButtonsUC", resourceCulture);
             }
@@ -846,7 +837,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Make top department.
         /// </summary>
-        internal static string _changeDepartmentToTop_ToolTip {
+        public static string _changeDepartmentToTop_ToolTip {
             get {
                 return ResourceManager.GetString("_changeDepartmentToTop_ToolTip", resourceCulture);
             }
@@ -855,7 +846,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move the type.
         /// </summary>
-        internal static string _changeParentDCP_DataButtonsUC {
+        public static string _changeParentDCP_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeParentDCP_DataButtonsUC", resourceCulture);
             }
@@ -864,7 +855,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move the type to another parent.
         /// </summary>
-        internal static string _changeParentDCP_ToolTip {
+        public static string _changeParentDCP_ToolTip {
             get {
                 return ResourceManager.GetString("_changeParentDCP_ToolTip", resourceCulture);
             }
@@ -873,7 +864,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move department .
         /// </summary>
-        internal static string _changeParentDepartment_DataButtonsUC {
+        public static string _changeParentDepartment_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeParentDepartment_DataButtonsUC", resourceCulture);
             }
@@ -882,7 +873,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move department to another.
         /// </summary>
-        internal static string _changeParentDepartment_ToolTip {
+        public static string _changeParentDepartment_ToolTip {
             get {
                 return ResourceManager.GetString("_changeParentDepartment_ToolTip", resourceCulture);
             }
@@ -891,7 +882,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move to another parent.
         /// </summary>
-        internal static string _changeParentType_DataButtonsUC {
+        public static string _changeParentType_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeParentType_DataButtonsUC", resourceCulture);
             }
@@ -900,7 +891,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move to another parent.
         /// </summary>
-        internal static string _changeParentType_ToolTip {
+        public static string _changeParentType_ToolTip {
             get {
                 return ResourceManager.GetString("_changeParentType_ToolTip", resourceCulture);
             }
@@ -909,7 +900,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New password.
         /// </summary>
-        internal static string _changePassword_Button {
+        public static string _changePassword_Button {
             get {
                 return ResourceManager.GetString("_changePassword_Button", resourceCulture);
             }
@@ -918,16 +909,34 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Change password.
         /// </summary>
-        internal static string _changePassword_MenuItemHeader {
+        public static string _changePassword_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_changePassword_MenuItemHeader", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you accept to change the password:.
+        /// </summary>
+        public static string _changePasswordAsk {
+            get {
+                return ResourceManager.GetString("_changePasswordAsk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm change a user&apos;s password:.
+        /// </summary>
+        public static string _changePasswordAsk1 {
+            get {
+                return ResourceManager.GetString("_changePasswordAsk1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Move to top.
         /// </summary>
-        internal static string _changeTypeToTop_DataButtonsUC {
+        public static string _changeTypeToTop_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_changeTypeToTop_DataButtonsUC", resourceCulture);
             }
@@ -936,7 +945,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Move selected type to top level.
         /// </summary>
-        internal static string _changeTypeToTop_ToolTip {
+        public static string _changeTypeToTop_ToolTip {
             get {
                 return ResourceManager.GetString("_changeTypeToTop_ToolTip", resourceCulture);
             }
@@ -945,7 +954,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Character/Text.
         /// </summary>
-        internal static string _Char_Header {
+        public static string _Char_Header {
             get {
                 return ResourceManager.GetString("_Char_Header", resourceCulture);
             }
@@ -954,7 +963,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Do you want to exit the application?.
         /// </summary>
-        internal static string _closeApplicationAsk {
+        public static string _closeApplicationAsk {
             get {
                 return ResourceManager.GetString("_closeApplicationAsk", resourceCulture);
             }
@@ -963,7 +972,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
-        internal static string _Code_Header {
+        public static string _Code_Header {
             get {
                 return ResourceManager.GetString("_Code_Header", resourceCulture);
             }
@@ -972,7 +981,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Column of errors.
         /// </summary>
-        internal static string _colErrors_Button {
+        public static string _colErrors_Button {
             get {
                 return ResourceManager.GetString("_colErrors_Button", resourceCulture);
             }
@@ -981,7 +990,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Column limits.
         /// </summary>
-        internal static string _colLimits_Button {
+        public static string _colLimits_Button {
             get {
                 return ResourceManager.GetString("_colLimits_Button", resourceCulture);
             }
@@ -990,7 +999,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Column of series of measurements.
         /// </summary>
-        internal static string _colMeasSeries_Button {
+        public static string _colMeasSeries_Button {
             get {
                 return ResourceManager.GetString("_colMeasSeries_Button", resourceCulture);
             }
@@ -999,7 +1008,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Column visibility.
         /// </summary>
-        internal static string _columnVisibility {
+        public static string _columnVisibility {
             get {
                 return ResourceManager.GetString("_columnVisibility", resourceCulture);
             }
@@ -1008,7 +1017,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Comply the calibration date?.
         /// </summary>
-        internal static string _complyCalibrationDate_CheckBocContent {
+        public static string _complyCalibrationDate_CheckBocContent {
             get {
                 return ResourceManager.GetString("_complyCalibrationDate_CheckBocContent", resourceCulture);
             }
@@ -1017,7 +1026,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
-        internal static string _confirm {
+        public static string _confirm {
             get {
                 return ResourceManager.GetString("_confirm", resourceCulture);
             }
@@ -1026,7 +1035,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Connecting to DB.
         /// </summary>
-        internal static string _connectingToDB_TextBlock {
+        public static string _connectingToDB_TextBlock {
             get {
                 return ResourceManager.GetString("_connectingToDB_TextBlock", resourceCulture);
             }
@@ -1035,7 +1044,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Connect.
         /// </summary>
-        internal static string _connectToDocument_Button {
+        public static string _connectToDocument_Button {
             get {
                 return ResourceManager.GetString("_connectToDocument_Button", resourceCulture);
             }
@@ -1044,7 +1053,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Contract.
         /// </summary>
-        internal static string _contrakt_MenuItemHeader {
+        public static string _contrakt_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_contrakt_MenuItemHeader", resourceCulture);
             }
@@ -1053,7 +1062,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Copy roles.
         /// </summary>
-        internal static string _copyRoles_Button {
+        public static string _copyRoles_Button {
             get {
                 return ResourceManager.GetString("_copyRoles_Button", resourceCulture);
             }
@@ -1062,7 +1071,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to From user :.
         /// </summary>
-        internal static string _copyRolesTextBlock {
+        public static string _copyRolesTextBlock {
             get {
                 return ResourceManager.GetString("_copyRolesTextBlock", resourceCulture);
             }
@@ -1071,7 +1080,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
-        internal static string _createDate_Label {
+        public static string _createDate_Label {
             get {
                 return ResourceManager.GetString("_createDate_Label", resourceCulture);
             }
@@ -1080,7 +1089,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Kalibracje .
         /// </summary>
-        internal static string _dateOfCalibration_Header {
+        public static string _dateOfCalibration_Header {
             get {
                 return ResourceManager.GetString("_dateOfCalibration_Header", resourceCulture);
             }
@@ -1089,7 +1098,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Data zarejestrowania.
         /// </summary>
-        internal static string _dateStart_Header {
+        public static string _dateStart_Header {
             get {
                 return ResourceManager.GetString("_dateStart_Header", resourceCulture);
             }
@@ -1098,7 +1107,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Db connection .
         /// </summary>
-        internal static string _dbConnect_Buttons {
+        public static string _dbConnect_Buttons {
             get {
                 return ResourceManager.GetString("_dbConnect_Buttons", resourceCulture);
             }
@@ -1107,7 +1116,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Reconnect to other base.
         /// </summary>
-        internal static string _dbConnect_ToolTip {
+        public static string _dbConnect_ToolTip {
             get {
                 return ResourceManager.GetString("_dbConnect_ToolTip", resourceCulture);
             }
@@ -1116,7 +1125,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Authentication windows.
         /// </summary>
-        internal static string _DbConnection_Authentication_Label {
+        public static string _DbConnection_Authentication_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_Authentication_Label", resourceCulture);
             }
@@ -1125,7 +1134,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Database name.
         /// </summary>
-        internal static string _DbConnection_DbName_Label {
+        public static string _DbConnection_DbName_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_DbName_Label", resourceCulture);
             }
@@ -1134,7 +1143,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Database connection.
         /// </summary>
-        internal static string _DbConnection_Form_Title {
+        public static string _DbConnection_Form_Title {
             get {
                 return ResourceManager.GetString("_DbConnection_Form_Title", resourceCulture);
             }
@@ -1143,7 +1152,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The system can not connect to the database!.
         /// </summary>
-        internal static string _DbConnection_NotConnected_Label {
+        public static string _DbConnection_NotConnected_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_NotConnected_Label", resourceCulture);
             }
@@ -1152,7 +1161,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string _DbConnection_Password_Label {
+        public static string _DbConnection_Password_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_Password_Label", resourceCulture);
             }
@@ -1161,7 +1170,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Resign.
         /// </summary>
-        internal static string _DbConnection_Resign_Label {
+        public static string _DbConnection_Resign_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_Resign_Label", resourceCulture);
             }
@@ -1170,7 +1179,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Server name.
         /// </summary>
-        internal static string _DbConnection_ServerName_Label {
+        public static string _DbConnection_ServerName_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_ServerName_Label", resourceCulture);
             }
@@ -1179,7 +1188,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Attention: If you change the database program will be shut down!.
         /// </summary>
-        internal static string _DbConnection_SystemStopped_Label {
+        public static string _DbConnection_SystemStopped_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_SystemStopped_Label", resourceCulture);
             }
@@ -1188,7 +1197,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Data source:   DbServer =.
         /// </summary>
-        internal static string _dbConnection_textBox {
+        public static string _dbConnection_textBox {
             get {
                 return ResourceManager.GetString("_dbConnection_textBox", resourceCulture);
             }
@@ -1197,7 +1206,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string _DbConnection_User_Label {
+        public static string _DbConnection_User_Label {
             get {
                 return ResourceManager.GetString("_DbConnection_User_Label", resourceCulture);
             }
@@ -1206,7 +1215,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to DbName =.
         /// </summary>
-        internal static string _dbConnectionDbName_textBox {
+        public static string _dbConnectionDbName_textBox {
             get {
                 return ResourceManager.GetString("_dbConnectionDbName_textBox", resourceCulture);
             }
@@ -1215,25 +1224,16 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to After accepting changes, the application will close. You should reopen it..
         /// </summary>
-        internal static string _DbOK_Button_ToolTip {
+        public static string _DbOK_Button_ToolTip {
             get {
                 return ResourceManager.GetString("_DbOK_Button_ToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Equipments.
-        /// </summary>
-        internal static string _dcpForEquipment_Label {
-            get {
-                return ResourceManager.GetString("_dcpForEquipment_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Partners.
         /// </summary>
-        internal static string _dcpForPartners_Label {
+        public static string _dcpForPartners_Label {
             get {
                 return ResourceManager.GetString("_dcpForPartners_Label", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Persons.
         /// </summary>
-        internal static string _dcpForPersons_Label {
+        public static string _dcpForPersons_Label {
             get {
                 return ResourceManager.GetString("_dcpForPersons_Label", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Standards.
         /// </summary>
-        internal static string _dcpForStandards_Label {
+        public static string _dcpForStandards_Label {
             get {
                 return ResourceManager.GetString("_dcpForStandards_Label", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Tasks.
         /// </summary>
-        internal static string _dcpForTsaks_Label {
+        public static string _dcpForTsaks_Label {
             get {
                 return ResourceManager.GetString("_dcpForTsaks_Label", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The hierarchy of documents for the objects:.
         /// </summary>
-        internal static string _dcpIntro_Label {
+        public static string _dcpIntro_Label {
             get {
                 return ResourceManager.GetString("_dcpIntro_Label", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Remove from database.
         /// </summary>
-        internal static string _delete_DataButtons {
+        public static string _delete_DataButtons {
             get {
                 return ResourceManager.GetString("_delete_DataButtons", resourceCulture);
             }
@@ -1287,7 +1287,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Irreversible deleting the record from the database.
         /// </summary>
-        internal static string _delete_ToolTip {
+        public static string _delete_ToolTip {
             get {
                 return ResourceManager.GetString("_delete_ToolTip", resourceCulture);
             }
@@ -1296,7 +1296,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to will not be company representative.
         /// </summary>
-        internal static string _deleteAgentAsk {
+        public static string _deleteAgentAsk {
             get {
                 return ResourceManager.GetString("_deleteAgentAsk", resourceCulture);
             }
@@ -1305,7 +1305,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete.
         /// </summary>
-        internal static string _deleteDataAsk {
+        public static string _deleteDataAsk {
             get {
                 return ResourceManager.GetString("_deleteDataAsk", resourceCulture);
             }
@@ -1314,7 +1314,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Erase document.
         /// </summary>
-        internal static string _deleteDocument_Button {
+        public static string _deleteDocument_Button {
             get {
                 return ResourceManager.GetString("_deleteDocument_Button", resourceCulture);
             }
@@ -1323,7 +1323,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Deletes information of file, does not erase the file..
         /// </summary>
-        internal static string _deleteDocument_ToolTip {
+        public static string _deleteDocument_ToolTip {
             get {
                 return ResourceManager.GetString("_deleteDocument_ToolTip", resourceCulture);
             }
@@ -1332,7 +1332,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delete from keyboard.
         /// </summary>
-        internal static string _deleteKey_Button {
+        public static string _deleteKey_Button {
             get {
                 return ResourceManager.GetString("_deleteKey_Button", resourceCulture);
             }
@@ -1341,7 +1341,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string _deleteRecord_DataButtonsUC {
+        public static string _deleteRecord_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_deleteRecord_DataButtonsUC", resourceCulture);
             }
@@ -1350,7 +1350,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delete current record.
         /// </summary>
-        internal static string _deleteRecordToolTip_DataButtonsUC {
+        public static string _deleteRecordToolTip_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_deleteRecordToolTip_DataButtonsUC", resourceCulture);
             }
@@ -1359,7 +1359,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string _deleteUser_Button {
+        public static string _deleteUser_Button {
             get {
                 return ResourceManager.GetString("_deleteUser_Button", resourceCulture);
             }
@@ -1368,7 +1368,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Organisational structure.
         /// </summary>
-        internal static string _DepartmantForm_Title {
+        public static string _DepartmantForm_Title {
             get {
                 return ResourceManager.GetString("_DepartmantForm_Title", resourceCulture);
             }
@@ -1377,7 +1377,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Department.
         /// </summary>
-        internal static string _Department_DGHeader {
+        public static string _Department_DGHeader {
             get {
                 return ResourceManager.GetString("_Department_DGHeader", resourceCulture);
             }
@@ -1386,7 +1386,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to List of registered departments.
         /// </summary>
-        internal static string _departmentList_Header {
+        public static string _departmentList_Header {
             get {
                 return ResourceManager.GetString("_departmentList_Header", resourceCulture);
             }
@@ -1395,7 +1395,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        internal static string _details_TabItemHeader {
+        public static string _details_TabItemHeader {
             get {
                 return ResourceManager.GetString("_details_TabItemHeader", resourceCulture);
             }
@@ -1404,7 +1404,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Degree of deviation = .
         /// </summary>
-        internal static string _devDegree {
+        public static string _devDegree {
             get {
                 return ResourceManager.GetString("_devDegree", resourceCulture);
             }
@@ -1413,7 +1413,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Diconnect document.
         /// </summary>
-        internal static string _disconnectFileFromEquipment_Button {
+        public static string _disconnectFileFromEquipment_Button {
             get {
                 return ResourceManager.GetString("_disconnectFileFromEquipment_Button", resourceCulture);
             }
@@ -1422,7 +1422,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Disconnected file will remain in the system..
         /// </summary>
-        internal static string _disconnectFileFromEquipment_ToolTip {
+        public static string _disconnectFileFromEquipment_ToolTip {
             get {
                 return ResourceManager.GetString("_disconnectFileFromEquipment_ToolTip", resourceCulture);
             }
@@ -1431,7 +1431,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to doc..
         /// </summary>
-        internal static string _doc {
+        public static string _doc {
             get {
                 return ResourceManager.GetString("_doc", resourceCulture);
             }
@@ -1440,7 +1440,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to documents..
         /// </summary>
-        internal static string _docs {
+        public static string _docs {
             get {
                 return ResourceManager.GetString("_docs", resourceCulture);
             }
@@ -1449,7 +1449,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document.
         /// </summary>
-        internal static string _document_Label {
+        public static string _document_Label {
             get {
                 return ResourceManager.GetString("_document_Label", resourceCulture);
             }
@@ -1458,7 +1458,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Actual.
         /// </summary>
-        internal static string _documentActive_DGHeader {
+        public static string _documentActive_DGHeader {
             get {
                 return ResourceManager.GetString("_documentActive_DGHeader", resourceCulture);
             }
@@ -1467,7 +1467,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Further classifications :.
         /// </summary>
-        internal static string _documentAlternativeClassification {
+        public static string _documentAlternativeClassification {
             get {
                 return ResourceManager.GetString("_documentAlternativeClassification", resourceCulture);
             }
@@ -1476,7 +1476,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Main classification : .
         /// </summary>
-        internal static string _documentBaseClassification {
+        public static string _documentBaseClassification {
             get {
                 return ResourceManager.GetString("_documentBaseClassification", resourceCulture);
             }
@@ -1485,7 +1485,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New classification item.
         /// </summary>
-        internal static string _documentClassPaternDialog_Window_Title {
+        public static string _documentClassPaternDialog_Window_Title {
             get {
                 return ResourceManager.GetString("_documentClassPaternDialog_Window_Title", resourceCulture);
             }
@@ -1494,7 +1494,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents classification pattern.
         /// </summary>
-        internal static string _documentClassPaternWindow_Window_Title {
+        public static string _documentClassPaternWindow_Window_Title {
             get {
                 return ResourceManager.GetString("_documentClassPaternWindow_Window_Title", resourceCulture);
             }
@@ -1503,7 +1503,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
-        internal static string _documentCode_DGHeader {
+        public static string _documentCode_DGHeader {
             get {
                 return ResourceManager.GetString("_documentCode_DGHeader", resourceCulture);
             }
@@ -1512,7 +1512,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Remember old versions.
         /// </summary>
-        internal static string _documentcollateVersions_DGHeader {
+        public static string _documentcollateVersions_DGHeader {
             get {
                 return ResourceManager.GetString("_documentcollateVersions_DGHeader", resourceCulture);
             }
@@ -1521,7 +1521,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Creation time.
         /// </summary>
-        internal static string _documentCreationTime_DGHeader {
+        public static string _documentCreationTime_DGHeader {
             get {
                 return ResourceManager.GetString("_documentCreationTime_DGHeader", resourceCulture);
             }
@@ -1530,7 +1530,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Descripton.
         /// </summary>
-        internal static string _documentDescription_DGHeader {
+        public static string _documentDescription_DGHeader {
             get {
                 return ResourceManager.GetString("_documentDescription_DGHeader", resourceCulture);
             }
@@ -1539,7 +1539,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document attributes.
         /// </summary>
-        internal static string _documentDetails_TabItemHeader {
+        public static string _documentDetails_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentDetails_TabItemHeader", resourceCulture);
             }
@@ -1548,7 +1548,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document window.
         /// </summary>
-        internal static string _documentDetails_Window_Title {
+        public static string _documentDetails_Window_Title {
             get {
                 return ResourceManager.GetString("_documentDetails_Window_Title", resourceCulture);
             }
@@ -1557,7 +1557,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
-        internal static string _documentdocPath_DGHeader {
+        public static string _documentdocPath_DGHeader {
             get {
                 return ResourceManager.GetString("_documentdocPath_DGHeader", resourceCulture);
             }
@@ -1566,7 +1566,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Divided into subsections.
         /// </summary>
-        internal static string _documentElementarySite_DGHeader {
+        public static string _documentElementarySite_DGHeader {
             get {
                 return ResourceManager.GetString("_documentElementarySite_DGHeader", resourceCulture);
             }
@@ -1575,7 +1575,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents connected to equipment.
         /// </summary>
-        internal static string _documentEquipment_Header {
+        public static string _documentEquipment_Header {
             get {
                 return ResourceManager.GetString("_documentEquipment_Header", resourceCulture);
             }
@@ -1584,7 +1584,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Ext..
         /// </summary>
-        internal static string _documentExtention_DGHeader {
+        public static string _documentExtention_DGHeader {
             get {
                 return ResourceManager.GetString("_documentExtention_DGHeader", resourceCulture);
             }
@@ -1593,7 +1593,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Adding new document.
         /// </summary>
-        internal static string _documentForPatternDialog_Window_Title {
+        public static string _documentForPatternDialog_Window_Title {
             get {
                 return ResourceManager.GetString("_documentForPatternDialog_Window_Title", resourceCulture);
             }
@@ -1602,7 +1602,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document ID.
         /// </summary>
-        internal static string _documentId_DGHeader {
+        public static string _documentId_DGHeader {
             get {
                 return ResourceManager.GetString("_documentId_DGHeader", resourceCulture);
             }
@@ -1611,7 +1611,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Last access.
         /// </summary>
-        internal static string _documentLastAccessTime_DGHeader {
+        public static string _documentLastAccessTime_DGHeader {
             get {
                 return ResourceManager.GetString("_documentLastAccessTime_DGHeader", resourceCulture);
             }
@@ -1620,7 +1620,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Last write.
         /// </summary>
-        internal static string _documentLastWriteTime_DGHeader {
+        public static string _documentLastWriteTime_DGHeader {
             get {
                 return ResourceManager.GetString("_documentLastWriteTime_DGHeader", resourceCulture);
             }
@@ -1629,7 +1629,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Size of file.
         /// </summary>
-        internal static string _documentLength_DGHeader {
+        public static string _documentLength_DGHeader {
             get {
                 return ResourceManager.GetString("_documentLength_DGHeader", resourceCulture);
             }
@@ -1638,7 +1638,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Place in the archive.
         /// </summary>
-        internal static string _documentLocationInStore {
+        public static string _documentLocationInStore {
             get {
                 return ResourceManager.GetString("_documentLocationInStore", resourceCulture);
             }
@@ -1647,7 +1647,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Lock.
         /// </summary>
-        internal static string _documentLocked_DGHeader {
+        public static string _documentLocked_DGHeader {
             get {
                 return ResourceManager.GetString("_documentLocked_DGHeader", resourceCulture);
             }
@@ -1656,7 +1656,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Old versions.
         /// </summary>
-        internal static string _documentOldVersions_TabItemHeader {
+        public static string _documentOldVersions_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentOldVersions_TabItemHeader", resourceCulture);
             }
@@ -1665,7 +1665,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Calassification can&apos;t be fixed.
         /// </summary>
-        internal static string _documentOrphan_Message {
+        public static string _documentOrphan_Message {
             get {
                 return ResourceManager.GetString("_documentOrphan_Message", resourceCulture);
             }
@@ -1674,7 +1674,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents relating to the company (the lab).
         /// </summary>
-        internal static string _documentPartner_Header {
+        public static string _documentPartner_Header {
             get {
                 return ResourceManager.GetString("_documentPartner_Header", resourceCulture);
             }
@@ -1683,7 +1683,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Firms.
         /// </summary>
-        internal static string _documentPartner_TabItemHeader {
+        public static string _documentPartner_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentPartner_TabItemHeader", resourceCulture);
             }
@@ -1692,7 +1692,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Partners.
         /// </summary>
-        internal static string _documentPartners_DGHeader {
+        public static string _documentPartners_DGHeader {
             get {
                 return ResourceManager.GetString("_documentPartners_DGHeader", resourceCulture);
             }
@@ -1701,7 +1701,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to has got assigned documents. Please indicate the classifier, which is to be transferred..
         /// </summary>
-        internal static string _DocumentPatternHasDocumentsAsk {
+        public static string _DocumentPatternHasDocumentsAsk {
             get {
                 return ResourceManager.GetString("_DocumentPatternHasDocumentsAsk", resourceCulture);
             }
@@ -1710,7 +1710,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Terminal.
         /// </summary>
-        internal static string _documentPrimaryComputer_DGHeader {
+        public static string _documentPrimaryComputer_DGHeader {
             get {
                 return ResourceManager.GetString("_documentPrimaryComputer_DGHeader", resourceCulture);
             }
@@ -1719,7 +1719,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Projects.
         /// </summary>
-        internal static string _documentProjects_DGHeader {
+        public static string _documentProjects_DGHeader {
             get {
                 return ResourceManager.GetString("_documentProjects_DGHeader", resourceCulture);
             }
@@ -1728,7 +1728,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Definitions of document relations .
         /// </summary>
-        internal static string _documentRalationWindow_Title {
+        public static string _documentRalationWindow_Title {
             get {
                 return ResourceManager.GetString("_documentRalationWindow_Title", resourceCulture);
             }
@@ -1737,7 +1737,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Read only.
         /// </summary>
-        internal static string _documentReadOnly_DGHeader {
+        public static string _documentReadOnly_DGHeader {
             get {
                 return ResourceManager.GetString("_documentReadOnly_DGHeader", resourceCulture);
             }
@@ -1746,7 +1746,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Classification.
         /// </summary>
-        internal static string _documentRelations_TabItemHeader {
+        public static string _documentRelations_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentRelations_TabItemHeader", resourceCulture);
             }
@@ -1755,7 +1755,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Relationship.
         /// </summary>
-        internal static string _documentRelationship_TabItemHeader {
+        public static string _documentRelationship_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentRelationship_TabItemHeader", resourceCulture);
             }
@@ -1764,7 +1764,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Relationships.
         /// </summary>
-        internal static string _documentRelationships_TabItemHeader {
+        public static string _documentRelationships_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentRelationships_TabItemHeader", resourceCulture);
             }
@@ -1773,7 +1773,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to   Documents  .
         /// </summary>
-        internal static string _documents_DataButtonsUC {
+        public static string _documents_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_documents_DataButtonsUC", resourceCulture);
             }
@@ -1782,7 +1782,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string _documents_MenuItemHeader {
+        public static string _documents_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_documents_MenuItemHeader", resourceCulture);
             }
@@ -1791,7 +1791,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string _documents_TabItemHeader {
+        public static string _documents_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documents_TabItemHeader", resourceCulture);
             }
@@ -1800,7 +1800,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Create , read and edit documents.
         /// </summary>
-        internal static string _documents_ToolTip {
+        public static string _documents_ToolTip {
             get {
                 return ResourceManager.GetString("_documents_ToolTip", resourceCulture);
             }
@@ -1809,7 +1809,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document classification pattern.
         /// </summary>
-        internal static string _documentsClassPaternMenuItem_Header {
+        public static string _documentsClassPaternMenuItem_Header {
             get {
                 return ResourceManager.GetString("_documentsClassPaternMenuItem_Header", resourceCulture);
             }
@@ -1818,7 +1818,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _documentSignature_DGHeader {
+        public static string _documentSignature_DGHeader {
             get {
                 return ResourceManager.GetString("_documentSignature_DGHeader", resourceCulture);
             }
@@ -1827,7 +1827,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string _documentsInDivision_TabItemHeader {
+        public static string _documentsInDivision_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentsInDivision_TabItemHeader", resourceCulture);
             }
@@ -1836,7 +1836,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string _documentsMenuItem_Header {
+        public static string _documentsMenuItem_Header {
             get {
                 return ResourceManager.GetString("_documentsMenuItem_Header", resourceCulture);
             }
@@ -1845,7 +1845,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Copy files to local computer.
         /// </summary>
-        internal static string _documentsToLocalFolder_Window_Title {
+        public static string _documentsToLocalFolder_Window_Title {
             get {
                 return ResourceManager.GetString("_documentsToLocalFolder_Window_Title", resourceCulture);
             }
@@ -1854,7 +1854,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Select place in document store.
         /// </summary>
-        internal static string _documentStorageLocalisationSelection_Window_Title {
+        public static string _documentStorageLocalisationSelection_Window_Title {
             get {
                 return ResourceManager.GetString("_documentStorageLocalisationSelection_Window_Title", resourceCulture);
             }
@@ -1863,7 +1863,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Storage of documents.
         /// </summary>
-        internal static string _documentStore_Title {
+        public static string _documentStore_Title {
             get {
                 return ResourceManager.GetString("_documentStore_Title", resourceCulture);
             }
@@ -1872,7 +1872,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Storage division details.
         /// </summary>
-        internal static string _documentStoreDetails_TabItemHeader {
+        public static string _documentStoreDetails_TabItemHeader {
             get {
                 return ResourceManager.GetString("_documentStoreDetails_TabItemHeader", resourceCulture);
             }
@@ -1881,7 +1881,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Max. number subsections.
         /// </summary>
-        internal static string _documentStoreMaxDivisions_DGHeader {
+        public static string _documentStoreMaxDivisions_DGHeader {
             get {
                 return ResourceManager.GetString("_documentStoreMaxDivisions_DGHeader", resourceCulture);
             }
@@ -1890,7 +1890,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Capcity (number documents).
         /// </summary>
-        internal static string _documentStoreMaxDocuments_DGHeader {
+        public static string _documentStoreMaxDocuments_DGHeader {
             get {
                 return ResourceManager.GetString("_documentStoreMaxDocuments_DGHeader", resourceCulture);
             }
@@ -1899,7 +1899,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _documentStoreName_DGHeader {
+        public static string _documentStoreName_DGHeader {
             get {
                 return ResourceManager.GetString("_documentStoreName_DGHeader", resourceCulture);
             }
@@ -1908,7 +1908,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Prefix of identifier.
         /// </summary>
-        internal static string _documentStorePrefix_DGHeader {
+        public static string _documentStorePrefix_DGHeader {
             get {
                 return ResourceManager.GetString("_documentStorePrefix_DGHeader", resourceCulture);
             }
@@ -1917,7 +1917,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Subsection.
         /// </summary>
-        internal static string _documentStoreSubsection_DGHeader {
+        public static string _documentStoreSubsection_DGHeader {
             get {
                 return ResourceManager.GetString("_documentStoreSubsection_DGHeader", resourceCulture);
             }
@@ -1926,7 +1926,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Document settings.
         /// </summary>
-        internal static string _documentSubMenuItem_Header {
+        public static string _documentSubMenuItem_Header {
             get {
                 return ResourceManager.GetString("_documentSubMenuItem_Header", resourceCulture);
             }
@@ -1935,7 +1935,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string _documentsWindow_Window_Title {
+        public static string _documentsWindow_Window_Title {
             get {
                 return ResourceManager.GetString("_documentsWindow_Window_Title", resourceCulture);
             }
@@ -1944,7 +1944,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Version.
         /// </summary>
-        internal static string _documentVersion_DGHeader {
+        public static string _documentVersion_DGHeader {
             get {
                 return ResourceManager.GetString("_documentVersion_DGHeader", resourceCulture);
             }
@@ -1953,7 +1953,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        internal static string _editMode_DataButtonsUC {
+        public static string _editMode_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_editMode_DataButtonsUC", resourceCulture);
             }
@@ -1962,7 +1962,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Lock /Unlock edit mode.
         /// </summary>
-        internal static string _editModeToolTip_DataButtonsUC {
+        public static string _editModeToolTip_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_editModeToolTip_DataButtonsUC", resourceCulture);
             }
@@ -1971,7 +1971,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Employee.
         /// </summary>
-        internal static string _employee_Label {
+        public static string _employee_Label {
             get {
                 return ResourceManager.GetString("_employee_Label", resourceCulture);
             }
@@ -1980,7 +1980,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Change the post.
         /// </summary>
-        internal static string _employeeChangePost_Label {
+        public static string _employeeChangePost_Label {
             get {
                 return ResourceManager.GetString("_employeeChangePost_Label", resourceCulture);
             }
@@ -1989,7 +1989,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Department.
         /// </summary>
-        internal static string _employeeDartment_Label {
+        public static string _employeeDartment_Label {
             get {
                 return ResourceManager.GetString("_employeeDartment_Label", resourceCulture);
             }
@@ -1998,7 +1998,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Since the day.
         /// </summary>
-        internal static string _employeeFrom_Label {
+        public static string _employeeFrom_Label {
             get {
                 return ResourceManager.GetString("_employeeFrom_Label", resourceCulture);
             }
@@ -2007,7 +2007,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Posts.
         /// </summary>
-        internal static string _employeePostForm_Title {
+        public static string _employeePostForm_Title {
             get {
                 return ResourceManager.GetString("_employeePostForm_Title", resourceCulture);
             }
@@ -2016,7 +2016,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Attendants of equipment.
         /// </summary>
-        internal static string _employeesAttendants {
+        public static string _employeesAttendants {
             get {
                 return ResourceManager.GetString("_employeesAttendants", resourceCulture);
             }
@@ -2025,7 +2025,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Employees to choose.
         /// </summary>
-        internal static string _employeesToChoose {
+        public static string _employeesToChoose {
             get {
                 return ResourceManager.GetString("_employeesToChoose", resourceCulture);
             }
@@ -2034,7 +2034,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to To the day.
         /// </summary>
-        internal static string _employeeTo_Label {
+        public static string _employeeTo_Label {
             get {
                 return ResourceManager.GetString("_employeeTo_Label", resourceCulture);
             }
@@ -2043,7 +2043,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The trial period is over..
         /// </summary>
-        internal static string _endOfTryPeriod {
+        public static string _endOfTryPeriod {
             get {
                 return ResourceManager.GetString("_endOfTryPeriod", resourceCulture);
             }
@@ -2052,70 +2052,16 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
-        internal static string _english_MenuItemHeader {
+        public static string _english_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_english_MenuItemHeader", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mesure tools.
-        /// </summary>
-        internal static string _equipment_MenuItemHeader {
-            get {
-                return ResourceManager.GetString("_equipment_MenuItemHeader", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Connet device to document.
-        /// </summary>
-        internal static string _EquipmentToDocument_Button {
-            get {
-                return ResourceManager.GetString("_EquipmentToDocument_Button", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Allows you to associate a document with multiple devices.
-        /// </summary>
-        internal static string _EquipmentToDocument_ToolTip {
-            get {
-                return ResourceManager.GetString("_EquipmentToDocument_ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Equipment types.
-        /// </summary>
-        internal static string _EquipmentType_Title {
-            get {
-                return ResourceManager.GetString("_EquipmentType_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remove scope.
-        /// </summary>
-        internal static string _eraseGraph_Buttons {
-            get {
-                return ResourceManager.GetString("_eraseGraph_Buttons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remove year: .
-        /// </summary>
-        internal static string _eraseYear_Buttons {
-            get {
-                return ResourceManager.GetString("_eraseYear_Buttons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        internal static string _error {
+        public static string _error {
             get {
                 return ResourceManager.GetString("_error", resourceCulture);
             }
@@ -2124,7 +2070,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string _exit_MenuItemHeader {
+        public static string _exit_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_exit_MenuItemHeader", resourceCulture);
             }
@@ -2133,7 +2079,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The field can&apos;t be blank.
         /// </summary>
-        internal static string _fildCanNotBeBlank {
+        public static string _fildCanNotBeBlank {
             get {
                 return ResourceManager.GetString("_fildCanNotBeBlank", resourceCulture);
             }
@@ -2142,7 +2088,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Available fields for filtering.
         /// </summary>
-        internal static string _fildsForFilter_Header {
+        public static string _fildsForFilter_Header {
             get {
                 return ResourceManager.GetString("_fildsForFilter_Header", resourceCulture);
             }
@@ -2151,7 +2097,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to List of report fields.
         /// </summary>
-        internal static string _FildsForReport_Title {
+        public static string _FildsForReport_Title {
             get {
                 return ResourceManager.GetString("_FildsForReport_Title", resourceCulture);
             }
@@ -2160,7 +2106,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
-        internal static string _file_MenuItemHeader {
+        public static string _file_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_file_MenuItemHeader", resourceCulture);
             }
@@ -2169,7 +2115,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Path to file.
         /// </summary>
-        internal static string _filePath_Header {
+        public static string _filePath_Header {
             get {
                 return ResourceManager.GetString("_filePath_Header", resourceCulture);
             }
@@ -2178,7 +2124,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paths to files.
         /// </summary>
-        internal static string _FilePathForm_Title {
+        public static string _FilePathForm_Title {
             get {
                 return ResourceManager.GetString("_FilePathForm_Title", resourceCulture);
             }
@@ -2187,7 +2133,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paths to file folders.
         /// </summary>
-        internal static string _FilePaths_Form_Title {
+        public static string _FilePaths_Form_Title {
             get {
                 return ResourceManager.GetString("_FilePaths_Form_Title", resourceCulture);
             }
@@ -2196,7 +2142,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Active.
         /// </summary>
-        internal static string _filter_equipmentActive {
+        public static string _filter_equipmentActive {
             get {
                 return ResourceManager.GetString("_filter_equipmentActive", resourceCulture);
             }
@@ -2205,7 +2151,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Discontinued.
         /// </summary>
-        internal static string _filter_equipmentDiscontinued {
+        public static string _filter_equipmentDiscontinued {
             get {
                 return ResourceManager.GetString("_filter_equipmentDiscontinued", resourceCulture);
             }
@@ -2214,7 +2160,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to from.
         /// </summary>
-        internal static string _from_NavigationPanel {
+        public static string _from_NavigationPanel {
             get {
                 return ResourceManager.GetString("_from_NavigationPanel", resourceCulture);
             }
@@ -2223,7 +2169,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to From.
         /// </summary>
-        internal static string _from_text {
+        public static string _from_text {
             get {
                 return ResourceManager.GetString("_from_text", resourceCulture);
             }
@@ -2232,7 +2178,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Repaint graph.
         /// </summary>
-        internal static string _graph_Button {
+        public static string _graph_Button {
             get {
                 return ResourceManager.GetString("_graph_Button", resourceCulture);
             }
@@ -2241,7 +2187,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Create or repaint graph.
         /// </summary>
-        internal static string _graph_toolTip {
+        public static string _graph_toolTip {
             get {
                 return ResourceManager.GetString("_graph_toolTip", resourceCulture);
             }
@@ -2250,7 +2196,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The history of the instrument calibration.
         /// </summary>
-        internal static string _graphs_Window_Title {
+        public static string _graphs_Window_Title {
             get {
                 return ResourceManager.GetString("_graphs_Window_Title", resourceCulture);
             }
@@ -2259,7 +2205,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Calibrations.
         /// </summary>
-        internal static string _historiaLegalizacji_TabItemHeader {
+        public static string _historiaLegalizacji_TabItemHeader {
             get {
                 return ResourceManager.GetString("_historiaLegalizacji_TabItemHeader", resourceCulture);
             }
@@ -2268,7 +2214,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Do you want to purchase license?.
         /// </summary>
-        internal static string _ifPurchaseLicense {
+        public static string _ifPurchaseLicense {
             get {
                 return ResourceManager.GetString("_ifPurchaseLicense", resourceCulture);
             }
@@ -2277,7 +2223,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Number of copied columns and their names must be in accordance with table.
         /// </summary>
-        internal static string _incompatibleColumns {
+        public static string _incompatibleColumns {
             get {
                 return ResourceManager.GetString("_incompatibleColumns", resourceCulture);
             }
@@ -2286,7 +2232,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Number of copied columnst be in accordance with table.
         /// </summary>
-        internal static string _incompatibleNumberOfColumns {
+        public static string _incompatibleNumberOfColumns {
             get {
                 return ResourceManager.GetString("_incompatibleNumberOfColumns", resourceCulture);
             }
@@ -2295,7 +2241,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Incorrect password.
         /// </summary>
-        internal static string _incorrectPasswordMessage {
+        public static string _incorrectPasswordMessage {
             get {
                 return ResourceManager.GetString("_incorrectPasswordMessage", resourceCulture);
             }
@@ -2304,7 +2250,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User name is not valid.
         /// </summary>
-        internal static string _incorrectUserNameMessage {
+        public static string _incorrectUserNameMessage {
             get {
                 return ResourceManager.GetString("_incorrectUserNameMessage", resourceCulture);
             }
@@ -2313,7 +2259,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Initialize.
         /// </summary>
-        internal static string _initKeyBoard_Button {
+        public static string _initKeyBoard_Button {
             get {
                 return ResourceManager.GetString("_initKeyBoard_Button", resourceCulture);
             }
@@ -2322,7 +2268,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Enter the password.
         /// </summary>
-        internal static string _insertPassword {
+        public static string _insertPassword {
             get {
                 return ResourceManager.GetString("_insertPassword", resourceCulture);
             }
@@ -2331,7 +2277,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Ref. devices.
         /// </summary>
-        internal static string _kalibratorNazwa_Header {
+        public static string _kalibratorNazwa_Header {
             get {
                 return ResourceManager.GetString("_kalibratorNazwa_Header", resourceCulture);
             }
@@ -2340,7 +2286,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Keyboard of special characters.
         /// </summary>
-        internal static string _KeyBoard_Title {
+        public static string _KeyBoard_Title {
             get {
                 return ResourceManager.GetString("_KeyBoard_Title", resourceCulture);
             }
@@ -2349,34 +2295,34 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Content of screen keyboard.
         /// </summary>
-        internal static string _KeyBoardContent_Title {
+        public static string _KeyBoardContent_Title {
             get {
                 return ResourceManager.GetString("_KeyBoardContent_Title", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Laborant.
-        /// </summary>
-        internal static string _labWorkerKalibrator_Header {
-            get {
-                return ResourceManager.GetString("_labWorkerKalibrator_Header", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
-        internal static string _language_MenuItemHeader {
+        public static string _language_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_language_MenuItemHeader", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date of last update.
+        /// </summary>
+        public static string _lastUpdateLabel {
+            get {
+                return ResourceManager.GetString("_lastUpdateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Licence for &quot;Ometrisis&quot;.
         /// </summary>
-        internal static string _licenceEmailSubject {
+        public static string _licenceEmailSubject {
             get {
                 return ResourceManager.GetString("_licenceEmailSubject", resourceCulture);
             }
@@ -2385,7 +2331,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Limit logins exceeded.
         /// </summary>
-        internal static string _limitLoginsExceeded {
+        public static string _limitLoginsExceeded {
             get {
                 return ResourceManager.GetString("_limitLoginsExceeded", resourceCulture);
             }
@@ -2394,7 +2340,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to List of users.
         /// </summary>
-        internal static string _listOfUsers_Header {
+        public static string _listOfUsers_Header {
             get {
                 return ResourceManager.GetString("_listOfUsers_Header", resourceCulture);
             }
@@ -2403,7 +2349,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to #.
         /// </summary>
-        internal static string _Lp_Header {
+        public static string _Lp_Header {
             get {
                 return ResourceManager.GetString("_Lp_Header", resourceCulture);
             }
@@ -2412,7 +2358,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string _Name_Header {
+        public static string _Name_Header {
             get {
                 return ResourceManager.GetString("_Name_Header", resourceCulture);
             }
@@ -2421,7 +2367,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to You have to change the password.
         /// </summary>
-        internal static string _needChangePassword_Header {
+        public static string _needChangePassword_Header {
             get {
                 return ResourceManager.GetString("_needChangePassword_Header", resourceCulture);
             }
@@ -2430,7 +2376,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Enter the date.
         /// </summary>
-        internal static string _needDate {
+        public static string _needDate {
             get {
                 return ResourceManager.GetString("_needDate", resourceCulture);
             }
@@ -2439,7 +2385,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Enter the decimal number.
         /// </summary>
-        internal static string _needDecimal {
+        public static string _needDecimal {
             get {
                 return ResourceManager.GetString("_needDecimal", resourceCulture);
             }
@@ -2448,7 +2394,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Enter the  integer.
         /// </summary>
-        internal static string _needInteger {
+        public static string _needInteger {
             get {
                 return ResourceManager.GetString("_needInteger", resourceCulture);
             }
@@ -2457,7 +2403,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Enter logical velue (true, false).
         /// </summary>
-        internal static string _needLogical {
+        public static string _needLogical {
             get {
                 return ResourceManager.GetString("_needLogical", resourceCulture);
             }
@@ -2466,25 +2412,16 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New device.
         /// </summary>
-        internal static string _newAirConditionDevice_DataButtonsUC {
+        public static string _newAirConditionDevice_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newAirConditionDevice_DataButtonsUC", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nowy zapis kalibracji.
-        /// </summary>
-        internal static string _newCalibration_DataButtonsUC {
-            get {
-                return ResourceManager.GetString("_newCalibration_DataButtonsUC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to New subordinate deprtment.
         /// </summary>
-        internal static string _newDepartment_DataButtonsUC {
+        public static string _newDepartment_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newDepartment_DataButtonsUC", resourceCulture);
             }
@@ -2493,7 +2430,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New subordinate deprtment.
         /// </summary>
-        internal static string _newDepartment_ToolTip {
+        public static string _newDepartment_ToolTip {
             get {
                 return ResourceManager.GetString("_newDepartment_ToolTip", resourceCulture);
             }
@@ -2502,7 +2439,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New period of employment.
         /// </summary>
-        internal static string _newEmployee_Button {
+        public static string _newEmployee_Button {
             get {
                 return ResourceManager.GetString("_newEmployee_Button", resourceCulture);
             }
@@ -2511,7 +2448,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New path.
         /// </summary>
-        internal static string _newFilePath_DataButtonsUC {
+        public static string _newFilePath_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newFilePath_DataButtonsUC", resourceCulture);
             }
@@ -2520,7 +2457,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Create a new path.
         /// </summary>
-        internal static string _newFilePath_ToolTip {
+        public static string _newFilePath_ToolTip {
             get {
                 return ResourceManager.GetString("_newFilePath_ToolTip", resourceCulture);
             }
@@ -2529,7 +2466,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New item.
         /// </summary>
-        internal static string _newKey_Buttons {
+        public static string _newKey_Buttons {
             get {
                 return ResourceManager.GetString("_newKey_Buttons", resourceCulture);
             }
@@ -2538,7 +2475,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add new partner.
         /// </summary>
-        internal static string _newPartner_Button {
+        public static string _newPartner_Button {
             get {
                 return ResourceManager.GetString("_newPartner_Button", resourceCulture);
             }
@@ -2547,7 +2484,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The system will record new business.
         /// </summary>
-        internal static string _newPartner_ToolTip {
+        public static string _newPartner_ToolTip {
             get {
                 return ResourceManager.GetString("_newPartner_ToolTip", resourceCulture);
             }
@@ -2556,7 +2493,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New password.
         /// </summary>
-        internal static string _newPassword_Button {
+        public static string _newPassword_Button {
             get {
                 return ResourceManager.GetString("_newPassword_Button", resourceCulture);
             }
@@ -2565,7 +2502,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add new person.
         /// </summary>
-        internal static string _newPerson_Button {
+        public static string _newPerson_Button {
             get {
                 return ResourceManager.GetString("_newPerson_Button", resourceCulture);
             }
@@ -2574,7 +2511,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The system will record new person.
         /// </summary>
-        internal static string _newPerson_ToolTip {
+        public static string _newPerson_ToolTip {
             get {
                 return ResourceManager.GetString("_newPerson_ToolTip", resourceCulture);
             }
@@ -2583,7 +2520,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New template.
         /// </summary>
-        internal static string _newReportPattern_Button {
+        public static string _newReportPattern_Button {
             get {
                 return ResourceManager.GetString("_newReportPattern_Button", resourceCulture);
             }
@@ -2592,7 +2529,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New report from pattern.
         /// </summary>
-        internal static string _newRptFromPattern_DataButtonsUC {
+        public static string _newRptFromPattern_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newRptFromPattern_DataButtonsUC", resourceCulture);
             }
@@ -2601,7 +2538,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Create a new report based on an existing template.
         /// </summary>
-        internal static string _newRptFromPattern_ToolTip {
+        public static string _newRptFromPattern_ToolTip {
             get {
                 return ResourceManager.GetString("_newRptFromPattern_ToolTip", resourceCulture);
             }
@@ -2610,7 +2547,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New standard.
         /// </summary>
-        internal static string _newStandard_DataButtonsUC {
+        public static string _newStandard_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newStandard_DataButtonsUC", resourceCulture);
             }
@@ -2619,7 +2556,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Register new standard.
         /// </summary>
-        internal static string _newStandard_ToolTip {
+        public static string _newStandard_ToolTip {
             get {
                 return ResourceManager.GetString("_newStandard_ToolTip", resourceCulture);
             }
@@ -2628,7 +2565,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New type .
         /// </summary>
-        internal static string _newTopDCP_DataButtonsUC {
+        public static string _newTopDCP_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newTopDCP_DataButtonsUC", resourceCulture);
             }
@@ -2637,7 +2574,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New top type of document.
         /// </summary>
-        internal static string _newTopDCP_ToolTip {
+        public static string _newTopDCP_ToolTip {
             get {
                 return ResourceManager.GetString("_newTopDCP_ToolTip", resourceCulture);
             }
@@ -2646,7 +2583,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New department.
         /// </summary>
-        internal static string _newTopDepartment_DataButtonsUC {
+        public static string _newTopDepartment_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newTopDepartment_DataButtonsUC", resourceCulture);
             }
@@ -2655,7 +2592,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New main department.
         /// </summary>
-        internal static string _newTopDepartment_ToolTip {
+        public static string _newTopDepartment_ToolTip {
             get {
                 return ResourceManager.GetString("_newTopDepartment_ToolTip", resourceCulture);
             }
@@ -2664,16 +2601,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New top type of equipment.
         /// </summary>
-        internal static string _newTopEquipmentType_DataButtonsUC {
-            get {
-                return ResourceManager.GetString("_newTopEquipmentType_DataButtonsUC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New top type of equipment.
-        /// </summary>
-        internal static string _newTopEquipmentType_ToolTip {
+        public static string _newTopEquipmentType_ToolTip {
             get {
                 return ResourceManager.GetString("_newTopEquipmentType_ToolTip", resourceCulture);
             }
@@ -2682,7 +2610,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New subtype.
         /// </summary>
-        internal static string _newTypeDCP_DataButtonsUC {
+        public static string _newTypeDCP_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newTypeDCP_DataButtonsUC", resourceCulture);
             }
@@ -2691,7 +2619,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New subordinate type of document.
         /// </summary>
-        internal static string _newTypeDCP_ToolTip {
+        public static string _newTypeDCP_ToolTip {
             get {
                 return ResourceManager.GetString("_newTypeDCP_ToolTip", resourceCulture);
             }
@@ -2700,7 +2628,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New subtype of equipment.
         /// </summary>
-        internal static string _newTypeOfEquipment_DataButtonsUC {
+        public static string _newTypeOfEquipment_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_newTypeOfEquipment_DataButtonsUC", resourceCulture);
             }
@@ -2709,7 +2637,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to New subtype of selected type of equipment.
         /// </summary>
-        internal static string _newTypeOfEquipment_ToolTip {
+        public static string _newTypeOfEquipment_ToolTip {
             get {
                 return ResourceManager.GetString("_newTypeOfEquipment_ToolTip", resourceCulture);
             }
@@ -2718,7 +2646,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add .
         /// </summary>
-        internal static string _newUser_Button {
+        public static string _newUser_Button {
             get {
                 return ResourceManager.GetString("_newUser_Button", resourceCulture);
             }
@@ -2727,7 +2655,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to No opened windows.
         /// </summary>
-        internal static string _noOpenedWIndows {
+        public static string _noOpenedWIndows {
             get {
                 return ResourceManager.GetString("_noOpenedWIndows", resourceCulture);
             }
@@ -2736,7 +2664,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Not allocated.
         /// </summary>
-        internal static string _NotAllocated {
+        public static string _NotAllocated {
             get {
                 return ResourceManager.GetString("_NotAllocated", resourceCulture);
             }
@@ -2745,7 +2673,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The old password.
         /// </summary>
-        internal static string _oldPassword_Button {
+        public static string _oldPassword_Button {
             get {
                 return ResourceManager.GetString("_oldPassword_Button", resourceCulture);
             }
@@ -2754,7 +2682,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The table is omitted.
         /// </summary>
-        internal static string _omittedDataSourceCollection {
+        public static string _omittedDataSourceCollection {
             get {
                 return ResourceManager.GetString("_omittedDataSourceCollection", resourceCulture);
             }
@@ -2763,7 +2691,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to You must specify one column in the table.
         /// </summary>
-        internal static string _onlyOneColumnCanSelect {
+        public static string _onlyOneColumnCanSelect {
             get {
                 return ResourceManager.GetString("_onlyOneColumnCanSelect", resourceCulture);
             }
@@ -2772,7 +2700,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Opened windows.
         /// </summary>
-        internal static string _openedWIndows {
+        public static string _openedWIndows {
             get {
                 return ResourceManager.GetString("_openedWIndows", resourceCulture);
             }
@@ -2781,7 +2709,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to I order a license for ..... workstations..
         /// </summary>
-        internal static string _orderLicence {
+        public static string _orderLicence {
             get {
                 return ResourceManager.GetString("_orderLicence", resourceCulture);
             }
@@ -2790,7 +2718,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Other roles.
         /// </summary>
-        internal static string _otherRoles_Header {
+        public static string _otherRoles_Header {
             get {
                 return ResourceManager.GetString("_otherRoles_Header", resourceCulture);
             }
@@ -2799,7 +2727,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Department.
         /// </summary>
-        internal static string _partner_division_Label {
+        public static string _partner_division_Label {
             get {
                 return ResourceManager.GetString("_partner_division_Label", resourceCulture);
             }
@@ -2808,7 +2736,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Partners .
         /// </summary>
-        internal static string _partner_MenuItemHeader {
+        public static string _partner_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_partner_MenuItemHeader", resourceCulture);
             }
@@ -2817,7 +2745,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Partner name.
         /// </summary>
-        internal static string _partner_name_Label {
+        public static string _partner_name_Label {
             get {
                 return ResourceManager.GetString("_partner_name_Label", resourceCulture);
             }
@@ -2826,7 +2754,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Join  company to  the document.
         /// </summary>
-        internal static string _PartnerToDocument_Button {
+        public static string _PartnerToDocument_Button {
             get {
                 return ResourceManager.GetString("_PartnerToDocument_Button", resourceCulture);
             }
@@ -2835,7 +2763,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Allows you to choose a company (laboratory) to be combined with document.
         /// </summary>
-        internal static string _PartnerToDocument_ToolTip {
+        public static string _PartnerToDocument_ToolTip {
             get {
                 return ResourceManager.GetString("_PartnerToDocument_ToolTip", resourceCulture);
             }
@@ -2844,7 +2772,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string _password_Button {
+        public static string _password_Button {
             get {
                 return ResourceManager.GetString("_password_Button", resourceCulture);
             }
@@ -2853,7 +2781,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Password has been changed.
         /// </summary>
-        internal static string _passwordChanges {
+        public static string _passwordChanges {
             get {
                 return ResourceManager.GetString("_passwordChanges", resourceCulture);
             }
@@ -2862,7 +2790,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Unconfirmed password.
         /// </summary>
-        internal static string _passwordConformationError {
+        public static string _passwordConformationError {
             get {
                 return ResourceManager.GetString("_passwordConformationError", resourceCulture);
             }
@@ -2871,7 +2799,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The password must be at least six characters in length.
         /// </summary>
-        internal static string _passwordToShort {
+        public static string _passwordToShort {
             get {
                 return ResourceManager.GetString("_passwordToShort", resourceCulture);
             }
@@ -2880,7 +2808,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string _paste {
+        public static string _paste {
             get {
                 return ResourceManager.GetString("_paste", resourceCulture);
             }
@@ -2889,7 +2817,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Files stored in the clipboard will save in system.
         /// </summary>
-        internal static string _pasteFile_ToolTip {
+        public static string _pasteFile_ToolTip {
             get {
                 return ResourceManager.GetString("_pasteFile_ToolTip", resourceCulture);
             }
@@ -2898,7 +2826,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paste data from Excel range.
         /// </summary>
-        internal static string _pasteTo_scopeDatagrid_ToolTip {
+        public static string _pasteTo_scopeDatagrid_ToolTip {
             get {
                 return ResourceManager.GetString("_pasteTo_scopeDatagrid_ToolTip", resourceCulture);
             }
@@ -2907,7 +2835,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paste data from the clipboard. The first row must contains  headers..
         /// </summary>
-        internal static string _pasteToGrid_ToolTip {
+        public static string _pasteToGrid_ToolTip {
             get {
                 return ResourceManager.GetString("_pasteToGrid_ToolTip", resourceCulture);
             }
@@ -2916,7 +2844,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add to the  contents of table  the range of cells from selected  sheet.
         /// </summary>
-        internal static string _pasteToGridFromRange_ToolTip {
+        public static string _pasteToGridFromRange_ToolTip {
             get {
                 return ResourceManager.GetString("_pasteToGridFromRange_ToolTip", resourceCulture);
             }
@@ -2925,7 +2853,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Paste data from the clipboard. No  headers but data must be consistent with the existing headers..
         /// </summary>
-        internal static string _pasteToGridOmitHeader_ToolTip {
+        public static string _pasteToGridOmitHeader_ToolTip {
             get {
                 return ResourceManager.GetString("_pasteToGridOmitHeader_ToolTip", resourceCulture);
             }
@@ -2934,7 +2862,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Folder of files.
         /// </summary>
-        internal static string _pathToDocuments_Label {
+        public static string _pathToDocuments_Label {
             get {
                 return ResourceManager.GetString("_pathToDocuments_Label", resourceCulture);
             }
@@ -2943,7 +2871,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Copy files to : .
         /// </summary>
-        internal static string _pathToNewDocuments_Label {
+        public static string _pathToNewDocuments_Label {
             get {
                 return ResourceManager.GetString("_pathToNewDocuments_Label", resourceCulture);
             }
@@ -2952,7 +2880,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Folder of templates.
         /// </summary>
-        internal static string _pathToTemplate_Label {
+        public static string _pathToTemplate_Label {
             get {
                 return ResourceManager.GetString("_pathToTemplate_Label", resourceCulture);
             }
@@ -2961,7 +2889,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Access permisions.
         /// </summary>
-        internal static string _permissions_TabItemHeader {
+        public static string _permissions_TabItemHeader {
             get {
                 return ResourceManager.GetString("_permissions_TabItemHeader", resourceCulture);
             }
@@ -2970,7 +2898,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Person Details.
         /// </summary>
-        internal static string _personDetails_TabItemHeader {
+        public static string _personDetails_TabItemHeader {
             get {
                 return ResourceManager.GetString("_personDetails_TabItemHeader", resourceCulture);
             }
@@ -2979,7 +2907,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Edit employee.
         /// </summary>
-        internal static string _personEditEmployee_Button {
+        public static string _personEditEmployee_Button {
             get {
                 return ResourceManager.GetString("_personEditEmployee_Button", resourceCulture);
             }
@@ -2988,7 +2916,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Employee of department.
         /// </summary>
-        internal static string _personEmployee_Header {
+        public static string _personEmployee_Header {
             get {
                 return ResourceManager.GetString("_personEmployee_Header", resourceCulture);
             }
@@ -2997,7 +2925,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Employee.
         /// </summary>
-        internal static string _personEmployee_TabItemHeader {
+        public static string _personEmployee_TabItemHeader {
             get {
                 return ResourceManager.GetString("_personEmployee_TabItemHeader", resourceCulture);
             }
@@ -3006,7 +2934,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add to Employees.
         /// </summary>
-        internal static string _personNewEmployee_Button {
+        public static string _personNewEmployee_Button {
             get {
                 return ResourceManager.GetString("_personNewEmployee_Button", resourceCulture);
             }
@@ -3015,7 +2943,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Company representative.
         /// </summary>
-        internal static string _personRepresentative_TabItemHeader {
+        public static string _personRepresentative_TabItemHeader {
             get {
                 return ResourceManager.GetString("_personRepresentative_TabItemHeader", resourceCulture);
             }
@@ -3024,7 +2952,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Persons (employees, agents).
         /// </summary>
-        internal static string _persons_MenuItemHeader {
+        public static string _persons_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_persons_MenuItemHeader", resourceCulture);
             }
@@ -3033,7 +2961,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Departments.
         /// </summary>
-        internal static string _personsWindow_DepartmentFilter {
+        public static string _personsWindow_DepartmentFilter {
             get {
                 return ResourceManager.GetString("_personsWindow_DepartmentFilter", resourceCulture);
             }
@@ -3042,7 +2970,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Posts.
         /// </summary>
-        internal static string _personsWindow_PostFilter {
+        public static string _personsWindow_PostFilter {
             get {
                 return ResourceManager.GetString("_personsWindow_PostFilter", resourceCulture);
             }
@@ -3051,7 +2979,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Polish.
         /// </summary>
-        internal static string _polish_MenuItemHeader {
+        public static string _polish_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_polish_MenuItemHeader", resourceCulture);
             }
@@ -3060,7 +2988,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Record.
         /// </summary>
-        internal static string _Position_NavigationPanel {
+        public static string _Position_NavigationPanel {
             get {
                 return ResourceManager.GetString("_Position_NavigationPanel", resourceCulture);
             }
@@ -3069,7 +2997,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Mesure tool.
         /// </summary>
-        internal static string _przyrzadPomiarowy_Window_Title {
+        public static string _przyrzadPomiarowy_Window_Title {
             get {
                 return ResourceManager.GetString("_przyrzadPomiarowy_Window_Title", resourceCulture);
             }
@@ -3078,7 +3006,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Mesure tool.
         /// </summary>
-        internal static string _przyrzadPomiarowyFullInfo_Window_Title {
+        public static string _przyrzadPomiarowyFullInfo_Window_Title {
             get {
                 return ResourceManager.GetString("_przyrzadPomiarowyFullInfo_Window_Title", resourceCulture);
             }
@@ -3087,7 +3015,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Refresh  records in the table.
         /// </summary>
-        internal static string _refreshDataGrid_Button {
+        public static string _refreshDataGrid_Button {
             get {
                 return ResourceManager.GetString("_refreshDataGrid_Button", resourceCulture);
             }
@@ -3096,7 +3024,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Do you have a license file and want to install it?.
         /// </summary>
-        internal static string _registerApplication {
+        public static string _registerApplication {
             get {
                 return ResourceManager.GetString("_registerApplication", resourceCulture);
             }
@@ -3105,7 +3033,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delete period of employment.
         /// </summary>
-        internal static string _RemoveEmployee_Button {
+        public static string _RemoveEmployee_Button {
             get {
                 return ResourceManager.GetString("_RemoveEmployee_Button", resourceCulture);
             }
@@ -3114,7 +3042,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Disconnect partner.
         /// </summary>
-        internal static string _RemovePartner_Button {
+        public static string _RemovePartner_Button {
             get {
                 return ResourceManager.GetString("_RemovePartner_Button", resourceCulture);
             }
@@ -3123,7 +3051,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Undo all roles.
         /// </summary>
-        internal static string _removeRoles_Button {
+        public static string _removeRoles_Button {
             get {
                 return ResourceManager.GetString("_removeRoles_Button", resourceCulture);
             }
@@ -3132,7 +3060,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Repeat password.
         /// </summary>
-        internal static string _repeatPassword_Button {
+        public static string _repeatPassword_Button {
             get {
                 return ResourceManager.GetString("_repeatPassword_Button", resourceCulture);
             }
@@ -3141,7 +3069,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Add/repleace photo.
         /// </summary>
-        internal static string _repleacePhoto_Button {
+        public static string _repleacePhoto_Button {
             get {
                 return ResourceManager.GetString("_repleacePhoto_Button", resourceCulture);
             }
@@ -3150,7 +3078,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Unsubscribe from selection.
         /// </summary>
-        internal static string _resign_ToolTip {
+        public static string _resign_ToolTip {
             get {
                 return ResourceManager.GetString("_resign_ToolTip", resourceCulture);
             }
@@ -3159,7 +3087,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Esc.
         /// </summary>
-        internal static string _resignation_Button {
+        public static string _resignation_Button {
             get {
                 return ResourceManager.GetString("_resignation_Button", resourceCulture);
             }
@@ -3168,7 +3096,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to    Fields for reports   .
         /// </summary>
-        internal static string _RptFildsList_DataButtonsUC {
+        public static string _RptFildsList_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_RptFildsList_DataButtonsUC", resourceCulture);
             }
@@ -3177,7 +3105,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Opens a window with a list of fields that can be used in reports.
         /// </summary>
-        internal static string _RptFildsList_ToolTip {
+        public static string _RptFildsList_ToolTip {
             get {
                 return ResourceManager.GetString("_RptFildsList_ToolTip", resourceCulture);
             }
@@ -3186,7 +3114,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to   Save  .
         /// </summary>
-        internal static string _save_DataButtonsUC {
+        public static string _save_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_save_DataButtonsUC", resourceCulture);
             }
@@ -3195,7 +3123,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The changes are saved.
         /// </summary>
-        internal static string _savedChanges {
+        public static string _savedChanges {
             get {
                 return ResourceManager.GetString("_savedChanges", resourceCulture);
             }
@@ -3204,7 +3132,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Save data.
         /// </summary>
-        internal static string _saveToolTip_DataButtonsUC {
+        public static string _saveToolTip_DataButtonsUC {
             get {
                 return ResourceManager.GetString("_saveToolTip_DataButtonsUC", resourceCulture);
             }
@@ -3213,7 +3141,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Skope.
         /// </summary>
-        internal static string _scope {
+        public static string _scope {
             get {
                 return ResourceManager.GetString("_scope", resourceCulture);
             }
@@ -3222,7 +3150,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Name of scope.
         /// </summary>
-        internal static string _scopeName_Label {
+        public static string _scopeName_Label {
             get {
                 return ResourceManager.GetString("_scopeName_Label", resourceCulture);
             }
@@ -3231,7 +3159,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to [Ctrl+F]Search....
         /// </summary>
-        internal static string _search {
+        public static string _search {
             get {
                 return ResourceManager.GetString("_search", resourceCulture);
             }
@@ -3240,7 +3168,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Allocated.
         /// </summary>
-        internal static string _Selected {
+        public static string _Selected {
             get {
                 return ResourceManager.GetString("_Selected", resourceCulture);
             }
@@ -3249,7 +3177,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Hierarchy of types.
         /// </summary>
-        internal static string _SelectedByClassification {
+        public static string _SelectedByClassification {
             get {
                 return ResourceManager.GetString("_SelectedByClassification", resourceCulture);
             }
@@ -3258,7 +3186,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Selection by fields.
         /// </summary>
-        internal static string _SelectedByFilter {
+        public static string _SelectedByFilter {
             get {
                 return ResourceManager.GetString("_SelectedByFilter", resourceCulture);
             }
@@ -3267,7 +3195,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Ref. devices.
         /// </summary>
-        internal static string _SelectedByKalibratory {
+        public static string _SelectedByKalibratory {
             get {
                 return ResourceManager.GetString("_SelectedByKalibratory", resourceCulture);
             }
@@ -3276,7 +3204,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Selected document type.
         /// </summary>
-        internal static string _selectedDCP_Header {
+        public static string _selectedDCP_Header {
             get {
                 return ResourceManager.GetString("_selectedDCP_Header", resourceCulture);
             }
@@ -3285,7 +3213,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Selected department.
         /// </summary>
-        internal static string _selectedDepartment_Header {
+        public static string _selectedDepartment_Header {
             get {
                 return ResourceManager.GetString("_selectedDepartment_Header", resourceCulture);
             }
@@ -3294,7 +3222,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Responsibilities.
         /// </summary>
-        internal static string _SelectedLabWorker {
+        public static string _SelectedLabWorker {
             get {
                 return ResourceManager.GetString("_SelectedLabWorker", resourceCulture);
             }
@@ -3303,7 +3231,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Selected type of equipment.
         /// </summary>
-        internal static string _selectedType_Header {
+        public static string _selectedType_Header {
             get {
                 return ResourceManager.GetString("_selectedType_Header", resourceCulture);
             }
@@ -3312,7 +3240,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Select the appropriate sheet.
         /// </summary>
-        internal static string _selectFile_ListViewHeader {
+        public static string _selectFile_ListViewHeader {
             get {
                 return ResourceManager.GetString("_selectFile_ListViewHeader", resourceCulture);
             }
@@ -3321,7 +3249,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Select the file location path.
         /// </summary>
-        internal static string _selectFilePath_Message {
+        public static string _selectFilePath_Message {
             get {
                 return ResourceManager.GetString("_selectFilePath_Message", resourceCulture);
             }
@@ -3330,7 +3258,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Select lab worker (workers).
         /// </summary>
-        internal static string _selectLabWorkers_ListViewHeader {
+        public static string _selectLabWorkers_ListViewHeader {
             get {
                 return ResourceManager.GetString("_selectLabWorkers_ListViewHeader", resourceCulture);
             }
@@ -3339,7 +3267,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to You can select one or more employees, if no one is selected, it will be selected equipments without allocated responsibilities.
         /// </summary>
-        internal static string _selectLabWorkers_ListViewToolTip {
+        public static string _selectLabWorkers_ListViewToolTip {
             get {
                 return ResourceManager.GetString("_selectLabWorkers_ListViewToolTip", resourceCulture);
             }
@@ -3348,7 +3276,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Balance of features.
         /// </summary>
-        internal static string _setBalanceFeatures_Buttons {
+        public static string _setBalanceFeatures_Buttons {
             get {
                 return ResourceManager.GetString("_setBalanceFeatures_Buttons", resourceCulture);
             }
@@ -3357,7 +3285,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Select equipments with multiple workers assignment.
         /// </summary>
-        internal static string _ShowMultipleAlocations {
+        public static string _ShowMultipleAlocations {
             get {
                 return ResourceManager.GetString("_ShowMultipleAlocations", resourceCulture);
             }
@@ -3366,7 +3294,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Stand.
         /// </summary>
-        internal static string _Stand_DGHeader {
+        public static string _Stand_DGHeader {
             get {
                 return ResourceManager.GetString("_Stand_DGHeader", resourceCulture);
             }
@@ -3375,7 +3303,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Standards Procedures Manuals.
         /// </summary>
-        internal static string _Standard_Form_Title {
+        public static string _Standard_Form_Title {
             get {
                 return ResourceManager.GetString("_Standard_Form_Title", resourceCulture);
             }
@@ -3384,7 +3312,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Error execution procedures.
         /// </summary>
-        internal static string _StateOfExecutionError {
+        public static string _StateOfExecutionError {
             get {
                 return ResourceManager.GetString("_StateOfExecutionError", resourceCulture);
             }
@@ -3393,7 +3321,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Sure &amp; first name.
         /// </summary>
-        internal static string _sureFirstName_Label {
+        public static string _sureFirstName_Label {
             get {
                 return ResourceManager.GetString("_sureFirstName_Label", resourceCulture);
             }
@@ -3402,7 +3330,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Allocated.
         /// </summary>
-        internal static string _TaskAllocated {
+        public static string _TaskAllocated {
             get {
                 return ResourceManager.GetString("_TaskAllocated", resourceCulture);
             }
@@ -3411,7 +3339,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Tasks.
         /// </summary>
-        internal static string _Tasks {
+        public static string _Tasks {
             get {
                 return ResourceManager.GetString("_Tasks", resourceCulture);
             }
@@ -3420,7 +3348,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Calendar tasks.
         /// </summary>
-        internal static string _tasks_MenuItemHeader {
+        public static string _tasks_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_tasks_MenuItemHeader", resourceCulture);
             }
@@ -3429,7 +3357,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Template.
         /// </summary>
-        internal static string _template_Label {
+        public static string _template_Label {
             get {
                 return ResourceManager.GetString("_template_Label", resourceCulture);
             }
@@ -3438,7 +3366,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Clean up.
         /// </summary>
-        internal static string _tidy_Button {
+        public static string _tidy_Button {
             get {
                 return ResourceManager.GetString("_tidy_Button", resourceCulture);
             }
@@ -3447,7 +3375,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Removes records deleted files.
         /// </summary>
-        internal static string _tidy_ToolTip {
+        public static string _tidy_ToolTip {
             get {
                 return ResourceManager.GetString("_tidy_ToolTip", resourceCulture);
             }
@@ -3456,7 +3384,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to To.
         /// </summary>
-        internal static string _to_text {
+        public static string _to_text {
             get {
                 return ResourceManager.GetString("_to_text", resourceCulture);
             }
@@ -3465,7 +3393,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Total allocation.
         /// </summary>
-        internal static string _TotalAllocation {
+        public static string _TotalAllocation {
             get {
                 return ResourceManager.GetString("_TotalAllocation", resourceCulture);
             }
@@ -3474,7 +3402,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to days of trial period.
         /// </summary>
-        internal static string _trialPeriod {
+        public static string _trialPeriod {
             get {
                 return ResourceManager.GetString("_trialPeriod", resourceCulture);
             }
@@ -3483,7 +3411,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
-        internal static string _undo_Buttons {
+        public static string _undo_Buttons {
             get {
                 return ResourceManager.GetString("_undo_Buttons", resourceCulture);
             }
@@ -3492,7 +3420,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Do you want to save changes?.
         /// </summary>
-        internal static string _UnsavedChangesWillSave {
+        public static string _UnsavedChangesWillSave {
             get {
                 return ResourceManager.GetString("_UnsavedChangesWillSave", resourceCulture);
             }
@@ -3501,7 +3429,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User name.
         /// </summary>
-        internal static string _user_Button {
+        public static string _user_Button {
             get {
                 return ResourceManager.GetString("_user_Button", resourceCulture);
             }
@@ -3510,7 +3438,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Retired.
         /// </summary>
-        internal static string _userActive_DGHeader {
+        public static string _userActive_DGHeader {
             get {
                 return ResourceManager.GetString("_userActive_DGHeader", resourceCulture);
             }
@@ -3519,7 +3447,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User name.
         /// </summary>
-        internal static string _userCode_DGHeader {
+        public static string _userCode_DGHeader {
             get {
                 return ResourceManager.GetString("_userCode_DGHeader", resourceCulture);
             }
@@ -3528,7 +3456,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User details.
         /// </summary>
-        internal static string _userDetails_TabItemHeader {
+        public static string _userDetails_TabItemHeader {
             get {
                 return ResourceManager.GetString("_userDetails_TabItemHeader", resourceCulture);
             }
@@ -3537,7 +3465,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to e-mail.
         /// </summary>
-        internal static string _userEmail_DGHeader {
+        public static string _userEmail_DGHeader {
             get {
                 return ResourceManager.GetString("_userEmail_DGHeader", resourceCulture);
             }
@@ -3546,7 +3474,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Initials.
         /// </summary>
-        internal static string _userInitials_DGHeader {
+        public static string _userInitials_DGHeader {
             get {
                 return ResourceManager.GetString("_userInitials_DGHeader", resourceCulture);
             }
@@ -3555,7 +3483,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Surname.
         /// </summary>
-        internal static string _userLastName_DGHeader {
+        public static string _userLastName_DGHeader {
             get {
                 return ResourceManager.GetString("_userLastName_DGHeader", resourceCulture);
             }
@@ -3564,7 +3492,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Level of confidence.
         /// </summary>
-        internal static string _userLevelOfConfidency_DGHeader {
+        public static string _userLevelOfConfidency_DGHeader {
             get {
                 return ResourceManager.GetString("_userLevelOfConfidency_DGHeader", resourceCulture);
             }
@@ -3573,7 +3501,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Level of confidence.
         /// </summary>
-        internal static string _userLevelOfConfidency_DGHeader1 {
+        public static string _userLevelOfConfidency_DGHeader1 {
             get {
                 return ResourceManager.GetString("_userLevelOfConfidency_DGHeader1", resourceCulture);
             }
@@ -3582,7 +3510,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to First name.
         /// </summary>
-        internal static string _userName_DGHeader {
+        public static string _userName_DGHeader {
             get {
                 return ResourceManager.GetString("_userName_DGHeader", resourceCulture);
             }
@@ -3591,7 +3519,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Added by:.
         /// </summary>
-        internal static string _userName_Label {
+        public static string _userName_Label {
             get {
                 return ResourceManager.GetString("_userName_Label", resourceCulture);
             }
@@ -3600,7 +3528,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
-        internal static string _userPhone_DGHeader {
+        public static string _userPhone_DGHeader {
             get {
                 return ResourceManager.GetString("_userPhone_DGHeader", resourceCulture);
             }
@@ -3609,7 +3537,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User roles.
         /// </summary>
-        internal static string _userRoles_Header {
+        public static string _userRoles_Header {
             get {
                 return ResourceManager.GetString("_userRoles_Header", resourceCulture);
             }
@@ -3618,7 +3546,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to User roles.
         /// </summary>
-        internal static string _userRoles_TabItemHeader {
+        public static string _userRoles_TabItemHeader {
             get {
                 return ResourceManager.GetString("_userRoles_TabItemHeader", resourceCulture);
             }
@@ -3627,7 +3555,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Local settings.
         /// </summary>
-        internal static string _userSettings_Header {
+        public static string _userSettings_Header {
             get {
                 return ResourceManager.GetString("_userSettings_Header", resourceCulture);
             }
@@ -3636,7 +3564,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Users and roles.
         /// </summary>
-        internal static string _usersManager_MenuItemHeader {
+        public static string _usersManager_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_usersManager_MenuItemHeader", resourceCulture);
             }
@@ -3645,7 +3573,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Users manager.
         /// </summary>
-        internal static string _usersWindow_Window_Title {
+        public static string _usersWindow_Window_Title {
             get {
                 return ResourceManager.GetString("_usersWindow_Window_Title", resourceCulture);
             }
@@ -3654,7 +3582,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Version info.
         /// </summary>
-        internal static string _versionInfo_MenuItemHeader {
+        public static string _versionInfo_MenuItemHeader {
             get {
                 return ResourceManager.GetString("_versionInfo_MenuItemHeader", resourceCulture);
             }
@@ -3663,7 +3591,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to ?.
         /// </summary>
-        internal static string _x {
+        public static string _x {
             get {
                 return ResourceManager.GetString("_x", resourceCulture);
             }
@@ -3672,7 +3600,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Year: .
         /// </summary>
-        internal static string _year_Label {
+        public static string _year_Label {
             get {
                 return ResourceManager.GetString("_year_Label", resourceCulture);
             }
@@ -3681,7 +3609,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to You still have.
         /// </summary>
-        internal static string _youStillHave {
+        public static string _youStillHave {
             get {
                 return ResourceManager.GetString("_youStillHave", resourceCulture);
             }
@@ -3690,7 +3618,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to accepted contractors.
         /// </summary>
-        internal static string acceptedContractors {
+        public static string acceptedContractors {
             get {
                 return ResourceManager.GetString("acceptedContractors", resourceCulture);
             }
@@ -3699,7 +3627,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Activities.
         /// </summary>
-        internal static string activities {
+        public static string activities {
             get {
                 return ResourceManager.GetString("activities", resourceCulture);
             }
@@ -3708,7 +3636,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Afforded certificate.
         /// </summary>
-        internal static string affordedCertificate {
+        public static string affordedCertificate {
             get {
                 return ResourceManager.GetString("affordedCertificate", resourceCulture);
             }
@@ -3717,7 +3645,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Begins with.
         /// </summary>
-        internal static string BeginsWith {
+        public static string BeginsWith {
             get {
                 return ResourceManager.GetString("BeginsWith", resourceCulture);
             }
@@ -3726,7 +3654,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Contains.
         /// </summary>
-        internal static string Contains {
+        public static string Contains {
             get {
                 return ResourceManager.GetString("Contains", resourceCulture);
             }
@@ -3735,7 +3663,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Delivered.
         /// </summary>
-        internal static string delivered {
+        public static string delivered {
             get {
                 return ResourceManager.GetString("delivered", resourceCulture);
             }
@@ -3744,7 +3672,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Documents.
         /// </summary>
-        internal static string documents {
+        public static string documents {
             get {
                 return ResourceManager.GetString("documents", resourceCulture);
             }
@@ -3753,7 +3681,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 4 - Depending on the circumstances.
         /// </summary>
-        internal static string DoDecyzji {
+        public static string DoDecyzji {
             get {
                 return ResourceManager.GetString("DoDecyzji", resourceCulture);
             }
@@ -3762,7 +3690,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Electric gauge.
         /// </summary>
-        internal static string Elektryczne {
+        public static string Elektryczne {
             get {
                 return ResourceManager.GetString("Elektryczne", resourceCulture);
             }
@@ -3771,7 +3699,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Electric.
         /// </summary>
-        internal static string Elektryczne1 {
+        public static string Elektryczne1 {
             get {
                 return ResourceManager.GetString("Elektryczne1", resourceCulture);
             }
@@ -3780,7 +3708,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Employees.
         /// </summary>
-        internal static string employees {
+        public static string employees {
             get {
                 return ResourceManager.GetString("employees", resourceCulture);
             }
@@ -3789,7 +3717,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Empty.
         /// </summary>
-        internal static string Empty {
+        public static string Empty {
             get {
                 return ResourceManager.GetString("Empty", resourceCulture);
             }
@@ -3798,7 +3726,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to =.
         /// </summary>
-        internal static string Equal {
+        public static string Equal {
             get {
                 return ResourceManager.GetString("Equal", resourceCulture);
             }
@@ -3807,7 +3735,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to The path and classifier calibration sheet (xls).
         /// </summary>
-        internal static string excPathTypeOfDoc {
+        public static string excPathTypeOfDoc {
             get {
                 return ResourceManager.GetString("excPathTypeOfDoc", resourceCulture);
             }
@@ -3816,7 +3744,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Finished.
         /// </summary>
-        internal static string finished {
+        public static string finished {
             get {
                 return ResourceManager.GetString("finished", resourceCulture);
             }
@@ -3825,7 +3753,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to &gt;.
         /// </summary>
-        internal static string Greater {
+        public static string Greater {
             get {
                 return ResourceManager.GetString("Greater", resourceCulture);
             }
@@ -3834,7 +3762,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to &gt;=.
         /// </summary>
-        internal static string GreaterEqual {
+        public static string GreaterEqual {
             get {
                 return ResourceManager.GetString("GreaterEqual", resourceCulture);
             }
@@ -3843,7 +3771,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Inactive.
         /// </summary>
-        internal static string Inactive {
+        public static string Inactive {
             get {
                 return ResourceManager.GetString("Inactive", resourceCulture);
             }
@@ -3852,7 +3780,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 1 - Calibrator in a specialized laboratory.
         /// </summary>
-        internal static string kalibratorObceLab_1 {
+        public static string kalibratorObceLab_1 {
             get {
                 return ResourceManager.GetString("kalibratorObceLab_1", resourceCulture);
             }
@@ -3861,7 +3789,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 0 - Legalization of their own.
         /// </summary>
-        internal static string LegalizacjaWlasna {
+        public static string LegalizacjaWlasna {
             get {
                 return ResourceManager.GetString("LegalizacjaWlasna", resourceCulture);
             }
@@ -3870,7 +3798,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to &lt;.
         /// </summary>
-        internal static string Less {
+        public static string Less {
             get {
                 return ResourceManager.GetString("Less", resourceCulture);
             }
@@ -3879,7 +3807,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to &lt;=.
         /// </summary>
-        internal static string LessEqual {
+        public static string LessEqual {
             get {
                 return ResourceManager.GetString("LessEqual", resourceCulture);
             }
@@ -3888,7 +3816,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Loan.
         /// </summary>
-        internal static string Loan {
+        public static string Loan {
             get {
                 return ResourceManager.GetString("Loan", resourceCulture);
             }
@@ -3897,7 +3825,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Measuring devices.
         /// </summary>
-        internal static string measuringDevices {
+        public static string measuringDevices {
             get {
                 return ResourceManager.GetString("measuringDevices", resourceCulture);
             }
@@ -3906,7 +3834,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Measuring labs.
         /// </summary>
-        internal static string measuringLabs {
+        public static string measuringLabs {
             get {
                 return ResourceManager.GetString("measuringLabs", resourceCulture);
             }
@@ -3915,7 +3843,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Mechanical gauges.
         /// </summary>
-        internal static string Mechaniczne {
+        public static string Mechaniczne {
             get {
                 return ResourceManager.GetString("Mechaniczne", resourceCulture);
             }
@@ -3924,7 +3852,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Mech..
         /// </summary>
-        internal static string Mechaniczne1 {
+        public static string Mechaniczne1 {
             get {
                 return ResourceManager.GetString("Mechaniczne1", resourceCulture);
             }
@@ -3933,7 +3861,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 1 - Not subject to legalization.
         /// </summary>
-        internal static string NiePodlegaLegalizacji {
+        public static string NiePodlegaLegalizacji {
             get {
                 return ResourceManager.GetString("NiePodlegaLegalizacji", resourceCulture);
             }
@@ -3942,7 +3870,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to by norm.
         /// </summary>
-        internal static string normy_0 {
+        public static string normy_0 {
             get {
                 return ResourceManager.GetString("normy_0", resourceCulture);
             }
@@ -3951,7 +3879,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Not start with.
         /// </summary>
-        internal static string NotBeginsWith {
+        public static string NotBeginsWith {
             get {
                 return ResourceManager.GetString("NotBeginsWith", resourceCulture);
             }
@@ -3960,7 +3888,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Not contains.
         /// </summary>
-        internal static string NotContains {
+        public static string NotContains {
             get {
                 return ResourceManager.GetString("NotContains", resourceCulture);
             }
@@ -3969,7 +3897,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Not empty.
         /// </summary>
-        internal static string NotEmpty {
+        public static string NotEmpty {
             get {
                 return ResourceManager.GetString("NotEmpty", resourceCulture);
             }
@@ -3978,7 +3906,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to !=.
         /// </summary>
-        internal static string NotEqual {
+        public static string NotEqual {
             get {
                 return ResourceManager.GetString("NotEqual", resourceCulture);
             }
@@ -3987,7 +3915,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Obtained after calibration.
         /// </summary>
-        internal static string obtainedAfterCalibration {
+        public static string obtainedAfterCalibration {
             get {
                 return ResourceManager.GetString("obtainedAfterCalibration", resourceCulture);
             }
@@ -3996,7 +3924,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Persons.
         /// </summary>
-        internal static string persons {
+        public static string persons {
             get {
                 return ResourceManager.GetString("persons", resourceCulture);
             }
@@ -4005,7 +3933,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Proceed.
         /// </summary>
-        internal static string proceed {
+        public static string proceed {
             get {
                 return ResourceManager.GetString("proceed", resourceCulture);
             }
@@ -4014,7 +3942,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to producer.
         /// </summary>
-        internal static string producenta_2 {
+        public static string producenta_2 {
             get {
                 return ResourceManager.GetString("producenta_2", resourceCulture);
             }
@@ -4023,7 +3951,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 3 - Unregistered.
         /// </summary>
-        internal static string przyrzadNierejestrowany_3 {
+        public static string przyrzadNierejestrowany_3 {
             get {
                 return ResourceManager.GetString("przyrzadNierejestrowany_3", resourceCulture);
             }
@@ -4032,7 +3960,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 2 - Equipment commisioned for calibration.
         /// </summary>
-        internal static string przyrzadObcy_2 {
+        public static string przyrzadObcy_2 {
             get {
                 return ResourceManager.GetString("przyrzadObcy_2", resourceCulture);
             }
@@ -4041,7 +3969,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 0 - Own equipment.
         /// </summary>
-        internal static string przyrzadWlasny_0 {
+        public static string przyrzadWlasny_0 {
             get {
                 return ResourceManager.GetString("przyrzadWlasny_0", resourceCulture);
             }
@@ -4050,7 +3978,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to All instruments.
         /// </summary>
-        internal static string PrzyrzadyWszystkie {
+        public static string PrzyrzadyWszystkie {
             get {
                 return ResourceManager.GetString("PrzyrzadyWszystkie", resourceCulture);
             }
@@ -4059,7 +3987,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to indefinite.
         /// </summary>
-        internal static string PrzyrzadyWszystkie1 {
+        public static string PrzyrzadyWszystkie1 {
             get {
                 return ResourceManager.GetString("PrzyrzadyWszystkie1", resourceCulture);
             }
@@ -4068,7 +3996,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Redy to receive.
         /// </summary>
-        internal static string redyToReceive {
+        public static string redyToReceive {
             get {
                 return ResourceManager.GetString("redyToReceive", resourceCulture);
             }
@@ -4077,7 +4005,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to drawing.
         /// </summary>
-        internal static string rysunku_4 {
+        public static string rysunku_4 {
             get {
                 return ResourceManager.GetString("rysunku_4", resourceCulture);
             }
@@ -4086,7 +4014,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Seeking a broker.
         /// </summary>
-        internal static string seekingBroker {
+        public static string seekingBroker {
             get {
                 return ResourceManager.GetString("seekingBroker", resourceCulture);
             }
@@ -4095,7 +4023,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Seeking a lab.
         /// </summary>
-        internal static string seekingLab {
+        public static string seekingLab {
             get {
                 return ResourceManager.GetString("seekingLab", resourceCulture);
             }
@@ -4104,7 +4032,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Sent the equipment.
         /// </summary>
-        internal static string sentEquipment {
+        public static string sentEquipment {
             get {
                 return ResourceManager.GetString("sentEquipment", resourceCulture);
             }
@@ -4113,7 +4041,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to sent request.
         /// </summary>
-        internal static string sentRequest {
+        public static string sentRequest {
             get {
                 return ResourceManager.GetString("sentRequest", resourceCulture);
             }
@@ -4122,7 +4050,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Check tools.
         /// </summary>
-        internal static string Sprawdziany {
+        public static string Sprawdziany {
             get {
                 return ResourceManager.GetString("Sprawdziany", resourceCulture);
             }
@@ -4131,7 +4059,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Gauge.
         /// </summary>
-        internal static string Sprawdziany1 {
+        public static string Sprawdziany1 {
             get {
                 return ResourceManager.GetString("Sprawdziany1", resourceCulture);
             }
@@ -4140,7 +4068,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Check tools for threads.
         /// </summary>
-        internal static string SprawdzianyDoGwintow {
+        public static string SprawdzianyDoGwintow {
             get {
                 return ResourceManager.GetString("SprawdzianyDoGwintow", resourceCulture);
             }
@@ -4149,7 +4077,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to For threads.
         /// </summary>
-        internal static string SprawdzianyDoGwintow1 {
+        public static string SprawdzianyDoGwintow1 {
             get {
                 return ResourceManager.GetString("SprawdzianyDoGwintow1", resourceCulture);
             }
@@ -4158,7 +4086,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to Start process.
         /// </summary>
-        internal static string start {
+        public static string start {
             get {
                 return ResourceManager.GetString("start", resourceCulture);
             }
@@ -4167,7 +4095,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to testEn.
         /// </summary>
-        internal static string test {
+        public static string test {
             get {
                 return ResourceManager.GetString("test", resourceCulture);
             }
@@ -4176,7 +4104,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to by user.
         /// </summary>
-        internal static string uzytkownika_1 {
+        public static string uzytkownika_1 {
             get {
                 return ResourceManager.GetString("uzytkownika_1", resourceCulture);
             }
@@ -4185,7 +4113,7 @@ namespace Abakon15WPF.LangKeys {
         /// <summary>
         ///   Looks up a localized string similar to 2 - Legalization of at an authorized laboratory.
         /// </summary>
-        internal static string ZawszeZlecana {
+        public static string ZawszeZlecana {
             get {
                 return ResourceManager.GetString("ZawszeZlecana", resourceCulture);
             }

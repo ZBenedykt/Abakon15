@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Data;
 using System.Windows;
 using System.Globalization;
@@ -11,6 +8,15 @@ using System.Windows.Markup;
 
 namespace Abakon15WPF.Infrastructure
 {
+
+    class LocalizedEnumConverter : Infralution.Localization.Wpf.ResourceEnumConverter
+    {
+        public LocalizedEnumConverter(Type type)
+            : base(type, Properties.Resources.ResourceManager)
+        {
+        }
+    }
+
     [ValueConversion(typeof(bool), typeof(bool))]
     public class BoolRevertConverter : IValueConverter
     {

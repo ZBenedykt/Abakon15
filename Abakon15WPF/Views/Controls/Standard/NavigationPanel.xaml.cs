@@ -19,10 +19,12 @@ namespace Abakon15WPF.Views.Controls.Standard
     /// </summary>
     public partial class NavigationPanel : UserControl
     {
+        
         public static readonly DependencyProperty CurrentIndexProperty;
         public static readonly DependencyProperty ViewProperty;
         static NavigationPanel()
         {
+           // System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
             FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(null);//, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault);
             ViewProperty = DependencyProperty.Register("View", typeof(ListCollectionView), typeof(NavigationPanel), metadata);
             metadata = new FrameworkPropertyMetadata(-1, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault);

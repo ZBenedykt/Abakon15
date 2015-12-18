@@ -7,12 +7,14 @@
              xmlns:UC="clr-namespace:Abakon15WPF.Views.Controls"
              xmlns:VM="clr-namespace:Abakon15WPF.ViewModels"
              xmlns:set="clr-namespace:Abakon15WPF.Properties"
+             xmlns:lex ="clr-namespace:Abakon15WPF.LangKeys"
+             
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1000"
              d:DataContext="{d:DesignInstance Type=VM:PartnerVM}" IsVisibleChanged="UserControl_IsVisibleChanged">
-
+     
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <Grid x:Name="c_detailsGrid" Grid.Row="1" Grid.Column="1" Margin="0" >
+        <Grid x:Name="c_detailsGrid" Grid.Row="1" Grid.Column="1" Margin="0"   >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -44,7 +46,8 @@
                 <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="1" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerCode_Label}" 
+            <!--   Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerCode_Label}" -->
+            <TextBlock Grid.Row="1" Grid.Column="0"  Text="{Resx ResxName=Abakon15WPF.LangKeys.ResourceLang, Key=_9_PartnerCode_Label }"
                 HorizontalAlignment="Right" Margin="4" VerticalAlignment="Center"
                 Visibility= "{Binding Source={x:Static set:Settings.Default}, Path=_9_PartnerCode_ColumnVisibility, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Margin="4" MinWidth="180"

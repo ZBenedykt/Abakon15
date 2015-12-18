@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using AbakonDataModel.Interfaces;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
-using System.IO;
 using AbakonDataModel.DataAccess;
 
 namespace AbakonDataModel

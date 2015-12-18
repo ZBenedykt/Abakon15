@@ -54,8 +54,9 @@ namespace AbakonDataModel
 
         public DbSet<_KeyBoardKey> _KeyBoardKeyDbSet { get; set; }
         public DbSet<Inwestment> InwestmentDbSet { get; set; }
-        public DbSet<Inwestment2> Inwestment2DbSet { get; set; }
+     
 
+        public DbSet<Contract> ContractDbSet { get; set; }
 
     }
 

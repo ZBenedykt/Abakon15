@@ -6,12 +6,13 @@
         xmlns:src="clr-namespace:Abakon15WPF.Views"
         xmlns:VM ="clr-namespace:Abakon15WPF.ViewModels"
         Title="{Resx ResxName=WisecomWPF.LangKeys.ResourceLang, Key=_documentsWindow_Window_Title}" 
-        Icon="{Resx ResxName=WisecomWPF.LangKeys.ResourceLang, Key=WindowIcon}"
-        Height="700" Width="1200" WindowStartupLocation="CenterOwner">
+        Icon="/Abakon15WPF;component/Images/Documents.png"
+        Height="700" Width="1200" WindowStartupLocation="CenterOwner"
+        >
 
     <Border Style="{StaticResource WindowBorderStyle}">
         <Grid>
-            <UC:DocumentUC   x:Name="c_DocumentUC"  />
+            <UC:DocumentUC x:Name="c_DocumentUC"  />
         </Grid>
         
     </Border>

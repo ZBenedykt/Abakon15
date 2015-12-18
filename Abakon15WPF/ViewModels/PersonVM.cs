@@ -17,8 +17,10 @@ using Abakon15WPF.Views.Windows;
 
 namespace Abakon15WPF.ViewModels
 {
+    [TypeConverter(typeof(LocalizedEnumConverter))]
     class PersonVM : ViewModelBase
     {
+       
         public enum KindOfPersonsEnum
         {
             NieOkreślony,
